@@ -1,0 +1,22 @@
+--cpu=Cortex-M4.fp.sp
+".\objects\main.o"
+".\objects\stm32f4xx_it.o"
+".\objects\thled1.o"
+".\objects\thled2.o"
+".\objects\thled3.o"
+"..\..\..\..\..\..\Keil\ARM\Packs\ARM\CMSIS\5.7.0\CMSIS\RTOS2\RTX\Library\ARM\RTX_CM4F.lib"
+".\objects\rtx_lib.o"
+".\objects\rtx_config.o"
+".\objects\stm32f4xx_hal.o"
+".\objects\stm32f4xx_hal_cortex.o"
+".\objects\stm32f4xx_hal_gpio.o"
+".\objects\stm32f4xx_hal_pwr.o"
+".\objects\stm32f4xx_hal_pwr_ex.o"
+".\objects\stm32f4xx_hal_rcc.o"
+".\objects\stm32f4xx_hal_rcc_ex.o"
+".\objects\startup_stm32f429xx.o"
+".\objects\system_stm32f4xx.o"
+--strict --scatter ".\Objects\P5_2.sct"
+--summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list ".\Listings\P5_2.map" -o .\Objects\P5_2.axf
