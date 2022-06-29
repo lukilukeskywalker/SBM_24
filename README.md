@@ -45,24 +45,24 @@ Practica Numb:
 	>> * *void LCD_wr_cmd(unsigned char cmd)*
 	>>
 	3. Creacion de la funcion de Init *LCD_init()*  
-	
-	 
-| Comando         | Funcion                                                                  |
-|-----------------|--------------------------------------------------------------------------|
-| *wr_cmd(0xAE)*  | Display off                                                              |
-| *wr_cmd(0xA2)*  | Fija el valor de la relación de la tensión de polarización del LCD a 1/9 |
-| *wr_cmd(0xA0);* | El direccionamiento de la RAM de datos del display es la normal          |
-| *wr_cmd(0xC8);* | El scan en las salidas COM es el normal                                  |
-| *wr_cmd(0x22);* | Fija la relación de resistencias interna a 2                             |
-| *wr_cmd(0x2F);* | Power on                                                                 |
-| *wr_cmd(0x40);* | Display empieza en la línea 0                                            |
-| *wr_cmd(0xAF);* | Display ON                                                               |
-| *wr_cmd(0x81);* | Contraste                                                                |
-| *wr_cmd(0x??);* | Valor Contraste                                                          |
-| *wr_cmd(0xA4);* | Display all points normal                                                |
-| *wr_cmd(0xA6);* | LCD Display normal                                                       | 
 
 
+>> | Comando         | Funcion                                                                  |
+>> |-----------------|--------------------------------------------------------------------------|
+>> | *wr_cmd(0xAE)*  | Display off                                                              |
+>> | *wr_cmd(0xA2)*  | Fija el valor de la relación de la tensión de polarización del LCD a 1/9 |
+>> | *wr_cmd(0xA0);* | El direccionamiento de la RAM de datos del display es la normal          |
+>> | *wr_cmd(0xC8);* | El scan en las salidas COM es el normal                                  |
+>> | *wr_cmd(0x22);* | Fija la relación de resistencias interna a 2                             |
+>> | *wr_cmd(0x2F);* | Power on                                                                 |
+>> | *wr_cmd(0x40);* | Display empieza en la línea 0                                            |
+>> | *wr_cmd(0xAF);* | Display ON                                                               |
+>> | *wr_cmd(0x81);* | Contraste                                                                |
+>> | *wr_cmd(0x??);* | Valor Contraste                                                          |
+>> | *wr_cmd(0xA4);* | Display all points normal                                                |
+>> | *wr_cmd(0xA6);* | LCD Display normal                                                       | 
 
+
+	4. tets
 
 	
