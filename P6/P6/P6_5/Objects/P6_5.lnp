@@ -4,7 +4,7 @@
 ".\objects\thjoy.o"
 ".\objects\lcd.o"
 ".\objects\thread2.o"
-".\objects\irq_armv7m.o"
+".\objects\irq_cm4f.o"
 ".\objects\rtx_delay.o"
 ".\objects\rtx_evflags.o"
 ".\objects\rtx_evr.o"

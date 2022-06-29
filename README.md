@@ -21,8 +21,14 @@ Done!
 * LED1: PB0
 * LED2: PB7
 * LED3: PB14
+* JOY_ARRIBA: PB10  (pin15 en mbed_board);
+* JOY_DERECHA: PB11 (pin16 en mbed_board);
+* JOY_ABAJO: PE12	(pin12 en mbed_board);
+* JOY_IZQUIEDA: PE14(pin13 en mbed_board);
+* JOY_CENTRO: PE15	(pin14 en mbed_board);
 ## Datasheet y posiciones
-[Link](https://www.st.com/resource/en/datasheet/dm00071990.pdf)
+[Link Datasheet](https://www.st.com/resource/en/datasheet/dm00071990.pdf)
+[Link Nucleo_MBED](https://os.mbed.com/platforms/ST-Nucleo-F429ZI/)
 ### Posiciones del datasheet
 Funciones alternativas de pines: Pag 75
 ## Objetivos de las practicas
@@ -95,6 +101,14 @@ Practica Numb:
 	Ademas hay que utilizar el wizard del fihero RTX_Config.h para cambiar el tick del sistema
 	2. Cambiar el tick de sistema a 1 ms, e introducir 2 nuevos hilos Thled2 y Thled3. Los peridos de enendido y apagado de los leds son 137 ms y 137 ms para el led 2 y 287 ms y 287 ms para el led 3. Los hilos deben ser ejecutados de forma concurrente.
 	3. Sincronizar la ejecucion de los 3 hilos mediante el uso de flags. Utilizar un watch para ver la ejecucion de los hilos (View->Watch Windows->RTX RTOS)
+6. 5 Tareas:
+	1. Contador Binario, que cuenta con el boton B1 (usando interrupciones), y mostrando el valor en los leds 1, 2, 3 (Valor, 4, 2, 1). No se deben utilizar variables globales
+	(Muestra de puta madre los rebotes)
+	2. Detectar pulsaciones del gesto RIGHT del joystick 
+	3. Hacer un contador de 3 segundos, que se puede resetear mientras que no haya terminado la cuenta atras con el boton 1. Mientras que esta ccontando, el led verde (LED 1)esta encendido, una vez termina, el led verde se apaga y se enciende el led rojo (LED 3)
+	4. Eliminar rebotes con timers del sistema operativo. Cada interrupcion en un pin debe iniciar un timer one-shot. Una vez finaliza el timer one-shot, se observa el estado de los pines, y se guarda en una variable el numero de vees que ha sido accionado el joystick en determinada direccion. Ademas se debe mostrar en los leds de forma codificada (Arriba=1, Derecha=2, Abajo=3, Izquierda=4, Centro=5);
+	5. Encolar las pulsaciones en una cola de mensajes, para que otro modulo lo lea posteriormente. La informacion a enviar a la cola es el valor del joystick leido como un conjunto de 5 bits. Para comprobar que funciona, representar el gesto pulsado en el LCD ccon otro hilo.
+
 
 ### Tabla comandos LCD
 >> | Comando         | Funcion                                                                  |
