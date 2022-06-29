@@ -44,7 +44,9 @@ Practica Numb:
 	>> * *void LCD_wr_data(unsigned char data)*
 	>> * *void LCD_wr_cmd(unsigned char cmd)*
 	>>
-	3. Creacion de la funcion de Init *LCD_init()*   
+	3. Creacion de la funcion de Init *LCD_init()*  
+	
+	 
 | Comando         | Funcion                                                                  |
 |-----------------|--------------------------------------------------------------------------|
 | *wr_cmd(0xAE)*  | Display off                                                              |
