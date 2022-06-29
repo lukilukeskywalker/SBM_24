@@ -21,6 +21,10 @@ Done!
 * LED1: PB0
 * LED2: PB7
 * LED3: PB14
+## Datasheet y posiciones
+[Link](https://www.st.com/resource/en/datasheet/dm00071990.pdf)
+### Posiciones del datasheet
+Funciones alternativas de pines: Pag 75
 ## Objetivos de las practicas
 Practica Numb:
 1. Un contador binario con los leds en la placa Nucleo usando Hal_Delay()  
