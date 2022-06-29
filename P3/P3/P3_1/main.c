@@ -440,9 +440,9 @@ void LCD_init(){
 void Pintar_Cuadrado(){
 	/*PINTAR CUADRADO*/
 	buffer[0]=0xFF;
-	buffer[1]=0x81;
-	buffer[2]=0x81;
-	buffer[3]=0x81;
+	buffer[1]=0x99;
+	buffer[2]=0x99;
+	buffer[3]=0x99;
 	buffer[4]=0x81;
 	buffer[5]=0x81;
 	buffer[6]=0x81;

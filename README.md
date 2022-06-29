@@ -48,6 +48,24 @@ Practica Numb:
 	Explicacion de los comandos en la tabla de abajo
 	4. Escritura de datos en el LCD
 	Se escribe una funcion denominada *LCD_update()* que permite copiar la informacion de un array de datos global, *buffer* de 512 elementos. Cada uno de los bits de ese array (4096=512x8) representa el estado de uno de los 128*32 pixeles de la pantalla
+4. 5 Tareas:
+	1. Incluir fichero Arial12x12.h y incluir una funcion *void symbolToLocalBuffer_L1(uint8_t symbol)*
+	""" void symbolToLocalBuffer_L1(uint8_t symbol){
+	
+		uint8_t i, value1, value2;
+		uint16_t offset=0;
+	
+		offset=25*(symbol - ' ');
+	
+		for(i=0; i<12; i++){
+	
+		value1=Arial12x12[offset+i*2+1];//coge datos alternos-> uno si,uno no, empezando por el 1 en el valor 1 y el dos en el valor 2
+		value2=Arial12x12[offset+i*2+2];
+	
+		buffer[i/*+positionL1*/]=value1;//escribe en la página 0
+		buffer[i+128/*+positionL1*/]=value2;//escribe en la página 1
+
+		} """
 
 ### Tabla comandos LCD
 >> | Comando         | Funcion                                                                  |
