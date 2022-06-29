@@ -2,9 +2,7 @@
 
 ## Como crear un nuevo proyecto:
 Para crear un proyecto, creamos un proyecto en Project New uvision Project, Seleccionamos el dispositivo, en nuestro caso el
-STM32F429ZITx. Una vez creado el proyecto aparecera una pestaña Manage Run, para seleccionar las librerias que queremos utilizar
-Tenemos que seleccionar:   
-  
+STM32F429ZITx. Una vez creado el proyecto aparecera una pestaña Manage Run, para seleccionar las librerias que queremos utilizar tenemos que seleccionar:   
 	- Abriendo CMSIS, CMSIS-CORE   
 	- Abriendo Device, Device-Startup   
 		* Abriendo STM32CubeMX Framework(API) Seleccionar Classic  
