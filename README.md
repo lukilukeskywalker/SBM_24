@@ -50,22 +50,47 @@ Practica Numb:
 	Se escribe una funcion denominada *LCD_update()* que permite copiar la informacion de un array de datos global, *buffer* de 512 elementos. Cada uno de los bits de ese array (4096=512x8) representa el estado de uno de los 128*32 pixeles de la pantalla
 4. 5 Tareas:
 	1. Incluir fichero Arial12x12.h y incluir una funcion *void symbolToLocalBuffer_L1(uint8_t symbol)*
-	""" void symbolToLocalBuffer_L1(uint8_t symbol){
+	```C
+		void symbolToLocalBuffer_L1(uint8_t symbol){
 	
-		uint8_t i, value1, value2;
-		uint16_t offset=0;
+			uint8_t i, value1, value2;
+			uint16_t offset=0;
 	
-		offset=25*(symbol - ' ');
+			offset=25*(symbol - ' ');
 	
-		for(i=0; i<12; i++){
+			for(i=0; i<12; i++){
 	
-		value1=Arial12x12[offset+i*2+1];//coge datos alternos-> uno si,uno no, empezando por el 1 en el valor 1 y el dos en el valor 2
-		value2=Arial12x12[offset+i*2+2];
+			value1=Arial12x12[offset+i*2+1];//coge datos alternos-> uno si,uno no, empezando por el 1 en el valor 1 y el dos en el valor 2
+			value2=Arial12x12[offset+i*2+2];
 	
-		buffer[i/*+positionL1*/]=value1;//escribe en la página 0
-		buffer[i+128/*+positionL1*/]=value2;//escribe en la página 1
-
-		} """
+			buffer[i/*+positionL1*/]=value1;//escribe en la página 0
+			buffer[i+128/*+positionL1*/]=value2;//escribe en la página 1
+		} 
+		```
+	2. Crear un proyecto que escriba una linea de texto al LCD **Prueba de texto L1** Hay que modificar la funcion para que la anchura por cada letra no sea fija, y el texto se ajuste
+	3. Crear una segunda función *void symbolToLocalBuffer_L2(uint8_t symbol)* que permita ver en la segunda linea el texto **Prueba de texto L2**
+	```C
+		void symbolToLocalBuffer_L2(uint8_t symbol){
+			uint8_t i, value1, value2;
+			uint16_t offset=0;
+			offset=25*(symbol - ' ');
+			for(i=0; i<12; i++){
+				value1=Arial12x12[offset+i*2+1];//coge datos alternos-> uno si,uno no, empezando por el 1 en el valor 1 y el dos en el valor 2
+				value2=Arial12x12[offset+i*2+2];
+					
+				buffer[i+256+positionL2]=value1;//escribe en la página 0
+				buffer[i+384+positionL2]=value2;//escribe en la página 1
+			}
+			positionL2=positionL2+Arial12x12[offset];//va guardando las posiciones finales de las letras para que continue por ahí
+		}
+	```
+	4. Estudiar el prototipo de la funcion de libreria *sprintf()* de tal forma que podamos escribir variables en la pantalla, apartir de diferentes tipos de datos, como uint32_t o float
+	5. Utilizar una fuente diferente para el texto.
+5. Esta practica consiste en utilizar RTOSV2. Hay 3 tareas
+	1. Crear un hilo llamado Thled1 que encienda y apague periodicamente un led, 200ms encendido 800 ms apagado.
+	Ademas hay que utilizar el wizard del fihero RTX_Config.h para cambiar el tick del sistema
+	2. Cambiar el tick de sistema a 1 ms, e introducir 2 nuevos hilos Thled2 y Thled3. Los peridos de enendido y apagado de los leds son 137 ms y 137 ms para el led 2 y 287 ms y 287 ms para el led 3. Los hilos deben ser ejecutados de forma concurrente.
+	3. Sincronizar la ejecucion de los 3 hilos mediante el uso de flags. Utilizar un watch para ver la ejecucion de los hilos (View->Watch Windows->RTX RTOS)
 
 ### Tabla comandos LCD
 >> | Comando         | Funcion                                                                  |
