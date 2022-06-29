@@ -30,11 +30,37 @@ Practica Numb:
 	3. Utilizar el timer 2 para desarrollar una aplicacion que permita generar una señal configurable de 500Hz, 1000Hz, 2000Hz, y 3000Hz, en el pin PB11. La configuracion se realiza a traves de una interrupcion provocada por el BTN de usuario, que cambia en teoria el preescaler o el period register. (En el segundo caso si se configura el Output Compare Register a modo TOGGLE (TIM_OCMODE_TOGGLE))
 3. 4 Tareas:
 	1. Inicializacion de SPI y LCD
->> Se configura el SPI segun los requisitos del LCD 
->> * Modo Master ARM_SPI_MODE_MASTER
->> * CPOL1 y CPHA1 ARM_SPI_CPOL1_CPHA1 (Para poner el SPI en modo 3 de operacion (si recuerdo bien))
->> * Organización de la informacion de MSB a LSB ARM_SPI_MSB_LSB
->> * Frecuencia de operacion 20 MHz
->> * 3 pines configurados como RESET, CS y A0
->> * Se debe generar un pulso de reset de duracion adecuada, y esperar 1ms antes de comenzar con la secuencia de comandos de inicializacion del LCD
->> * Se debe utilizar una funcion llamada delay que asi mismo utilice el TIMER 7, en modo basico sin interrupciones, esperando hasta que se active el flag que indique final de cuenta.
+	>> Se configura el SPI segun los requisitos del LCD 
+	>> * Modo Master ARM_SPI_MODE_MASTER
+	>> * CPOL1 y CPHA1 ARM_SPI_CPOL1_CPHA1 (Para poner el SPI en modo 3 de operacion (si recuerdo bien))
+	>> * Organización de la informacion de MSB a LSB ARM_SPI_MSB_LSB
+	>> * Frecuencia de operacion 20 MHz
+	>> * 3 pines configurados como RESET, CS y A0
+	>> * Se debe generar un pulso de reset de duracion adecuada, y esperar 1ms antes de comenzar con la secuencia de comandos de inicializacion del LCD
+	>> * Se debe utilizar una funcion llamada delay que asi mismo utilice el TIMER 7, en modo basico sin interrupciones, esperando hasta que se active el flag que indique final de cuenta.
+	>>  
+	2. Creacion de funciones de gestion del LCD
+	>> Las funciones creadas son:  
+	>> * *void LCD_wr_data(unsigned char data)*
+	>> * *void LCD_wr_cmd(unsigned char cmd)*
+	>>
+	3. Creacion de la funcion de Init *LCD_init()*
+	|Comando|Funcion|
+	|---|---|
+	|*wr_cmd(0xAE)*|Display off|
+	|*wr_cmd(0xA2)*|Fija el valor de la relación de la tensión de polarización del LCD a 1/9|
+	|*wr_cmd(0xA0);*|El direccionamiento de la RAM de datos del display es la normal|
+	|*wr_cmd(0xC8);*|El scan en las salidas COM es el normal|
+	|*wr_cmd(0x22);*|Fija la relación de resistencias interna a 2|
+	|*wr_cmd(0x2F);*|Power on|
+	|*wr_cmd(0x40);*|Display empieza en la línea 0|
+	|*wr_cmd(0xAF);*|Display ON|
+	|*wr_cmd(0x81);*|Contraste|
+	|*wr_cmd(0x??);*|Valor Contraste|
+	|*wr_cmd(0xA4);*|Display all points normal|
+	|*wr_cmd(0xA6);*|LCD Display normal|
+
+
+
+
+	
