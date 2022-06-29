@@ -45,8 +45,11 @@ Practica Numb:
 	>> * *void LCD_wr_cmd(unsigned char cmd)*
 	>>
 	3. Creacion de la funcion de Init *LCD_init()*  
+	Explicacion de los comandos en la tabla de abajo
+	4. Escritura de datos en el LCD
+	Se escribe una funcion denominada *LCD_update()* que permite copiar la informacion de un array de datos global, *buffer* de 512 elementos. Cada uno de los bits de ese array (4096=512x8) representa el estado de uno de los 128*32 pixeles de la pantalla
 
-
+### Tabla comandos LCD
 >> | Comando         | Funcion                                                                  |
 >> |-----------------|--------------------------------------------------------------------------|
 >> | *wr_cmd(0xAE)*  | Display off                                                              |
@@ -61,8 +64,6 @@ Practica Numb:
 >> | *wr_cmd(0x??);* | Valor Contraste                                                          |
 >> | *wr_cmd(0xA4);* | Display all points normal                                                |
 >> | *wr_cmd(0xA6);* | LCD Display normal                                                       | 
-
-
-	4. tets
+	
 
 	
