@@ -4,7 +4,7 @@
 ".\objects\thled1.o"
 ".\objects\thled2.o"
 ".\objects\thled3.o"
-"..\..\..\..\..\..\Keil\ARM\Packs\ARM\CMSIS\5.7.0\CMSIS\RTOS2\RTX\Library\ARM\RTX_CM4F.lib"
+"..\..\..\..\..\Keil\ARM\Packs\ARM\CMSIS\5.7.0\CMSIS\RTOS2\RTX\Library\ARM\RTX_CM4F.lib"
 ".\objects\rtx_lib.o"
 ".\objects\rtx_config.o"
 ".\objects\stm32f4xx_hal.o"

@@ -1,0 +1,12 @@
+.\objects\os_systick.o: C:/Users/alumno/Desktop/Keil/ARM/Packs/ARM/CMSIS/5.7.0/CMSIS/RTOS2/Source/os_systick.c
+.\objects\os_systick.o: C:\Users\alumno\Desktop\Keil\ARM\Packs\ARM\CMSIS\5.7.0\CMSIS\RTOS2\Include\os_tick.h
+.\objects\os_systick.o: C:\Users\alumno\Desktop\Keil\ARM\ARMCC\Bin\..\include\stdint.h
+.\objects\os_systick.o: .\RTE\_Target_1\RTE_Components.h
+.\objects\os_systick.o: C:\Users\alumno\Desktop\Keil\ARM\Packs\Keil\STM32F4xx_DFP\2.15.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include\stm32f4xx.h
+.\objects\os_systick.o: C:\Users\alumno\Desktop\Keil\ARM\Packs\Keil\STM32F4xx_DFP\2.15.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include\stm32f429xx.h
+.\objects\os_systick.o: C:\Users\alumno\Desktop\Keil\ARM\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\core_cm4.h
+.\objects\os_systick.o: C:\Users\alumno\Desktop\Keil\ARM\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\cmsis_version.h
+.\objects\os_systick.o: C:\Users\alumno\Desktop\Keil\ARM\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\cmsis_compiler.h
+.\objects\os_systick.o: C:\Users\alumno\Desktop\Keil\ARM\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\cmsis_armcc.h
+.\objects\os_systick.o: C:\Users\alumno\Desktop\Keil\ARM\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\mpu_armv7.h
+.\objects\os_systick.o: C:\Users\alumno\Desktop\Keil\ARM\Packs\Keil\STM32F4xx_DFP\2.15.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include\system_stm32f4xx.h

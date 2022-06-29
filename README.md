@@ -66,7 +66,7 @@ Practica Numb:
 			buffer[i/*+positionL1*/]=value1;//escribe en la página 0
 			buffer[i+128/*+positionL1*/]=value2;//escribe en la página 1
 		} 
-		```
+	```
 	2. Crear un proyecto que escriba una linea de texto al LCD **Prueba de texto L1** Hay que modificar la funcion para que la anchura por cada letra no sea fija, y el texto se ajuste
 	3. Crear una segunda función *void symbolToLocalBuffer_L2(uint8_t symbol)* que permita ver en la segunda linea el texto **Prueba de texto L2**
 	```C
