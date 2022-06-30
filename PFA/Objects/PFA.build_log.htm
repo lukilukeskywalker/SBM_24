@@ -5,10 +5,9 @@
 <h2>Tool Versions:</h2>
 IDE-Version: µVision V5.37.0.0
 Copyright (C) 2022 ARM Ltd and ARM Germany GmbH. All rights reserved.
-License Information: Lukas Gdanietz UPM Flex license: MDK Professional 5.34 (Flex) (mdk_pro) Operation stops: 8 Mar 2024
- 
+License Information: Lukas Gdanietz UPM Flex license: error obtaining information 
 Tool Versions:
-Toolchain:       MDK Professional 5.34 (Flex)  Version: 5.34.0.0
+Toolchain:       MDK-Lite  Version: 5.34.0.0
 Toolchain Path:  C:\Users\alumno\Desktop\Keil\ARM\ARMCC\Bin
 C Compiler:      Armcc.exe V5.06 update 7 (build 960)
 Assembler:       Armasm.exe V5.06 update 7 (build 960)
@@ -21,16 +20,17 @@ Target DLL:      STLink\ST-LINKIII-KEIL_SWO.dll V3.0.8.0
 Dialog DLL:      TCM.DLL V1.48.0.0
  
 <h2>Project:</h2>
-C:\Users\alumno\Desktop\SBM_JULIO\PFA\PFA.uvprojx
+C:\Users\alumno\Desktop\SBM_JULIO\SBM\PFA\PFA.uvprojx
 Project File Date:  06/28/2022
 
 <h2>Output:</h2>
 *** Using Compiler 'V5.06 update 7 (build 960)', folder: 'C:\Users\alumno\Desktop\Keil\ARM\ARMCC\Bin'
 Build target 'STM32f429-Discovery'
+compiling main.c...
 compiling principal.c...
-User\principal.c(442): warning:  #188-D: enumerated type mixed with another type
+User\principal.c(447): warning:  #188-D: enumerated type mixed with another type
         msg.op=0x50;    //Debemos devolver el comando de medida, y no el inverso
-User\principal.c(481): warning:  #188-D: enumerated type mixed with another type
+User\principal.c(487): warning:  #188-D: enumerated type mixed with another type
         msg->op=0x50;
 User\principal.c(46): warning:  #177-D: variable "msg_com_tx"  was declared but never referenced
   static MSGQUEUE_OBJ_COM msg_com_tx;
@@ -39,8 +39,9 @@ User\principal.c(136): warning:  #177-D: variable "ciclos_left"  was declared bu
 User\principal.c(153): warning:  #177-D: variable "start_cycle"  was declared but never referenced
   static uint8_t start_cycle; 
 User\principal.c: 5 warnings, 0 errors
+compiling TSL2591.c...
 linking...
-Program Size: Code=40326 RO-data=3826 RW-data=35012 ZI-data=3340  
+Program Size: Code=40394 RO-data=3826 RW-data=35012 ZI-data=3340  
 FromELF: creating hex file...
 ".\Objects\PFA.axf" - 0 Error(s), 5 Warning(s).
 
@@ -108,20 +109,20 @@ Package Vendor: Keil
    * Component: ARM::CMSIS:CORE:5.4.0
 
    * Component: ARM::CMSIS:RTOS2:Keil RTX5:Library:5.5.2
-      Source file:   CMSIS/RTOS2/RTX/Template/svc_user.c
-      Include file:  CMSIS/RTOS2/RTX/Include/rtx_os.h
-      Source file:   CMSIS/RTOS2/RTX/Template/Timer.c
-      Source file:   CMSIS/RTOS2/RTX/Template/Events.c
-      Source file:   CMSIS/RTOS2/RTX/Template/MemPool.c
-      Source file:   CMSIS/RTOS2/RTX/Template/Semaphore.c
       Source file:   CMSIS/RTOS2/RTX/Template/main.c
-      Source file:   CMSIS/RTOS2/RTX/Template/MsgQueue.c
-      Source file:   CMSIS/RTOS2/RTX/Template/Thread.c
-      Source file:   CMSIS/RTOS2/RTX/Source/rtx_lib.c
-      Source file:   CMSIS/RTOS2/RTX/Config/RTX_Config.c
-      Source file:   CMSIS/RTOS2/RTX/Template/Mutex.c
       Include file:  CMSIS/RTOS2/RTX/Config/RTX_Config.h
+      Source file:   CMSIS/RTOS2/RTX/Template/svc_user.c
+      Source file:   CMSIS/RTOS2/RTX/Template/Timer.c
+      Source file:   CMSIS/RTOS2/RTX/Template/MemPool.c
+      Source file:   CMSIS/RTOS2/RTX/Template/Mutex.c
+      Source file:   CMSIS/RTOS2/RTX/Template/Events.c
+      Include file:  CMSIS/RTOS2/RTX/Include/rtx_os.h
+      Source file:   CMSIS/RTOS2/RTX/Template/Thread.c
+      Source file:   CMSIS/RTOS2/RTX/Template/Semaphore.c
       Library file:  CMSIS/RTOS2/RTX/Library/ARM/RTX_CM4F.lib
+      Source file:   CMSIS/RTOS2/RTX/Config/RTX_Config.c
+      Source file:   CMSIS/RTOS2/RTX/Source/rtx_lib.c
+      Source file:   CMSIS/RTOS2/RTX/Template/MsgQueue.c
 
    * Component: Keil::CMSIS Driver:I2C:2.10
       Source file:   CMSIS/Driver/I2C_STM32F4xx.c
@@ -134,14 +135,14 @@ Package Vendor: Keil
 
    * Component: Keil::Device:STM32Cube Framework:Classic:1.7.9
       Include file:  MDK/Templates_LL/Inc/main.h
-      Include file:  CMSIS/Driver/Config/RTE_Device.h
-      Source file:   MDK/Templates/Src/stm32f4xx_hal_msp.c
-      Source file:   MDK/Templates/Src/main.c
-      Include file:  MDK/Templates/Inc/stm32f4xx_it.h
-      Source file:   MDK/Templates/Src/stm32f4xx_it.c
       Include file:  MDK/Templates/Inc/stm32f4xx_hal_conf.h
-      Include file:  MDK/Templates/Inc/main.h
+      Source file:   MDK/Templates/Src/stm32f4xx_hal_msp.c
       Source file:   MDK/Templates_LL/Src/main.c
+      Source file:   MDK/Templates/Src/stm32f4xx_it.c
+      Include file:  CMSIS/Driver/Config/RTE_Device.h
+      Include file:  MDK/Templates/Inc/stm32f4xx_it.h
+      Source file:   MDK/Templates/Src/main.c
+      Include file:  MDK/Templates/Inc/main.h
 
    * Component: Keil::Device:STM32Cube HAL:Common:1.7.9
       Include file:  Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h
@@ -180,9 +181,9 @@ Package Vendor: Keil
       Source file:   Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_usart.c
 
    * Component: Keil::Device:Startup:2.6.3
-      Include file:  Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h
-      Source file:   MDK/Device/Source/ARM/STM32F4xx_OTP.s
       Source file:   MDK/Device/Source/ARM/STM32F42xxx_43xxx_OPT.s
+      Source file:   MDK/Device/Source/ARM/STM32F4xx_OTP.s
+      Include file:  Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h
       Source file:   Drivers/CMSIS/Device/ST/STM32F4xx/Source/Templates/arm/startup_stm32f429xx.s
       Source file:   Drivers/CMSIS/Device/ST/STM32F4xx/Source/Templates/system_stm32f4xx.c
 Build Time Elapsed:  00:00:08

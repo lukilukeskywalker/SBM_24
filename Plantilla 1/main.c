@@ -87,11 +87,14 @@ static void SystemClock_Config(void);
 static void Error_Handler(void);
 
 /* Private functions ---------------------------------------------------------*/
+void setUp_tim(void);
 /**
   * @brief  Main program
   * @param  None
   * @retval None
   */
+TIM_HandleTypeDef htim3;
+TIM_OC_InitTypeDef htim3OC;
 int main(void)
 {
 
@@ -199,13 +202,42 @@ static void SystemClock_Config(void)
   }
 }
 
+void setUp_tim(void){
+	GPIO_InitTypeDef GPIO_InitStruct;
+	
+	__HAL_RCC_GPIOB_CLK_ENABLE();
+	
+	GPIO_InitStruct.Pin = GPIO_PIN_0;
+	GPIO_InitStruct.Mode = GPIO_MODE_AF_PP;
+	GPIO_InitStruct.Speed = GPIO_SPEED_MEDIUM;
+	GPIO_InitStruct.Alternate = GPIO_AF1_TIM1;
+	HAL_GPIO_Init(GPIOB, &GPIO_InitStruct);
+	htim3.Instance = TIM3;
+	//Quiero dividir por ejemplo el reloj a 10KHz, entonces:
+	//84000Khz/10KHz=8400 -> 8400-1
+	htim3.Init.Prescaler = 8399;
+	//Para bajarlo a 100Hz, con entrada 10KHz->10000/100=10
+	htim3.Init.Period=9;
+	htim3.Init.CounterMode= TIM_COUNTERMODE_UP;
+	htim3.Init.AutoReloadPreload=TIM_AUTORELOAD_PRELOAD_ENABLE;
+	//htim3.Channel=HAL_TIM_ACTIVE_CHANNEL_3;
+	HAL_TIM_OC_Init(&htim3);
+	htim3OC.OCMode = TIM_OCMODE_TOGGLE;
+	htim3OC.OCPolarity = TIM_OCPOLARITY_HIGH;
+	HAL_TIM_OC_ConfigChannel(&htim3, &htim3OC, TIM_CHANNEL_3);
+	
+	HAL_TIM_OC_Start(&htim3, TIM_CHANNEL_3);
+	
+	__HAL_RCC_TIM1_CLK_ENABLE();
+	
+	
+}
 /**
   * @brief  This function is executed in case of error occurrence.
   * @param  None
   * @retval None
   */
-static void Error_Handler(void)
-{
+static void Error_Handler(void){
   /* User may add here some code to deal with this error */
   while(1)
   {

@@ -30,6 +30,7 @@ Done!
 [Link Datasheet](https://www.st.com/resource/en/datasheet/dm00071990.pdf)
 [Link Nucleo_MBED](https://os.mbed.com/platforms/ST-Nucleo-F429ZI/)
 ### Posiciones del datasheet
+Block Map: Pag 20
 Funciones alternativas de pines: Pag 75
 ## Objetivos de las practicas
 Practica Numb:

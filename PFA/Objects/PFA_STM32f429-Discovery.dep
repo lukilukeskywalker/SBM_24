@@ -147,12 +147,12 @@ I (C:\Users\alumno\Desktop\Keil\ARM\ARMCC\include\stdio.h)(0x5E8E9122)
 I (C:\Users\alumno\Desktop\Keil\ARM\ARMCC\include\string.h)(0x5E8E9122)
 I (User\joystick.h)(0x62B31734)
 I (User\rgb.h)(0x62B44941)
-I (User\TSL2591.h)(0x62B9AA08)
+I (User\TSL2591.h)(0x62BD7E12)
 I (C:\Users\alumno\Desktop\Keil\ARM\Packs\ARM\CMSIS\5.7.0\CMSIS\Driver\Include\Driver_I2C.h)(0x5E8F258A)
 I (User\com.h)(0x62B98697)
 I (C:\Users\alumno\Desktop\Keil\ARM\Packs\ARM\CMSIS\5.7.0\CMSIS\Driver\Include\Driver_USART.h)(0x5E8F258A)
 F (.\User\main.h)(0x5D36EA88)()
-F (.\User\principal.c)(0x62BB5491)(--c99 --gnu -c --cpu Cortex-M4.fp.sp -D__RTX -g -O0 --apcs=interwork --split_sections-I.\RTE\CMSIS-I.\RTE\Device\STM32F429ZITx-I.\RTE\_STM32f429-Discovery-IC:\Users\alumno\Desktop\Keil\ARM\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include-IC:\Users\alumno\Desktop\Keil\ARM\Packs\ARM\CMSIS\5.7.0\CMSIS\Driver\Include-IC:\Users\alumno\Desktop\Keil\ARM\Packs\ARM\CMSIS\5.7.0\CMSIS\RTOS2\Include-IC:\Users\alumno\Desktop\Keil\ARM\Packs\ARM\CMSIS\5.7.0\CMSIS\RTOS2\RTX\Include-IC:\Users\alumno\Desktop\Keil\ARM\Packs\Keil\STM32F4xx_DFP\2.15.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-IC:\Users\alumno\Desktop\Keil\ARM\Packs\Keil\STM32F4xx_DFP\2.15.0\Drivers\STM32F4xx_HAL_Driver\Inc-D__UVISION_VERSION="537" -D_RTE_ -DSTM32F429xx -D_RTE_ -DHSE_VALUE="8000000"-o .\objects\principal.o --omf_browse .\objects\principal.crf --depend .\objects\principal.d)
+F (.\User\principal.c)(0x62BD7F3F)(--c99 --gnu -c --cpu Cortex-M4.fp.sp -D__RTX -g -O0 --apcs=interwork --split_sections-I.\RTE\CMSIS-I.\RTE\Device\STM32F429ZITx-I.\RTE\_STM32f429-Discovery-IC:\Users\alumno\Desktop\Keil\ARM\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include-IC:\Users\alumno\Desktop\Keil\ARM\Packs\ARM\CMSIS\5.7.0\CMSIS\Driver\Include-IC:\Users\alumno\Desktop\Keil\ARM\Packs\ARM\CMSIS\5.7.0\CMSIS\RTOS2\Include-IC:\Users\alumno\Desktop\Keil\ARM\Packs\ARM\CMSIS\5.7.0\CMSIS\RTOS2\RTX\Include-IC:\Users\alumno\Desktop\Keil\ARM\Packs\Keil\STM32F4xx_DFP\2.15.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-IC:\Users\alumno\Desktop\Keil\ARM\Packs\Keil\STM32F4xx_DFP\2.15.0\Drivers\STM32F4xx_HAL_Driver\Inc-D__UVISION_VERSION="537" -D_RTE_ -DSTM32F429xx -D_RTE_ -DHSE_VALUE="8000000"-o .\objects\principal.o --omf_browse .\objects\principal.crf --depend .\objects\principal.d)
 I (User\principal.h)(0x62B8A5AF)
 I (C:\Users\alumno\Desktop\Keil\ARM\ARMCC\include\stdlib.h)(0x5E8E9122)
 I (User\clock.h)(0x62B04DCE)
@@ -199,7 +199,7 @@ I (C:\Users\alumno\Desktop\Keil\ARM\ARMCC\include\stdio.h)(0x5E8E9122)
 I (C:\Users\alumno\Desktop\Keil\ARM\ARMCC\include\string.h)(0x5E8E9122)
 I (User\joystick.h)(0x62B31734)
 I (User\rgb.h)(0x62B44941)
-I (User\TSL2591.h)(0x62B9AA08)
+I (User\TSL2591.h)(0x62BD7E12)
 I (C:\Users\alumno\Desktop\Keil\ARM\Packs\ARM\CMSIS\5.7.0\CMSIS\Driver\Include\Driver_I2C.h)(0x5E8F258A)
 I (User\com.h)(0x62B98697)
 I (C:\Users\alumno\Desktop\Keil\ARM\Packs\ARM\CMSIS\5.7.0\CMSIS\Driver\Include\Driver_USART.h)(0x5E8F258A)
@@ -280,15 +280,15 @@ I (C:\Users\alumno\Desktop\Keil\ARM\Packs\Keil\STM32F4xx_DFP\2.15.0\Drivers\STM3
 I (C:\Users\alumno\Desktop\Keil\ARM\Packs\Keil\STM32F4xx_DFP\2.15.0\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_usart.h)(0x5F6B26D6)
 I (User\stm32f4xx_it.h)(0x5A6ED43C)
 F (.\User\stm32f4xx_it.h)(0x5A6ED43C)()
-F (.\User\TSL2591.c)(0x62B9C438)(--c99 --gnu -c --cpu Cortex-M4.fp.sp -D__RTX -g -O0 --apcs=interwork --split_sections-I.\RTE\CMSIS-I.\RTE\Device\STM32F429ZITx-I.\RTE\_STM32f429-Discovery-IC:\Users\alumno\Desktop\Keil\ARM\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include-IC:\Users\alumno\Desktop\Keil\ARM\Packs\ARM\CMSIS\5.7.0\CMSIS\Driver\Include-IC:\Users\alumno\Desktop\Keil\ARM\Packs\ARM\CMSIS\5.7.0\CMSIS\RTOS2\Include-IC:\Users\alumno\Desktop\Keil\ARM\Packs\ARM\CMSIS\5.7.0\CMSIS\RTOS2\RTX\Include-IC:\Users\alumno\Desktop\Keil\ARM\Packs\Keil\STM32F4xx_DFP\2.15.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-IC:\Users\alumno\Desktop\Keil\ARM\Packs\Keil\STM32F4xx_DFP\2.15.0\Drivers\STM32F4xx_HAL_Driver\Inc-D__UVISION_VERSION="537" -D_RTE_ -DSTM32F429xx -D_RTE_ -DHSE_VALUE="8000000"-o .\objects\tsl2591.o --omf_browse .\objects\tsl2591.crf --depend .\objects\tsl2591.d)
-I (User\TSL2591.h)(0x62B9AA08)
+F (.\User\TSL2591.c)(0x62BD8038)(--c99 --gnu -c --cpu Cortex-M4.fp.sp -D__RTX -g -O0 --apcs=interwork --split_sections-I.\RTE\CMSIS-I.\RTE\Device\STM32F429ZITx-I.\RTE\_STM32f429-Discovery-IC:\Users\alumno\Desktop\Keil\ARM\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include-IC:\Users\alumno\Desktop\Keil\ARM\Packs\ARM\CMSIS\5.7.0\CMSIS\Driver\Include-IC:\Users\alumno\Desktop\Keil\ARM\Packs\ARM\CMSIS\5.7.0\CMSIS\RTOS2\Include-IC:\Users\alumno\Desktop\Keil\ARM\Packs\ARM\CMSIS\5.7.0\CMSIS\RTOS2\RTX\Include-IC:\Users\alumno\Desktop\Keil\ARM\Packs\Keil\STM32F4xx_DFP\2.15.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-IC:\Users\alumno\Desktop\Keil\ARM\Packs\Keil\STM32F4xx_DFP\2.15.0\Drivers\STM32F4xx_HAL_Driver\Inc-D__UVISION_VERSION="537" -D_RTE_ -DSTM32F429xx -D_RTE_ -DHSE_VALUE="8000000"-o .\objects\tsl2591.o --omf_browse .\objects\tsl2591.crf --depend .\objects\tsl2591.d)
+I (User\TSL2591.h)(0x62BD7E12)
 I (C:\Users\alumno\Desktop\Keil\ARM\Packs\ARM\CMSIS\5.7.0\CMSIS\RTOS2\Include\cmsis_os2.h)(0x5E835B2E)
 I (C:\Users\alumno\Desktop\Keil\ARM\ARMCC\include\stdint.h)(0x5E8E9122)
 I (C:\Users\alumno\Desktop\Keil\ARM\ARMCC\include\stddef.h)(0x5E8E9122)
 I (C:\Users\alumno\Desktop\Keil\ARM\Packs\ARM\CMSIS\5.7.0\CMSIS\Driver\Include\Driver_I2C.h)(0x5E8F258A)
 I (C:\Users\alumno\Desktop\Keil\ARM\Packs\ARM\CMSIS\5.7.0\CMSIS\Driver\Include\Driver_Common.h)(0x5C8A78DC)
 I (C:\Users\alumno\Desktop\Keil\ARM\ARMCC\include\stdbool.h)(0x5E8E9122)
-F (.\User\TSL2591.h)(0x62B9AA08)()
+F (.\User\TSL2591.h)(0x62BD7E12)()
 F (C:/Users/alumno/Desktop/Keil/ARM/Packs/ARM/CMSIS/5.7.0/CMSIS/RTOS2/RTX/Library/ARM/RTX_CM4F.lib)(0x5E8F258A)()
 F (C:/Users/alumno/Desktop/Keil/ARM/Packs/ARM/CMSIS/5.7.0/CMSIS/RTOS2/RTX/Source/rtx_lib.c)(0x5E835B2E)(--c99 --gnu -c --cpu Cortex-M4.fp.sp -D__RTX -g -O0 --apcs=interwork --split_sections-I.\RTE\CMSIS-I.\RTE\Device\STM32F429ZITx-I.\RTE\_STM32f429-Discovery-IC:\Users\alumno\Desktop\Keil\ARM\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include-IC:\Users\alumno\Desktop\Keil\ARM\Packs\ARM\CMSIS\5.7.0\CMSIS\Driver\Include-IC:\Users\alumno\Desktop\Keil\ARM\Packs\ARM\CMSIS\5.7.0\CMSIS\RTOS2\Include-IC:\Users\alumno\Desktop\Keil\ARM\Packs\ARM\CMSIS\5.7.0\CMSIS\RTOS2\RTX\Include-IC:\Users\alumno\Desktop\Keil\ARM\Packs\Keil\STM32F4xx_DFP\2.15.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-IC:\Users\alumno\Desktop\Keil\ARM\Packs\Keil\STM32F4xx_DFP\2.15.0\Drivers\STM32F4xx_HAL_Driver\Inc-D__UVISION_VERSION="537" -D_RTE_ -DSTM32F429xx -D_RTE_ -DHSE_VALUE="8000000"-o .\objects\rtx_lib.o --omf_browse .\objects\rtx_lib.crf --depend .\objects\rtx_lib.d)
 I (C:\Users\alumno\Desktop\Keil\ARM\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\cmsis_compiler.h)(0x5E835B22)

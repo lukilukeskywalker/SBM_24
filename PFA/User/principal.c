@@ -196,6 +196,7 @@ static void Th_principal (void *argument) {
 					msg_lcd.init_L2 = 20;
 					sprintf(msg_lcd.data_L2, "ESTADO ACTIVO");
 					estado = ACTIVO;
+					while(osMessageQueueGet(mid_MsgQueue_com_rx, &msg_com_rx, NULL, 0U)!=osErrorResource);
 				}
 			break;
 			
@@ -349,7 +350,10 @@ static void muestreo_lum(){
 			msg_lcd.init_L2 = 30;
 			sprintf(msg_lcd.data_L2, "C Luz: %d%d.%d%%", msg_i2c.light_cen, msg_i2c.light_dec, msg_i2c.light_uni);
 			numero_ciclos--;
-			if(numero_ciclos == 0)lock=UNLOCKED;
+			if(numero_ciclos == 0){
+				lock=UNLOCKED;
+				while(osMessageQueueGet(mid_MsgQueue_joy, &msg_com_rx, NULL, 0U)!=osErrorResource);
+			}
 		}
 		else{
 			msg_lcd.init_L2 = 35;
@@ -397,8 +401,9 @@ static void countdown_setup(MSGQUEUE_OBJ_COM msg){
 }
 
 static void countdown_read(MSGQUEUE_OBJ_COM msg){ 
-	msg.data[0] = countdown;
+	msg.data[0] = countdown+ASCII_DISP;
 	msg.size = 1;
+	msg.last_msg=true;
 	osMessageQueuePut(mid_MsgQueue_com_tx, &msg, NULL, 0U);
 }
 static void number_measures(MSGQUEUE_OBJ_COM msg){
@@ -473,7 +478,8 @@ static void last_measure(MSGQUEUE_OBJ_COM msg){
 //	msg.data[12]=medida.lum_uni;
 //	msg.data[13]=0x25;
 //	msg.size=14;*/
-	measureToMsg(&msg, buffer_circ->ultima_entrada-1);
+	if(buffer_circ->elementos != 0)
+		measureToMsg(&msg, buffer_circ->ultima_entrada-1);
 	osMessageQueuePut(mid_MsgQueue_com_tx, &msg, NULL, 0U);
 }
 static MSGQUEUE_OBJ_COM measureToMsg(MSGQUEUE_OBJ_COM *msg, uint8_t entrada){

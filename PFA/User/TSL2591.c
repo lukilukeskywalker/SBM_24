@@ -94,6 +94,7 @@ int capture_lum(int ciclo){
 			osMessageQueuePut(mid_MsgQueue_I2C, &msg, 0U, 0U);	
 			return 0;//osThreadFlagsClear(INIT_LIGHT_MEASURE);
 		}
+		return -1;
 }
 
 
@@ -130,7 +131,8 @@ void Th_I2C (void *argument) {
 	//Escribir en A0 03 
 	uint8_t data[]={TSL_CMD_BIT_REG|TSL_TRANSACTION|ENA_REG, ALS_ON|POWER_ON, MEDIUM_GAIN};	//ALS_ENABLE & PowerON, MEDIOUM GAIN
 	write_TSL2591(data, 3);
-	//free(data);	//Crashea el hilo de ejeccucion, una vez espera un 
+	//free(data);	//Crashea el hilo de ejeccucion, una vez espera un
+	//read_TSL2591(TSL_CMD_BIT_REG|TSL_TRANSACTION|TSL_VISB_REG, lum_buf, 4);
 	while (1) {
 		osThreadFlagsWait(INIT_LIGHT_MEASURE|INIT_LIGHT_CYCLE, osFlagsWaitAny | osFlagsNoClear, osWaitForever);	//Se queda esperando hasta que recibe un flag del OS
 		flags = osThreadFlagsGet();

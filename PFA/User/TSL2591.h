@@ -13,7 +13,7 @@
 #define MSGQUEUE_OBJECTS_I2C 16
 
 #define MAX_VALUE_VIS 38000 //37889
-#define MIN_VALUE_VIS 75
+#define MIN_VALUE_VIS 25
 
 typedef struct{
 	uint8_t light_cen;

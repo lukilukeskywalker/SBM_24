@@ -8,7 +8,7 @@
 ".\objects\rgb.o"
 ".\objects\stm32f4xx_it.o"
 ".\objects\tsl2591.o"
-"..\..\Keil\ARM\Packs\ARM\CMSIS\5.7.0\CMSIS\RTOS2\RTX\Library\ARM\RTX_CM4F.lib"
+"..\..\..\Keil\ARM\Packs\ARM\CMSIS\5.7.0\CMSIS\RTOS2\RTX\Library\ARM\RTX_CM4F.lib"
 ".\objects\rtx_lib.o"
 ".\objects\rtx_config.o"
 ".\objects\i2c_stm32f4xx.o"
