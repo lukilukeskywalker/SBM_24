@@ -5,10 +5,9 @@
 <h2>Tool Versions:</h2>
 IDE-Version: µVision V5.37.0.0
 Copyright (C) 2022 ARM Ltd and ARM Germany GmbH. All rights reserved.
-License Information: Lukas Gdanietz UPM Flex license: MDK Professional 5.34 (Flex) (mdk_pro) Operation stops: 8 Mar 2024
- 
+License Information: Lukas Gdanietz UPM Flex license: error obtaining information 
 Tool Versions:
-Toolchain:       MDK Professional 5.34 (Flex)  Version: 5.34.0.0
+Toolchain:       MDK-Lite  Version: 5.34.0.0
 Toolchain Path:  C:\Users\alumno\Desktop\Keil\ARM\ARMCLANG\Bin
 C Compiler:      ArmClang.exe V6.16
 Assembler:       Armasm.exe V6.16
@@ -28,370 +27,212 @@ Project File Date:  06/29/2022
 *** Using Compiler 'V6.16', folder: 'C:\Users\alumno\Desktop\Keil\ARM\ARMCLANG\Bin'
 Build target 'Target 1'
 compiling main.c...
-ArmClang: error: Failed to check out a license.Cannot connect to license server system.
- The license server manager (lmgrd) has not been started yet,
- the wrong port@host or license file is being used, or the
- port or hostname in the license file has been changed.
-Feature:       mdk_pro_compiler5
-Server name:   138.100.48.79
-License path:  8224@138.100.48.79;c:\program files\arm\licenses\license.dat;
-FlexNet Licensing error:-15,10032
-ArmClang: note: Check that your license details are correct in the License Management dialog of MDK. Additional information is available at:
- http://www.keil.com/support/man/docs/license/license_management.htm
- If you need further help, provide this complete error report to your supplier or license.support@arm.com.
- - ARMLMD_LICENSE_FILE: '8224@138.100.48.79'
- - LM_LICENSE_FILE: unset
- - ARM_PRODUCT_DEF: unset
- - ARM_PRODUCT_PATH: unset
- - ARM_TOOL_VARIANT: unset
- - Product location: C:\Users\alumno\Desktop\Keil\ARM\sw\mappings
- - Toolchain location: C:\Users\alumno\Desktop\Keil\ARM\ARMCLANG\Bin
- - Selected tool variant: mdk_pro_flex
-ArmClang: note:  - Checkout feature: mdk_pro_compiler5
- - Feature version: 5.0202103
- - Flex error code: -15
-Product: MDK Professional 5.34 (Flex)
-Component: ARM Compiler 6.16
-Tool: armclang [5dfeb700]
+main.c(41): warning: In file included from...
+./main.h(41): warning: In file included from...
+C:/Users/alumno/Desktop/Keil/ARM/Packs/Keil/STM32F4xx_DFP/2.15.0/Drivers/STM32F4xx_HAL_Driver/Inc\stm32f4xx_hal.h(30): warning: In file included from...
+./RTE/Device/STM32F429ZITx\stm32f4xx_hal_conf.h(411): warning: In file included from...
+C:/Users/alumno/Desktop/Keil/ARM/Packs/Keil/STM32F4xx_DFP/2.15.0/Drivers/STM32F4xx_HAL_Driver/Inc\stm32f4xx_hal_dma.h(110): warning: commas at the end of enumerator lists are a C99-specific feature [-Wc99-extensions]
+  HAL_DMA_STATE_ABORT             = 0x05U,  /*!< DMA Abort state                     */
+                                         ^~
+main.c(44): warning: // comments are not allowed in this language [-Wcomment]
+#include "RTE_Components.h"             // Component selection
+                                        ^
+main.c(41): warning: In file included from...
+./main.h(41): warning: In file included from...
+C:/Users/alumno/Desktop/Keil/ARM/Packs/Keil/STM32F4xx_DFP/2.15.0/Drivers/STM32F4xx_HAL_Driver/Inc\stm32f4xx_hal.h(30): warning: In file included from...
+./RTE/Device/STM32F429ZITx\stm32f4xx_hal_conf.h(527): warning: In file included from...
+C:/Users/alumno/Desktop/Keil/ARM/Packs/Keil/STM32F4xx_DFP/2.15.0/Drivers/STM32F4xx_HAL_Driver/Inc\stm32f4xx_hal_tim.h(321): warning: padding struct 'TIM_HandleTypeDef' with 3 bytes to align 'hdma' [-Wpadded]
+  DMA_HandleTypeDef           *hdma[7];      /*!< DMA Handlers array
+                               ^
+C:/Users/alumno/Desktop/Keil/ARM/Packs/Keil/STM32F4xx_DFP/2.15.0/Drivers/STM32F4xx_HAL_Driver/Inc\stm32f4xx_hal_tim.h(315): warning: padding size of 'TIM_HandleTypeDef' with 2 bytes to alignment boundary [-Wpadded]
+typedef struct
+        ^
+main.c(41): warning: In file included from...
+./main.h(41): warning: In file included from...
+C:/Users/alumno/Desktop/Keil/ARM/Packs/Keil/STM32F4xx_DFP/2.15.0/Drivers/STM32F4xx_HAL_Driver/Inc\stm32f4xx_hal.h(30): warning: In file included from...
+./RTE/Device/STM32F429ZITx\stm32f4xx_hal_conf.h(411): warning: In file included from...
+C:/Users/alumno/Desktop/Keil/ARM/Packs/Keil/STM32F4xx_DFP/2.15.0/Drivers/STM32F4xx_HAL_Driver/Inc\stm32f4xx_hal_dma.h(149): warning: padding struct 'struct __DMA_HandleTypeDef' with 2 bytes to align 'Parent' [-Wpadded]
+  void                       *Parent;                                                          /*!< Parent object state                    */ 
+                              ^
+main.c(240): warning: function 'Error_Handler' could be declared with attribute 'noreturn' [-Wmissing-noreturn]
+static void Error_Handler(void){
+                               ^
+main.c(96): warning: no previous extern declaration for non-static variable 'htim3' [-Wmissing-variable-declarations]
+TIM_HandleTypeDef htim3;
+                  ^
+main.c(96): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+TIM_HandleTypeDef htim3;
+^
+main.c(97): warning: no previous extern declaration for non-static variable 'htim3OC' [-Wmissing-variable-declarations]
+TIM_OC_InitTypeDef htim3OC;
+                   ^
+main.c(97): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+TIM_OC_InitTypeDef htim3OC;
+^
+8 warnings generated.
 compiling stm32f4xx_hal.c...
-ArmClang: error: Failed to check out a license.Cannot connect to license server system.
- The license server manager (lmgrd) has not been started yet,
- the wrong port@host or license file is being used, or the
- port or hostname in the license file has been changed.
-Feature:       mdk_pro_compiler5
-Server name:   138.100.48.79
-License path:  8224@138.100.48.79;c:\program files\arm\licenses\license.dat;
-FlexNet Licensing error:-15,10032
-ArmClang: note: Check that your license details are correct in the License Management dialog of MDK. Additional information is available at:
- http://www.keil.com/support/man/docs/license/license_management.htm
- If you need further help, provide this complete error report to your supplier or license.support@arm.com.
- - ARMLMD_LICENSE_FILE: '8224@138.100.48.79'
- - LM_LICENSE_FILE: unset
- - ARM_PRODUCT_DEF: unset
- - ARM_PRODUCT_PATH: unset
- - ARM_TOOL_VARIANT: unset
- - Product location: C:\Users\alumno\Desktop\Keil\ARM\sw\mappings
- - Toolchain location: C:\Users\alumno\Desktop\Keil\ARM\ARMCLANG\Bin
- - Selected tool variant: mdk_pro_flex
-ArmClang: note:  - Checkout feature: mdk_pro_compiler5
- - Feature version: 5.0202103
- - Flex error code: -15
-Product: MDK Professional 5.34 (Flex)
-Component: ARM Compiler 6.16
-Tool: armclang [5dfeb700]
+C:/Users/alumno/Desktop/Keil/ARM/Packs/Keil/STM32F4xx_DFP/2.15.0/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c(36): warning: In file included from...
+C:/Users/alumno/Desktop/Keil/ARM/Packs/Keil/STM32F4xx_DFP/2.15.0/Drivers/STM32F4xx_HAL_Driver/Inc\stm32f4xx_hal.h(30): warning: In file included from...
+./RTE/Device/STM32F429ZITx\stm32f4xx_hal_conf.h(411): warning: In file included from...
+C:/Users/alumno/Desktop/Keil/ARM/Packs/Keil/STM32F4xx_DFP/2.15.0/Drivers/STM32F4xx_HAL_Driver/Inc\stm32f4xx_hal_dma.h(110): warning: commas at the end of enumerator lists are a C99-specific feature [-Wc99-extensions]
+  HAL_DMA_STATE_ABORT             = 0x05U,  /*!< DMA Abort state                     */
+                                         ^~
+1 warning generated.
 compiling stm32f4xx_hal_cortex.c...
-ArmClang: error: Failed to check out a license.Cannot connect to license server system.
- The license server manager (lmgrd) has not been started yet,
- the wrong port@host or license file is being used, or the
- port or hostname in the license file has been changed.
-Feature:       mdk_pro_compiler5
-Server name:   138.100.48.79
-License path:  8224@138.100.48.79;c:\program files\arm\licenses\license.dat;
-FlexNet Licensing error:-15,10032
-ArmClang: note: Check that your license details are correct in the License Management dialog of MDK. Additional information is available at:
- http://www.keil.com/support/man/docs/license/license_management.htm
- If you need further help, provide this complete error report to your supplier or license.support@arm.com.
- - ARMLMD_LICENSE_FILE: '8224@138.100.48.79'
- - LM_LICENSE_FILE: unset
- - ARM_PRODUCT_DEF: unset
- - ARM_PRODUCT_PATH: unset
- - ARM_TOOL_VARIANT: unset
- - Product location: C:\Users\alumno\Desktop\Keil\ARM\sw\mappings
- - Toolchain location: C:\Users\alumno\Desktop\Keil\ARM\ARMCLANG\Bin
- - Selected tool variant: mdk_pro_flex
-ArmClang: note:  - Checkout feature: mdk_pro_compiler5
- - Feature version: 5.0202103
- - Flex error code: -15
-Product: MDK Professional 5.34 (Flex)
-Component: ARM Compiler 6.16
-Tool: armclang [5dfeb700]
-compiling stm32f4xx_hal_gpio.c...
-ArmClang: error: Failed to check out a license.Cannot connect to license server system.
- The license server manager (lmgrd) has not been started yet,
- the wrong port@host or license file is being used, or the
- port or hostname in the license file has been changed.
-Feature:       mdk_pro_compiler5
-Server name:   138.100.48.79
-License path:  8224@138.100.48.79;c:\program files\arm\licenses\license.dat;
-FlexNet Licensing error:-15,10032
-ArmClang: note: Check that your license details are correct in the License Management dialog of MDK. Additional information is available at:
- http://www.keil.com/support/man/docs/license/license_management.htm
- If you need further help, provide this complete error report to your supplier or license.support@arm.com.
- - ARMLMD_LICENSE_FILE: '8224@138.100.48.79'
- - LM_LICENSE_FILE: unset
- - ARM_PRODUCT_DEF: unset
- - ARM_PRODUCT_PATH: unset
- - ARM_TOOL_VARIANT: unset
- - Product location: C:\Users\alumno\Desktop\Keil\ARM\sw\mappings
- - Toolchain location: C:\Users\alumno\Desktop\Keil\ARM\ARMCLANG\Bin
- - Selected tool variant: mdk_pro_flex
-ArmClang: note:  - Checkout feature: mdk_pro_compiler5
- - Feature version: 5.0202103
- - Flex error code: -15
-Product: MDK Professional 5.34 (Flex)
-Component: ARM Compiler 6.16
-Tool: armclang [5dfeb700]
-compiling stm32f4xx_hal_pwr.c...
-ArmClang: error: Failed to check out a license.Cannot connect to license server system.
- The license server manager (lmgrd) has not been started yet,
- the wrong port@host or license file is being used, or the
- port or hostname in the license file has been changed.
-Feature:       mdk_pro_compiler5
-Server name:   138.100.48.79
-License path:  8224@138.100.48.79;c:\program files\arm\licenses\license.dat;
-FlexNet Licensing error:-15,10032
-ArmClang: note: Check that your license details are correct in the License Management dialog of MDK. Additional information is available at:
- http://www.keil.com/support/man/docs/license/license_management.htm
- If you need further help, provide this complete error report to your supplier or license.support@arm.com.
- - ARMLMD_LICENSE_FILE: '8224@138.100.48.79'
- - LM_LICENSE_FILE: unset
- - ARM_PRODUCT_DEF: unset
- - ARM_PRODUCT_PATH: unset
- - ARM_TOOL_VARIANT: unset
- - Product location: C:\Users\alumno\Desktop\Keil\ARM\sw\mappings
- - Toolchain location: C:\Users\alumno\Desktop\Keil\ARM\ARMCLANG\Bin
- - Selected tool variant: mdk_pro_flex
-ArmClang: note:  - Checkout feature: mdk_pro_compiler5
- - Feature version: 5.0202103
- - Flex error code: -15
-Product: MDK Professional 5.34 (Flex)
-Component: ARM Compiler 6.16
-Tool: armclang [5dfeb700]
-compiling stm32f4xx_hal_pwr_ex.c...
-ArmClang: error: Failed to check out a license.Cannot connect to license server system.
- The license server manager (lmgrd) has not been started yet,
- the wrong port@host or license file is being used, or the
- port or hostname in the license file has been changed.
-Feature:       mdk_pro_compiler5
-Server name:   138.100.48.79
-License path:  8224@138.100.48.79;c:\program files\arm\licenses\license.dat;
-FlexNet Licensing error:-15,10032
-ArmClang: note: Check that your license details are correct in the License Management dialog of MDK. Additional information is available at:
- http://www.keil.com/support/man/docs/license/license_management.htm
- If you need further help, provide this complete error report to your supplier or license.support@arm.com.
- - ARMLMD_LICENSE_FILE: '8224@138.100.48.79'
- - LM_LICENSE_FILE: unset
- - ARM_PRODUCT_DEF: unset
- - ARM_PRODUCT_PATH: unset
- - ARM_TOOL_VARIANT: unset
- - Product location: C:\Users\alumno\Desktop\Keil\ARM\sw\mappings
- - Toolchain location: C:\Users\alumno\Desktop\Keil\ARM\ARMCLANG\Bin
- - Selected tool variant: mdk_pro_flex
-ArmClang: note:  - Checkout feature: mdk_pro_compiler5
- - Feature version: 5.0202103
- - Flex error code: -15
-Product: MDK Professional 5.34 (Flex)
-Component: ARM Compiler 6.16
-Tool: armclang [5dfeb700]
-compiling stm32f4xx_hal_rcc.c...
-ArmClang: error: Failed to check out a license.Cannot connect to license server system.
- The license server manager (lmgrd) has not been started yet,
- the wrong port@host or license file is being used, or the
- port or hostname in the license file has been changed.
-Feature:       mdk_pro_compiler5
-Server name:   138.100.48.79
-License path:  8224@138.100.48.79;c:\program files\arm\licenses\license.dat;
-FlexNet Licensing error:-15,10032
-ArmClang: note: Check that your license details are correct in the License Management dialog of MDK. Additional information is available at:
- http://www.keil.com/support/man/docs/license/license_management.htm
- If you need further help, provide this complete error report to your supplier or license.support@arm.com.
- - ARMLMD_LICENSE_FILE: '8224@138.100.48.79'
- - LM_LICENSE_FILE: unset
- - ARM_PRODUCT_DEF: unset
- - ARM_PRODUCT_PATH: unset
- - ARM_TOOL_VARIANT: unset
- - Product location: C:\Users\alumno\Desktop\Keil\ARM\sw\mappings
- - Toolchain location: C:\Users\alumno\Desktop\Keil\ARM\ARMCLANG\Bin
- - Selected tool variant: mdk_pro_flex
-ArmClang: note:  - Checkout feature: mdk_pro_compiler5
- - Feature version: 5.0202103
- - Flex error code: -15
-Product: MDK Professional 5.34 (Flex)
-Component: ARM Compiler 6.16
-Tool: armclang [5dfeb700]
-compiling stm32f4xx_hal_rcc_ex.c...
-ArmClang: error: Failed to check out a license.Cannot connect to license server system.
- The license server manager (lmgrd) has not been started yet,
- the wrong port@host or license file is being used, or the
- port or hostname in the license file has been changed.
-Feature:       mdk_pro_compiler5
-Server name:   138.100.48.79
-License path:  8224@138.100.48.79;c:\program files\arm\licenses\license.dat;
-FlexNet Licensing error:-15,10032
-ArmClang: note: Check that your license details are correct in the License Management dialog of MDK. Additional information is available at:
- http://www.keil.com/support/man/docs/license/license_management.htm
- If you need further help, provide this complete error report to your supplier or license.support@arm.com.
- - ARMLMD_LICENSE_FILE: '8224@138.100.48.79'
- - LM_LICENSE_FILE: unset
- - ARM_PRODUCT_DEF: unset
- - ARM_PRODUCT_PATH: unset
- - ARM_TOOL_VARIANT: unset
- - Product location: C:\Users\alumno\Desktop\Keil\ARM\sw\mappings
- - Toolchain location: C:\Users\alumno\Desktop\Keil\ARM\ARMCLANG\Bin
- - Selected tool variant: mdk_pro_flex
-ArmClang: note:  - Checkout feature: mdk_pro_compiler5
- - Feature version: 5.0202103
- - Flex error code: -15
-Product: MDK Professional 5.34 (Flex)
-Component: ARM Compiler 6.16
-Tool: armclang [5dfeb700]
-assembling startup_stm32f429xx.s...
-ArmClang: error: Failed to check out a license.Cannot connect to license server system.
- The license server manager (lmgrd) has not been started yet,
- the wrong port@host or license file is being used, or the
- port or hostname in the license file has been changed.
-Feature:       mdk_pro_compiler5
-Server name:   138.100.48.79
-License path:  8224@138.100.48.79;c:\program files\arm\licenses\license.dat;
-FlexNet Licensing error:-15,10032
-ArmClang: note: Check that your license details are correct in the License Management dialog of MDK. Additional information is available at:
- http://www.keil.com/support/man/docs/license/license_management.htm
- If you need further help, provide this complete error report to your supplier or license.support@arm.com.
- - ARMLMD_LICENSE_FILE: '8224@138.100.48.79'
- - LM_LICENSE_FILE: unset
- - ARM_PRODUCT_DEF: unset
- - ARM_PRODUCT_PATH: unset
- - ARM_TOOL_VARIANT: unset
- - Product location: C:\Users\alumno\Desktop\Keil\ARM\sw\mappings
- - Toolchain location: C:\Users\alumno\Desktop\Keil\ARM\ARMCLANG\Bin
- - Selected tool variant: mdk_pro_flex
-ArmClang: note:  - Checkout feature: mdk_pro_compiler5
- - Feature version: 5.0202103
- - Flex error code: -15
-Product: MDK Professional 5.34 (Flex)
-Component: ARM Compiler 6.16
-Tool: armclang [5dfeb700]
-compiling system_stm32f4xx.c...
-ArmClang: error: Failed to check out a license.Cannot connect to license server system.
- The license server manager (lmgrd) has not been started yet,
- the wrong port@host or license file is being used, or the
- port or hostname in the license file has been changed.
-Feature:       mdk_pro_compiler5
-Server name:   138.100.48.79
-License path:  8224@138.100.48.79;c:\program files\arm\licenses\license.dat;
-FlexNet Licensing error:-15,10032
-ArmClang: note: Check that your license details are correct in the License Management dialog of MDK. Additional information is available at:
- http://www.keil.com/support/man/docs/license/license_management.htm
- If you need further help, provide this complete error report to your supplier or license.support@arm.com.
- - ARMLMD_LICENSE_FILE: '8224@138.100.48.79'
- - LM_LICENSE_FILE: unset
- - ARM_PRODUCT_DEF: unset
- - ARM_PRODUCT_PATH: unset
- - ARM_TOOL_VARIANT: unset
- - Product location: C:\Users\alumno\Desktop\Keil\ARM\sw\mappings
- - Toolchain location: C:\Users\alumno\Desktop\Keil\ARM\ARMCLANG\Bin
- - Selected tool variant: mdk_pro_flex
-ArmClang: note:  - Checkout feature: mdk_pro_compiler5
- - Feature version: 5.0202103
- - Flex error code: -15
-Product: MDK Professional 5.34 (Flex)
-Component: ARM Compiler 6.16
-Tool: armclang [5dfeb700]
+C:/Users/alumno/Desktop/Keil/ARM/Packs/Keil/STM32F4xx_DFP/2.15.0/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c(83): warning: In file included from...
+C:/Users/alumno/Desktop/Keil/ARM/Packs/Keil/STM32F4xx_DFP/2.15.0/Drivers/STM32F4xx_HAL_Driver/Inc\stm32f4xx_hal.h(30): warning: In file included from...
+./RTE/Device/STM32F429ZITx\stm32f4xx_hal_conf.h(411): warning: In file included from...
+C:/Users/alumno/Desktop/Keil/ARM/Packs/Keil/STM32F4xx_DFP/2.15.0/Drivers/STM32F4xx_HAL_Driver/Inc\stm32f4xx_hal_dma.h(110): warning: commas at the end of enumerator lists are a C99-specific feature [-Wc99-extensions]
+  HAL_DMA_STATE_ABORT             = 0x05U,  /*!< DMA Abort state                     */
+                                         ^~
+C:/Users/alumno/Desktop/Keil/ARM/Packs/Keil/STM32F4xx_DFP/2.15.0/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c(217): warning: function 'HAL_NVIC_SystemReset' could be declared with attribute 'noreturn' [-Wmissing-noreturn]
+{
+^
+C:/Users/alumno/Desktop/Keil/ARM/Packs/Keil/STM32F4xx_DFP/2.15.0/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c(83): warning: In file included from...
+C:/Users/alumno/Desktop/Keil/ARM/Packs/Keil/STM32F4xx_DFP/2.15.0/Drivers/STM32F4xx_HAL_Driver/Inc\stm32f4xx_hal.h(30): warning: In file included from...
+./RTE/Device/STM32F429ZITx\stm32f4xx_hal_conf.h(415): warning: In file included from...
+C:/Users/alumno/Desktop/Keil/ARM/Packs/Keil/STM32F4xx_DFP/2.15.0/Drivers/STM32F4xx_HAL_Driver/Inc\stm32f4xx_hal_cortex.h(54): warning: padding struct 'MPU_Region_InitTypeDef' with 2 bytes to align 'BaseAddress' [-Wpadded]
+  uint32_t               BaseAddress;           /*!< Specifies the base address of the region to protect.                           */
+                         ^
+3 warnings generated.
 compiling stm32f4xx_hal_dma.c...
-ArmClang: error: Failed to check out a license.Cannot connect to license server system.
- The license server manager (lmgrd) has not been started yet,
- the wrong port@host or license file is being used, or the
- port or hostname in the license file has been changed.
-Feature:       mdk_pro_compiler5
-Server name:   138.100.48.79
-License path:  8224@138.100.48.79;c:\program files\arm\licenses\license.dat;
-FlexNet Licensing error:-15,10032
-ArmClang: note: Check that your license details are correct in the License Management dialog of MDK. Additional information is available at:
- http://www.keil.com/support/man/docs/license/license_management.htm
- If you need further help, provide this complete error report to your supplier or license.support@arm.com.
- - ARMLMD_LICENSE_FILE: '8224@138.100.48.79'
- - LM_LICENSE_FILE: unset
- - ARM_PRODUCT_DEF: unset
- - ARM_PRODUCT_PATH: unset
- - ARM_TOOL_VARIANT: unset
- - Product location: C:\Users\alumno\Desktop\Keil\ARM\sw\mappings
- - Toolchain location: C:\Users\alumno\Desktop\Keil\ARM\ARMCLANG\Bin
- - Selected tool variant: mdk_pro_flex
-ArmClang: note:  - Checkout feature: mdk_pro_compiler5
- - Feature version: 5.0202103
- - Flex error code: -15
-Product: MDK Professional 5.34 (Flex)
-Component: ARM Compiler 6.16
-Tool: armclang [5dfeb700]
+C:/Users/alumno/Desktop/Keil/ARM/Packs/Keil/STM32F4xx_DFP/2.15.0/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c(98): warning: In file included from...
+C:/Users/alumno/Desktop/Keil/ARM/Packs/Keil/STM32F4xx_DFP/2.15.0/Drivers/STM32F4xx_HAL_Driver/Inc\stm32f4xx_hal.h(30): warning: In file included from...
+./RTE/Device/STM32F429ZITx\stm32f4xx_hal_conf.h(411): warning: In file included from...
+C:/Users/alumno/Desktop/Keil/ARM/Packs/Keil/STM32F4xx_DFP/2.15.0/Drivers/STM32F4xx_HAL_Driver/Inc\stm32f4xx_hal_dma.h(110): warning: commas at the end of enumerator lists are a C99-specific feature [-Wc99-extensions]
+  HAL_DMA_STATE_ABORT             = 0x05U,  /*!< DMA Abort state                     */
+                                         ^~
+C:/Users/alumno/Desktop/Keil/ARM/Packs/Keil/STM32F4xx_DFP/2.15.0/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c(290): warning: cast from function call of type 'uint32_t' (aka 'unsigned int') to non-matching type 'DMA_Base_Registers *' [-Wbad-function-cast]
+  regs = (DMA_Base_Registers *)DMA_CalcBaseAndBitshift(hdma);
+                               ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:/Users/alumno/Desktop/Keil/ARM/Packs/Keil/STM32F4xx_DFP/2.15.0/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c(98): warning: In file included from...
+C:/Users/alumno/Desktop/Keil/ARM/Packs/Keil/STM32F4xx_DFP/2.15.0/Drivers/STM32F4xx_HAL_Driver/Inc\stm32f4xx_hal.h(30): warning: In file included from...
+./RTE/Device/STM32F429ZITx\stm32f4xx_hal_conf.h(411): warning: In file included from...
+C:/Users/alumno/Desktop/Keil/ARM/Packs/Keil/STM32F4xx_DFP/2.15.0/Drivers/STM32F4xx_HAL_Driver/Inc\stm32f4xx_hal_dma.h(149): warning: padding struct 'struct __DMA_HandleTypeDef' with 2 bytes to align 'Parent' [-Wpadded]
+  void                       *Parent;                                                          /*!< Parent object state                    */ 
+                              ^
+C:/Users/alumno/Desktop/Keil/ARM/Packs/Keil/STM32F4xx_DFP/2.15.0/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c(352): warning: cast from function call of type 'uint32_t' (aka 'unsigned int') to non-matching type 'DMA_Base_Registers *' [-Wbad-function-cast]
+  regs = (DMA_Base_Registers *)DMA_CalcBaseAndBitshift(hdma);
+                               ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:/Users/alumno/Desktop/Keil/ARM/Packs/Keil/STM32F4xx_DFP/2.15.0/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c(978): warning: enumeration value 'HAL_DMA_XFER_ALL_CB_ID' not explicitly handled in switch [-Wswitch-enum]
+    switch (CallbackID)
+            ^
+C:/Users/alumno/Desktop/Keil/ARM/Packs/Keil/STM32F4xx_DFP/2.15.0/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c(1072): warning: default label in switch which covers all enumeration values [-Wcovered-switch-default]
+    default:
+    ^
+6 warnings generated.
 compiling stm32f4xx_hal_dma_ex.c...
-ArmClang: error: Failed to check out a license.Cannot connect to license server system.
- The license server manager (lmgrd) has not been started yet,
- the wrong port@host or license file is being used, or the
- port or hostname in the license file has been changed.
-Feature:       mdk_pro_compiler5
-Server name:   138.100.48.79
-License path:  8224@138.100.48.79;c:\program files\arm\licenses\license.dat;
-FlexNet Licensing error:-15,10032
-ArmClang: note: Check that your license details are correct in the License Management dialog of MDK. Additional information is available at:
- http://www.keil.com/support/man/docs/license/license_management.htm
- If you need further help, provide this complete error report to your supplier or license.support@arm.com.
- - ARMLMD_LICENSE_FILE: '8224@138.100.48.79'
- - LM_LICENSE_FILE: unset
- - ARM_PRODUCT_DEF: unset
- - ARM_PRODUCT_PATH: unset
- - ARM_TOOL_VARIANT: unset
- - Product location: C:\Users\alumno\Desktop\Keil\ARM\sw\mappings
- - Toolchain location: C:\Users\alumno\Desktop\Keil\ARM\ARMCLANG\Bin
- - Selected tool variant: mdk_pro_flex
-ArmClang: note:  - Checkout feature: mdk_pro_compiler5
- - Feature version: 5.0202103
- - Flex error code: -15
-Product: MDK Professional 5.34 (Flex)
-Component: ARM Compiler 6.16
-Tool: armclang [5dfeb700]
+C:/Users/alumno/Desktop/Keil/ARM/Packs/Keil/STM32F4xx_DFP/2.15.0/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c(40): warning: In file included from...
+C:/Users/alumno/Desktop/Keil/ARM/Packs/Keil/STM32F4xx_DFP/2.15.0/Drivers/STM32F4xx_HAL_Driver/Inc\stm32f4xx_hal.h(30): warning: In file included from...
+./RTE/Device/STM32F429ZITx\stm32f4xx_hal_conf.h(411): warning: In file included from...
+C:/Users/alumno/Desktop/Keil/ARM/Packs/Keil/STM32F4xx_DFP/2.15.0/Drivers/STM32F4xx_HAL_Driver/Inc\stm32f4xx_hal_dma.h(110): warning: commas at the end of enumerator lists are a C99-specific feature [-Wc99-extensions]
+  HAL_DMA_STATE_ABORT             = 0x05U,  /*!< DMA Abort state                     */
+                                         ^~
+C:/Users/alumno/Desktop/Keil/ARM/Packs/Keil/STM32F4xx_DFP/2.15.0/Drivers/STM32F4xx_HAL_Driver/Inc\stm32f4xx_hal_dma.h(149): warning: padding struct 'struct __DMA_HandleTypeDef' with 2 bytes to align 'Parent' [-Wpadded]
+  void                       *Parent;                                                          /*!< Parent object state                    */ 
+                              ^
+2 warnings generated.
+compiling stm32f4xx_hal_gpio.c...
+C:/Users/alumno/Desktop/Keil/ARM/Packs/Keil/STM32F4xx_DFP/2.15.0/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c(108): warning: In file included from...
+C:/Users/alumno/Desktop/Keil/ARM/Packs/Keil/STM32F4xx_DFP/2.15.0/Drivers/STM32F4xx_HAL_Driver/Inc\stm32f4xx_hal.h(30): warning: In file included from...
+./RTE/Device/STM32F429ZITx\stm32f4xx_hal_conf.h(411): warning: In file included from...
+C:/Users/alumno/Desktop/Keil/ARM/Packs/Keil/STM32F4xx_DFP/2.15.0/Drivers/STM32F4xx_HAL_Driver/Inc\stm32f4xx_hal_dma.h(110): warning: commas at the end of enumerator lists are a C99-specific feature [-Wc99-extensions]
+  HAL_DMA_STATE_ABORT             = 0x05U,  /*!< DMA Abort state                     */
+                                         ^~
+1 warning generated.
+compiling stm32f4xx_hal_pwr.c...
+C:/Users/alumno/Desktop/Keil/ARM/Packs/Keil/STM32F4xx_DFP/2.15.0/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c(26): warning: In file included from...
+C:/Users/alumno/Desktop/Keil/ARM/Packs/Keil/STM32F4xx_DFP/2.15.0/Drivers/STM32F4xx_HAL_Driver/Inc\stm32f4xx_hal.h(30): warning: In file included from...
+./RTE/Device/STM32F429ZITx\stm32f4xx_hal_conf.h(411): warning: In file included from...
+C:/Users/alumno/Desktop/Keil/ARM/Packs/Keil/STM32F4xx_DFP/2.15.0/Drivers/STM32F4xx_HAL_Driver/Inc\stm32f4xx_hal_dma.h(110): warning: commas at the end of enumerator lists are a C99-specific feature [-Wc99-extensions]
+  HAL_DMA_STATE_ABORT             = 0x05U,  /*!< DMA Abort state                     */
+                                         ^~
+C:/Users/alumno/Desktop/Keil/ARM/Packs/Keil/STM32F4xx_DFP/2.15.0/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c(365): warning: unused parameter 'Regulator' [-Wunused-parameter]
+void HAL_PWR_EnterSLEEPMode(uint32_t Regulator, uint8_t SLEEPEntry)
+                                     ^
+2 warnings generated.
+compiling stm32f4xx_hal_pwr_ex.c...
+C:/Users/alumno/Desktop/Keil/ARM/Packs/Keil/STM32F4xx_DFP/2.15.0/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.c(25): warning: In file included from...
+C:/Users/alumno/Desktop/Keil/ARM/Packs/Keil/STM32F4xx_DFP/2.15.0/Drivers/STM32F4xx_HAL_Driver/Inc\stm32f4xx_hal.h(30): warning: In file included from...
+./RTE/Device/STM32F429ZITx\stm32f4xx_hal_conf.h(411): warning: In file included from...
+C:/Users/alumno/Desktop/Keil/ARM/Packs/Keil/STM32F4xx_DFP/2.15.0/Drivers/STM32F4xx_HAL_Driver/Inc\stm32f4xx_hal_dma.h(110): warning: commas at the end of enumerator lists are a C99-specific feature [-Wc99-extensions]
+  HAL_DMA_STATE_ABORT             = 0x05U,  /*!< DMA Abort state                     */
+                                         ^~
+1 warning generated.
+compiling stm32f4xx_hal_rcc.c...
+C:/Users/alumno/Desktop/Keil/ARM/Packs/Keil/STM32F4xx_DFP/2.15.0/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c(69): warning: In file included from...
+C:/Users/alumno/Desktop/Keil/ARM/Packs/Keil/STM32F4xx_DFP/2.15.0/Drivers/STM32F4xx_HAL_Driver/Inc\stm32f4xx_hal.h(30): warning: In file included from...
+./RTE/Device/STM32F429ZITx\stm32f4xx_hal_conf.h(411): warning: In file included from...
+C:/Users/alumno/Desktop/Keil/ARM/Packs/Keil/STM32F4xx_DFP/2.15.0/Drivers/STM32F4xx_HAL_Driver/Inc\stm32f4xx_hal_dma.h(110): warning: commas at the end of enumerator lists are a C99-specific feature [-Wc99-extensions]
+  HAL_DMA_STATE_ABORT             = 0x05U,  /*!< DMA Abort state                     */
+                                         ^~
+1 warning generated.
+compiling stm32f4xx_hal_rcc_ex.c...
+C:/Users/alumno/Desktop/Keil/ARM/Packs/Keil/STM32F4xx_DFP/2.15.0/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c(25): warning: In file included from...
+C:/Users/alumno/Desktop/Keil/ARM/Packs/Keil/STM32F4xx_DFP/2.15.0/Drivers/STM32F4xx_HAL_Driver/Inc\stm32f4xx_hal.h(30): warning: In file included from...
+./RTE/Device/STM32F429ZITx\stm32f4xx_hal_conf.h(411): warning: In file included from...
+C:/Users/alumno/Desktop/Keil/ARM/Packs/Keil/STM32F4xx_DFP/2.15.0/Drivers/STM32F4xx_HAL_Driver/Inc\stm32f4xx_hal_dma.h(110): warning: commas at the end of enumerator lists are a C99-specific feature [-Wc99-extensions]
+  HAL_DMA_STATE_ABORT             = 0x05U,  /*!< DMA Abort state                     */
+                                         ^~
+C:/Users/alumno/Desktop/Keil/ARM/Packs/Keil/STM32F4xx_DFP/2.15.0/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c(25): warning: In file included from...
+C:/Users/alumno/Desktop/Keil/ARM/Packs/Keil/STM32F4xx_DFP/2.15.0/Drivers/STM32F4xx_HAL_Driver/Inc\stm32f4xx_hal.h(30): warning: In file included from...
+./RTE/Device/STM32F429ZITx\stm32f4xx_hal_conf.h(399): warning: In file included from...
+C:/Users/alumno/Desktop/Keil/ARM/Packs/Keil/STM32F4xx_DFP/2.15.0/Drivers/STM32F4xx_HAL_Driver/Inc\stm32f4xx_hal_rcc.h(33): warning: In file included from...
+C:/Users/alumno/Desktop/Keil/ARM/Packs/Keil/STM32F4xx_DFP/2.15.0/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc_ex.h(341): warning: padding size of 'RCC_PeriphCLKInitTypeDef' with 3 bytes to alignment boundary [-Wpadded]
+typedef struct
+        ^
+2 warnings generated.
 compiling stm32f4xx_hal_tim.c...
-ArmClang: error: Failed to check out a license.Cannot connect to license server system.
- The license server manager (lmgrd) has not been started yet,
- the wrong port@host or license file is being used, or the
- port or hostname in the license file has been changed.
-Feature:       mdk_pro_compiler5
-Server name:   138.100.48.79
-License path:  8224@138.100.48.79;c:\program files\arm\licenses\license.dat;
-FlexNet Licensing error:-15,10032
-ArmClang: note: Check that your license details are correct in the License Management dialog of MDK. Additional information is available at:
- http://www.keil.com/support/man/docs/license/license_management.htm
- If you need further help, provide this complete error report to your supplier or license.support@arm.com.
- - ARMLMD_LICENSE_FILE: '8224@138.100.48.79'
- - LM_LICENSE_FILE: unset
- - ARM_PRODUCT_DEF: unset
- - ARM_PRODUCT_PATH: unset
- - ARM_TOOL_VARIANT: unset
- - Product location: C:\Users\alumno\Desktop\Keil\ARM\sw\mappings
- - Toolchain location: C:\Users\alumno\Desktop\Keil\ARM\ARMCLANG\Bin
- - Selected tool variant: mdk_pro_flex
-ArmClang: note:  - Checkout feature: mdk_pro_compiler5
- - Feature version: 5.0202103
- - Flex error code: -15
-Product: MDK Professional 5.34 (Flex)
-Component: ARM Compiler 6.16
-Tool: armclang [5dfeb700]
+C:/Users/alumno/Desktop/Keil/ARM/Packs/Keil/STM32F4xx_DFP/2.15.0/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c(186): warning: In file included from...
+C:/Users/alumno/Desktop/Keil/ARM/Packs/Keil/STM32F4xx_DFP/2.15.0/Drivers/STM32F4xx_HAL_Driver/Inc\stm32f4xx_hal.h(30): warning: In file included from...
+./RTE/Device/STM32F429ZITx\stm32f4xx_hal_conf.h(411): warning: In file included from...
+C:/Users/alumno/Desktop/Keil/ARM/Packs/Keil/STM32F4xx_DFP/2.15.0/Drivers/STM32F4xx_HAL_Driver/Inc\stm32f4xx_hal_dma.h(110): warning: commas at the end of enumerator lists are a C99-specific feature [-Wc99-extensions]
+  HAL_DMA_STATE_ABORT             = 0x05U,  /*!< DMA Abort state                     */
+                                         ^~
+C:/Users/alumno/Desktop/Keil/ARM/Packs/Keil/STM32F4xx_DFP/2.15.0/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c(186): warning: In file included from...
+C:/Users/alumno/Desktop/Keil/ARM/Packs/Keil/STM32F4xx_DFP/2.15.0/Drivers/STM32F4xx_HAL_Driver/Inc\stm32f4xx_hal.h(30): warning: In file included from...
+./RTE/Device/STM32F429ZITx\stm32f4xx_hal_conf.h(527): warning: In file included from...
+C:/Users/alumno/Desktop/Keil/ARM/Packs/Keil/STM32F4xx_DFP/2.15.0/Drivers/STM32F4xx_HAL_Driver/Inc\stm32f4xx_hal_tim.h(321): warning: padding struct 'TIM_HandleTypeDef' with 3 bytes to align 'hdma' [-Wpadded]
+  DMA_HandleTypeDef           *hdma[7];      /*!< DMA Handlers array
+                               ^
+C:/Users/alumno/Desktop/Keil/ARM/Packs/Keil/STM32F4xx_DFP/2.15.0/Drivers/STM32F4xx_HAL_Driver/Inc\stm32f4xx_hal_tim.h(315): warning: padding size of 'TIM_HandleTypeDef' with 2 bytes to alignment boundary [-Wpadded]
+typedef struct
+        ^
+C:/Users/alumno/Desktop/Keil/ARM/Packs/Keil/STM32F4xx_DFP/2.15.0/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c(186): warning: In file included from...
+C:/Users/alumno/Desktop/Keil/ARM/Packs/Keil/STM32F4xx_DFP/2.15.0/Drivers/STM32F4xx_HAL_Driver/Inc\stm32f4xx_hal.h(30): warning: In file included from...
+./RTE/Device/STM32F429ZITx\stm32f4xx_hal_conf.h(411): warning: In file included from...
+C:/Users/alumno/Desktop/Keil/ARM/Packs/Keil/STM32F4xx_DFP/2.15.0/Drivers/STM32F4xx_HAL_Driver/Inc\stm32f4xx_hal_dma.h(149): warning: padding struct 'struct __DMA_HandleTypeDef' with 2 bytes to align 'Parent' [-Wpadded]
+  void                       *Parent;                                                          /*!< Parent object state                    */ 
+                              ^
+4 warnings generated.
 compiling stm32f4xx_hal_tim_ex.c...
-ArmClang: error: Failed to check out a license.Cannot connect to license server system.
- The license server manager (lmgrd) has not been started yet,
- the wrong port@host or license file is being used, or the
- port or hostname in the license file has been changed.
-Feature:       mdk_pro_compiler5
-Server name:   138.100.48.79
-License path:  8224@138.100.48.79;c:\program files\arm\licenses\license.dat;
-FlexNet Licensing error:-15,10032
-ArmClang: note: Check that your license details are correct in the License Management dialog of MDK. Additional information is available at:
- http://www.keil.com/support/man/docs/license/license_management.htm
- If you need further help, provide this complete error report to your supplier or license.support@arm.com.
- - ARMLMD_LICENSE_FILE: '8224@138.100.48.79'
- - LM_LICENSE_FILE: unset
- - ARM_PRODUCT_DEF: unset
- - ARM_PRODUCT_PATH: unset
- - ARM_TOOL_VARIANT: unset
- - Product location: C:\Users\alumno\Desktop\Keil\ARM\sw\mappings
- - Toolchain location: C:\Users\alumno\Desktop\Keil\ARM\ARMCLANG\Bin
- - Selected tool variant: mdk_pro_flex
-ArmClang: note:  - Checkout feature: mdk_pro_compiler5
- - Feature version: 5.0202103
- - Flex error code: -15
-Product: MDK Professional 5.34 (Flex)
-Component: ARM Compiler 6.16
-Tool: armclang [5dfeb700]
-".\Objects\pla_1.axf" - 14 Error(s), 0 Warning(s).
+C:/Users/alumno/Desktop/Keil/ARM/Packs/Keil/STM32F4xx_DFP/2.15.0/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c(78): warning: In file included from...
+C:/Users/alumno/Desktop/Keil/ARM/Packs/Keil/STM32F4xx_DFP/2.15.0/Drivers/STM32F4xx_HAL_Driver/Inc\stm32f4xx_hal.h(30): warning: In file included from...
+./RTE/Device/STM32F429ZITx\stm32f4xx_hal_conf.h(411): warning: In file included from...
+C:/Users/alumno/Desktop/Keil/ARM/Packs/Keil/STM32F4xx_DFP/2.15.0/Drivers/STM32F4xx_HAL_Driver/Inc\stm32f4xx_hal_dma.h(110): warning: commas at the end of enumerator lists are a C99-specific feature [-Wc99-extensions]
+  HAL_DMA_STATE_ABORT             = 0x05U,  /*!< DMA Abort state                     */
+                                         ^~
+C:/Users/alumno/Desktop/Keil/ARM/Packs/Keil/STM32F4xx_DFP/2.15.0/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c(78): warning: In file included from...
+C:/Users/alumno/Desktop/Keil/ARM/Packs/Keil/STM32F4xx_DFP/2.15.0/Drivers/STM32F4xx_HAL_Driver/Inc\stm32f4xx_hal.h(30): warning: In file included from...
+./RTE/Device/STM32F429ZITx\stm32f4xx_hal_conf.h(527): warning: In file included from...
+C:/Users/alumno/Desktop/Keil/ARM/Packs/Keil/STM32F4xx_DFP/2.15.0/Drivers/STM32F4xx_HAL_Driver/Inc\stm32f4xx_hal_tim.h(321): warning: padding struct 'TIM_HandleTypeDef' with 3 bytes to align 'hdma' [-Wpadded]
+  DMA_HandleTypeDef           *hdma[7];      /*!< DMA Handlers array
+                               ^
+C:/Users/alumno/Desktop/Keil/ARM/Packs/Keil/STM32F4xx_DFP/2.15.0/Drivers/STM32F4xx_HAL_Driver/Inc\stm32f4xx_hal_tim.h(315): warning: padding size of 'TIM_HandleTypeDef' with 2 bytes to alignment boundary [-Wpadded]
+typedef struct
+        ^
+C:/Users/alumno/Desktop/Keil/ARM/Packs/Keil/STM32F4xx_DFP/2.15.0/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c(78): warning: In file included from...
+C:/Users/alumno/Desktop/Keil/ARM/Packs/Keil/STM32F4xx_DFP/2.15.0/Drivers/STM32F4xx_HAL_Driver/Inc\stm32f4xx_hal.h(30): warning: In file included from...
+./RTE/Device/STM32F429ZITx\stm32f4xx_hal_conf.h(411): warning: In file included from...
+C:/Users/alumno/Desktop/Keil/ARM/Packs/Keil/STM32F4xx_DFP/2.15.0/Drivers/STM32F4xx_HAL_Driver/Inc\stm32f4xx_hal_dma.h(149): warning: padding struct 'struct __DMA_HandleTypeDef' with 2 bytes to align 'Parent' [-Wpadded]
+  void                       *Parent;                                                          /*!< Parent object state                    */ 
+                              ^
+4 warnings generated.
+assembling startup_stm32f429xx.s...
+compiling system_stm32f4xx.c...
+linking...
+Program Size: Code=4338 RO-data=478 RW-data=12 ZI-data=1644  
+".\Objects\pla_1.axf" - 0 Error(s), 35 Warning(s).
 
 <h2>Software Packages used:</h2>
 
@@ -431,13 +272,13 @@ Package Vendor: Keil
 
    * Component: Keil::Device:STM32Cube Framework:Classic:1.7.9
       Include file:  MDK/Templates_LL/Inc/main.h
-      Include file:  MDK/Templates/Inc/stm32f4xx_it.h
       Include file:  MDK/Templates/Inc/stm32f4xx_hal_conf.h
       Source file:   MDK/Templates/Src/stm32f4xx_hal_msp.c
-      Source file:   MDK/Templates/Src/main.c
-      Include file:  CMSIS/Driver/Config/RTE_Device.h
       Source file:   MDK/Templates_LL/Src/main.c
       Source file:   MDK/Templates/Src/stm32f4xx_it.c
+      Include file:  CMSIS/Driver/Config/RTE_Device.h
+      Include file:  MDK/Templates/Inc/stm32f4xx_it.h
+      Source file:   MDK/Templates/Src/main.c
       Include file:  MDK/Templates/Inc/main.h
 
    * Component: Keil::Device:STM32Cube HAL:Common:1.7.9
@@ -459,21 +300,20 @@ Package Vendor: Keil
       Source file:   Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c
 
    * Component: Keil::Device:STM32Cube HAL:RCC:1.7.9
-      Source file:   Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c
       Source file:   Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c
+      Source file:   Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c
 
    * Component: Keil::Device:STM32Cube HAL:TIM:1.7.9
       Source file:   Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c
       Source file:   Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c
 
    * Component: Keil::Device:Startup:2.6.3
-      Source file:   Drivers/CMSIS/Device/ST/STM32F4xx/Source/Templates/system_stm32f4xx.c
       Source file:   MDK/Device/Source/ARM/STM32F42xxx_43xxx_OPT.s
-      Source file:   Drivers/CMSIS/Device/ST/STM32F4xx/Source/Templates/arm/startup_stm32f429xx.s
-      Include file:  Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h
       Source file:   MDK/Device/Source/ARM/STM32F4xx_OTP.s
-Target not created.
-Build Time Elapsed:  00:03:04
+      Include file:  Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h
+      Source file:   Drivers/CMSIS/Device/ST/STM32F4xx/Source/Templates/arm/startup_stm32f429xx.s
+      Source file:   Drivers/CMSIS/Device/ST/STM32F4xx/Source/Templates/system_stm32f4xx.c
+Build Time Elapsed:  00:00:08
 </pre>
 </body>
 </html>
