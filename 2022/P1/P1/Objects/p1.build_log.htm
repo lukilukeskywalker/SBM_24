@@ -1,0 +1,136 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Tool Versions:</h2>
+IDE-Version: µVision V5.34.0.0
+Copyright (C) 2021 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: Lukas Gdanietz UPM Flex license: MDK Professional 5.34 (Flex) (mdk_pro) Operation stops: 24 Jan 2027
+ 
+Tool Versions:
+Toolchain:       MDK Professional 5.34 (Flex)  Version: 5.34.0.0
+Toolchain Path:  C:\Keil_v5\ARM\ARMCLANG\Bin
+C Compiler:      ArmClang.exe V6.16
+Assembler:       Armasm.exe V6.16
+Linker/Locator:  ArmLink.exe V6.16
+Library Manager: ArmAr.exe V6.16
+Hex Converter:   FromElf.exe V6.16
+CPU DLL:         SARMCM3.DLL V5.34.0.0
+Dialog DLL:      DCM.DLL V1.17.3.0
+Target DLL:      STLink\ST-LINKIII-KEIL_SWO.dll V3.0.8.0
+Dialog DLL:      TCM.DLL V1.48.0.0
+ 
+<h2>Project:</h2>
+\\vmware-host\Shared Folders\SBM\2022\P1\P1\p1.uvprojx
+Project File Date:  10/10/2024
+
+<h2>Output:</h2>
+*** Using Compiler 'V6.16', folder: 'C:\Keil_v5\ARM\ARMCLANG\Bin'
+Build target 'Target 1'
+error: unable to rename temporary './objects/main-0cbeb9c9.o.tmp' to output file './objects/main.o': 'no such file or directory'
+1 error generated.
+compiling main.c...
+error: unable to rename temporary './objects/stm32f4xx_hal_cortex-f8d99745.o.tmp' to output file './objects/stm32f4xx_hal_cortex.o': 'no such file or directory'
+1 error generated.
+compiling stm32f4xx_hal_cortex.c...
+error: unable to rename temporary './objects/stm32f4xx_hal-f7525a28.o.tmp' to output file './objects/stm32f4xx_hal.o': 'no such file or directory'
+1 error generated.
+compiling stm32f4xx_hal.c...
+error: unable to rename temporary './objects/stm32f4xx_it-e63459d2.o.tmp' to output file './objects/stm32f4xx_it.o': 'no such file or directory'
+1 error generated.
+compiling stm32f4xx_it.c...
+error: unable to rename temporary './objects/stm32f4xx_hal_gpio-ac4e2196.o.tmp' to output file './objects/stm32f4xx_hal_gpio.o': 'no such file or directory'
+1 error generated.
+compiling stm32f4xx_hal_gpio.c...
+error: unable to rename temporary './objects/stm32f4xx_hal_pwr-bb6d05bd.o.tmp' to output file './objects/stm32f4xx_hal_pwr.o': 'no such file or directory'
+1 error generated.
+compiling stm32f4xx_hal_pwr.c...
+error: unable to rename temporary './objects/stm32f4xx_hal_pwr_ex-5eb71de7.o.tmp' to output file './objects/stm32f4xx_hal_pwr_ex.o': 'no such file or directory'
+1 error generated.
+compiling stm32f4xx_hal_pwr_ex.c...
+assembling startup_stm32f429xx.s...
+error: unable to rename temporary './objects/stm32f4xx_hal_rcc_ex-51432742.o.tmp' to output file './objects/stm32f4xx_hal_rcc_ex.o': 'no such file or directory'
+1 error generated.
+compiling stm32f4xx_hal_rcc_ex.c...
+error: unable to rename temporary './objects/stm32f4xx_hal_rcc-2a7d0ee4.o.tmp' to output file './objects/stm32f4xx_hal_rcc.o': 'no such file or directory'
+1 error generated.
+compiling stm32f4xx_hal_rcc.c...
+error: unable to rename temporary './objects/system_stm32f4xx-4e0cfabe.o.tmp' to output file './objects/system_stm32f4xx.o': 'no such file or directory'
+1 error generated.
+compiling system_stm32f4xx.c...
+".\Objects\p1.axf" - 10 Error(s), 0 Warning(s).
+
+<h2>Software Packages used:</h2>
+
+Package Vendor: ARM
+                http://www.keil.com/pack/ARM.CMSIS.5.9.0.pack
+                ARM.CMSIS.5.9.0
+                CMSIS (Common Microcontroller Software Interface Standard)
+   * Component: CORE Version: 5.6.0
+
+Package Vendor: Keil
+                https://www.keil.com/pack/Keil.STM32F4xx_DFP.2.17.1.pack
+                Keil.STM32F4xx_DFP.2.17.1
+                STMicroelectronics STM32F4 Series Device Support, Drivers and Examples
+   * Component: STM32Cube Framework Version: 1.0.0
+   * Component: Classic Version: 1.8.1
+   * Component: Common Version: 1.8.1
+   * Component: Cortex Version: 1.8.1
+   * Component: GPIO Version: 1.8.1
+   * Component: PWR Version: 1.8.1
+   * Component: RCC Version: 1.8.1
+   * Component: Startup Version: 2.6.3
+
+<h2>Collection of Component include folders:</h2>
+  .\RTE\Device\STM32F429ZITx
+  .\RTE\_Target_1
+  C:\Users\gdanietzlu\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include
+  C:\Users\gdanietzlu\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\CMSIS\Device\ST\STM32F4xx\Include
+  C:\Users\gdanietzlu\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\STM32F4xx_HAL_Driver\Inc
+
+<h2>Collection of Component Files used:</h2>
+
+   * Component: ::Device:STM32Cube Framework:1.0.0 (API)
+
+   * Component: ARM::CMSIS:CORE:5.6.0
+
+   * Component: Keil::Device:STM32Cube Framework:Classic:1.8.1
+      Include file:  CMSIS\Driver\Config\RTE_Device.h
+      Source file:   MDK\Templates\Src\stm32f4xx_hal_msp.c
+      Include file:  MDK\Templates\Inc\stm32f4xx_it.h
+      Include file:  MDK\Templates\Inc\stm32f4xx_hal_conf.h
+      Source file:   MDK\Templates\Src\stm32f4xx_it.c
+      Include file:  MDK\Templates\Inc\main.h
+      Source file:   MDK\Templates\Src\main.c
+      Source file:   MDK\Templates_LL\Src\main.c
+      Include file:  MDK\Templates_LL\Inc\main.h
+
+   * Component: Keil::Device:STM32Cube HAL:Common:1.8.1
+      Source file:   Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal.c
+      Include file:  Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal.h
+
+   * Component: Keil::Device:STM32Cube HAL:Cortex:1.8.1
+      Source file:   Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_cortex.c
+
+   * Component: Keil::Device:STM32Cube HAL:GPIO:1.8.1
+      Source file:   Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_gpio.c
+
+   * Component: Keil::Device:STM32Cube HAL:PWR:1.8.1
+      Source file:   Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_pwr_ex.c
+      Source file:   Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_pwr.c
+
+   * Component: Keil::Device:STM32Cube HAL:RCC:1.8.1
+      Source file:   Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_rcc.c
+      Source file:   Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_rcc_ex.c
+
+   * Component: Keil::Device:Startup:2.6.3
+      Source file:   Drivers\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c
+      Include file:  Drivers\CMSIS\Device\ST\STM32F4xx\Include\stm32f4xx.h
+      Source file:   MDK\Device\Source\ARM\STM32F4xx_OTP.s
+      Source file:   MDK\Device\Source\ARM\STM32F42xxx_43xxx_OPT.s
+      Source file:   Drivers\CMSIS\Device\ST\STM32F4xx\Source\Templates\arm\startup_stm32f429xx.s
+Target not created.
+Build Time Elapsed:  00:00:02
+</pre>
+</body>
+</html>

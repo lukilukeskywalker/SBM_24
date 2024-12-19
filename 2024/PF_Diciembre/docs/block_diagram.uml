@@ -1,0 +1,27 @@
+@startwire
+
+# Definición de componentes principales
+goto(0,360)
+* MCU [100x100] #lightgray
+
+move(0,200)
+* LED1 [50x30] #yellow
+* LED2 [50x30] #yellow
+* LED3 [50x30] #yellow
+
+move(200,-400)
+* LCD [100x50] #lightgray
+move(0,100)
+* ADXL346 [100x50] #lightgray
+move(0,100)
+* Computer [120x50] #lightgray
+
+# Conexiones
+MCU.SPI1 <-> LCD : SPI
+MCU.I2C1 <-> ADXL346 : I2C
+MCU.USART3 <-> Computer : USART
+MCU <-> LED1 : GPIO
+MCU <-> LED2 : GPIO
+MCU <-> LED3 : GPIO
+
+@endwire

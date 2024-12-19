@@ -1,0 +1,20 @@
+@startuml
+
+[*] --> COM_DECODER_INIT
+
+state COM_DECODER_INIT {
+    COM_DECODER_INIT --> COM_DECODER_WAIT_HEADER : cmd[0] == SOH && (flags & ARM_USART_EVENT_RECEIVE_COMPLETE)
+    COM_DECODER_INIT --> COM_DECODER_INIT : default transition
+}
+
+state COM_DECODER_WAIT_HEADER {
+    COM_DECODER_WAIT_HEADER --> COM_DECODER_WAIT_DATA : !(flags & osFlagsError) && (flags & ARM_USART_EVENT_RECEIVE_COMPLETE)
+    COM_DECODER_WAIT_HEADER --> COM_DECODER_INIT : default transition
+}
+
+state COM_DECODER_WAIT_DATA {
+    COM_DECODER_WAIT_DATA --> COM_DECODER_INIT : default transition
+}
+
+@enduml
+

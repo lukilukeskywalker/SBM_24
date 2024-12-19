@@ -1,0 +1,15 @@
+.\objects\accel&temp.o: Acelerometro\accel&temp.c
+.\objects\accel&temp.o: .\RTE\_STM32F429_Nucleo\Pre_Include_Global.h
+.\objects\accel&temp.o: Acelerometro\accel&temp.h
+.\objects\accel&temp.o: Acelerometro\../stm_err.h
+.\objects\accel&temp.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
+.\objects\accel&temp.o: Acelerometro\../stm_log.h
+.\objects\accel&temp.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+.\objects\accel&temp.o: C:\Users\gdanietzlu\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\RTOS2\Include\cmsis_os2.h
+.\objects\accel&temp.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
+.\objects\accel&temp.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdlib.h
+.\objects\accel&temp.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
+.\objects\accel&temp.o: C:\Users\gdanietzlu\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Driver\Include\Driver_I2C.h
+.\objects\accel&temp.o: C:\Users\gdanietzlu\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Driver\Include\Driver_Common.h
+.\objects\accel&temp.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdbool.h
+.\objects\accel&temp.o: Acelerometro\libs/adxl34x/adxl34x.h

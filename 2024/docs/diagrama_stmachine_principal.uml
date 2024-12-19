@@ -1,0 +1,32 @@
+@startuml
+
+[*] --> sys_state_reposo
+
+state sys_state_reposo {
+    [*] --> app_lcd_display_reposo
+    app_lcd_display_reposo --> sys_state_manual : JOY_CENTER_LPULSE
+}
+
+state sys_state_manual {
+    [*] --> app_lcd_display_manual
+    app_lcd_display_manual --> sys_state_automatico : JOY_CENTER_LPULSE
+}
+
+state sys_state_automatico {
+    [*] --> app_lcd_display_auto
+    app_lcd_display_auto --> sys_state_programacion : JOY_CENTER_LPULSE
+}
+
+state sys_state_programacion {
+    [*] --> app_gestionar_com
+    app_gestionar_com --> app_lcd_display_programacion : JOY_CENTER_LPULSE
+    app_lcd_display_programacion --> sys_state_reposo : JOY_CENTER_LPULSE
+}
+
+state sys_state_max {
+    [*] --> sys_state_reposo
+}
+
+sys_state_max --> sys_state_reposo : default transition
+
+@enduml

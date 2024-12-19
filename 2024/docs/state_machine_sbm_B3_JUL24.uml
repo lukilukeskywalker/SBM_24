@@ -1,0 +1,21 @@
+@startuml
+
+hide empty description
+
+[*] --> REPOSO
+state "<b>Reposo</b>\n<i>Mostrar Hora y Project detail\n<i>RGB_LEDG:PWM{Range:[10:90]%, Period: 4s}</i>" as REPOSO
+state "<b>Manual</b><\n><i>Control Manual</i>" as MANUAL
+state "<b>Auto</b>\n<i></i>" as AUTO
+state "<b>Programacion</b>\n<i></i>" as PROG
+
+state MANUAL {
+	state "POT_1\n<i>Controla Lref{Range: [1000:65000]</i>" as POT_1
+	state "POT_2\n<i>Controla LED:PWM{Range:[5:95]%}</i>" as POT_2
+	state "RGB_LEDR\n Activo si Lmed - Lref >= 5001" as RGB_LEDR
+}
+REPOSO --> MANUAL : JOY_CENTER_LPULSE		
+MANUAL --> AUTO : JOY_CENTER_LPULSE
+AUTO --> PROG : JOY_CENTER_LPULSE
+PROG --> REPOSO : JOY_CENTER_LPULSE
+
+@enduml

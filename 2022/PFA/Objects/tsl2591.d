@@ -1,0 +1,9 @@
+.\objects\tsl2591.o: User\TSL2591.c
+.\objects\tsl2591.o: .\RTE\_STM32f429-Discovery\Pre_Include_Global.h
+.\objects\tsl2591.o: User\TSL2591.h
+.\objects\tsl2591.o: C:\Users\gdanietzlu\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\RTOS2\Include\cmsis_os2.h
+.\objects\tsl2591.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+.\objects\tsl2591.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
+.\objects\tsl2591.o: C:\Users\gdanietzlu\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Driver\Include\Driver_I2C.h
+.\objects\tsl2591.o: C:\Users\gdanietzlu\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Driver\Include\Driver_Common.h
+.\objects\tsl2591.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdbool.h

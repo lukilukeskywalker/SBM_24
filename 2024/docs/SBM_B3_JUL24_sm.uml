@@ -1,0 +1,39 @@
+@startuml
+[*] --> REPOSO : Start
+
+state REPOSO {
+	"ste modo se presentará en el LCD el mensaje “SBM 2024” y la hora tal y como
+se indica en la Figura 2. Tras un reset el reloj marcará las 00:00:00. En este modo
+sólo se atenderá a una pulsación larga del botón CENTER del joystick, que hará
+que el sistema pase a modo MANUA"
+    [*] --> Wait
+    Wait : Esperando interacción
+    REPOSO --> MANUAL : JOY_CENTER_LPULSE
+}
+
+state MANUAL {
+    [*] --> Check_Luminosity
+    Check_Luminosity : Luminosidad medida y referencia (Lmed y Lref)
+    Check_Luminosity --> Adjust_LED : Diferencia > 5000 lux
+    Check_Luminosity --> Display_Info
+    Display_Info : Mostrar barras en el LCD y ciclo de trabajo PWM
+    Display_Info --> Check_Luminosity
+    Adjust_LED : Encender LED ROJO
+    Adjust_LED --> Check_Luminosity
+    MANUAL --> AUTO : Pulsación larga de CENTER
+}
+
+state AUTO {
+    [*] --> Check_Luminosity
+    Check_Luminosity : Luminosidad medida y referencia (Lmed y Lref)
+    Check_Luminosity --> Adjust_LED : Diferencia > 5000 lux
+    Check_Luminosity --> Update_Buffer : Almacenar en buffer circular
+    Update_Buffer : Tabla de 20 medidas
+    Update_Buffer --> Display_Info
+    Display_Info : Mostrar información en el LCD
+    Display_Info --> Check_Luminosity
+    Adjust_LED : Encender LED AZUL
+    Adjust_LED --> Check_Luminosity
+    AUTO --> PROGRAMACIÓN : Pulsación larga de CENTER
+}
+@enduml

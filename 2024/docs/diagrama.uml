@@ -1,0 +1,47 @@
+@startuml
+
+skinparam rectangle {
+  BackgroundColor #EEEEFF
+  BorderColor #000000
+  RoundCorner 20
+}
+
+rectangle "STM32F429" as uC {
+}
+
+rectangle "Ordenador" as PC {
+}
+
+rectangle "BH1750" as BH1750 {
+}
+
+rectangle "LCD" as LCD {
+}
+
+rectangle "Joystick" as Joystick {
+}
+
+rectangle "LED RGB" as LED {
+}
+
+rectangle "PWM" as PWM {
+}
+
+uC -down- USART3 : USART3
+USART3 - PC
+
+uC -down- I2C1 : I2C1
+I2C1 - BH1750
+
+uC -down- SPI1 : SPI1
+SPI1 - LCD
+
+uC -down- 5 : 5 cables
+5 - Joystick
+
+uC -down- 3 : 3 cables
+3 - LED
+
+uC -down- PWM
+
+@enduml

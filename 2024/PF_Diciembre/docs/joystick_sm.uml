@@ -1,0 +1,30 @@
+@startuml
+[*] --> Idle
+
+state Idle {
+}
+note left of Idle : El sistema espera una interrupcion.
+Idle --> Procesando_ISR : Interrupción detectada
+
+state Procesando_ISR {
+}
+note left of Procesando_ISR : Configura flags según los pines que\ngeneraron la interrupción.
+Procesando_ISR --> Esperando_Debounce : Flags configurados
+
+state Esperando_Debounce {
+}
+note left of Esperando_Debounce: Timer de 50ms activo.\nLos bits se desplazan y\nse leen nuevos valores del GPIO.
+Esperando_Debounce --> Esperando_Debounce : Timer expira (ciclo de 50ms)
+Esperando_Debounce --> Detectando_Tipo_de_Pulso : 6 ciclos completos
+
+state Detectando_Tipo_de_Pulso {
+}
+note left of Detectando_Tipo_de_Pulso : Determina si es un pulso corto o largo segun\nel numero de bits "acumulados"
+Detectando_Tipo_de_Pulso --> Generando_Evento : Pulso detectado
+
+state Generando_Evento {
+}
+note left of Generando_Evento : Se genera el evento colocandolo en la cola de mensajes
+Generando_Evento --> Idle
+
+@enduml

@@ -1,0 +1,18 @@
+# Keil Project Setup
+
+1. Select *Project* -> *New uVision Project...* -> Create new project file
+2. Search for the uC, for example STM32f429ZITx
+3. Select the components the project might need, for example:
+	* *CMSIS* -> *CORE*
+	* *RTOS2 (API)* -> *Keil RTX5*
+	* *CMSIS Driver* ->
+		* *I2C* -> *I2C*
+		* *SPI* -> *SPI*
+		* 
+	* *Device* -> *Startup*
+	* *STM32Cube Framework (API)* -> *Classic*
+	* *STM32Cube HAL* ->
+		* *GPIO*
+		* *ADC*
+		* *TIM*
+4. Select Op

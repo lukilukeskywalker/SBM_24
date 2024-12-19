@@ -1,0 +1,10 @@
+.\objects\test_app.o: test_app.c
+.\objects\test_app.o: .\RTE\_STM32F429\Pre_Include_Global.h
+.\objects\test_app.o: test_app.h
+.\objects\test_app.o: ../../stm_err.h
+.\objects\test_app.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
+.\objects\test_app.o: ../../stm_log.h
+.\objects\test_app.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+.\objects\test_app.o: ../lcd.h
+.\objects\test_app.o: C:\Users\gdanietzlu\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\RTOS2\Include\cmsis_os2.h
+.\objects\test_app.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h

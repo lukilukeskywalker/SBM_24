@@ -1,0 +1,12 @@
+.\objects\lcd.o: lcd\lcd.c
+.\objects\lcd.o: .\RTE\_NUCLEO-STM32F429\Pre_Include_Global.h
+.\objects\lcd.o: lcd\lcd.h
+.\objects\lcd.o: C:\Users\gdanietzlu\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Driver\Include\Driver_SPI.h
+.\objects\lcd.o: C:\Users\gdanietzlu\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Driver\Include\Driver_Common.h
+.\objects\lcd.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
+.\objects\lcd.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+.\objects\lcd.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdbool.h
+.\objects\lcd.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
+.\objects\lcd.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
+.\objects\lcd.o: C:\Users\gdanietzlu\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\RTOS2\Include\cmsis_os2.h
+.\objects\lcd.o: lcd\Arial12x12.h

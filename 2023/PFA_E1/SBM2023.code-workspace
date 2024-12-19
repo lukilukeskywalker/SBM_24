@@ -1,0 +1,13 @@
+{
+	"folders": [
+          {
+               "name": "LM75",
+               "path": "LM75"
+          },
+          {
+               "name": "temperatura",
+               "path": "temperatura"
+          }
+     ],
+     "settings": {}
+}

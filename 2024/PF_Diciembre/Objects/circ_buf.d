@@ -1,0 +1,9 @@
+.\objects\circ_buf.o: circ_buf.c
+.\objects\circ_buf.o: .\RTE\_STM32F429_Nucleo\Pre_Include_Global.h
+.\objects\circ_buf.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
+.\objects\circ_buf.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdlib.h
+.\objects\circ_buf.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+.\objects\circ_buf.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
+.\objects\circ_buf.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\assert.h
+.\objects\circ_buf.o: circ_buf.h
+.\objects\circ_buf.o: stm_log.h

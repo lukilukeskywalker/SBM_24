@@ -1,0 +1,10 @@
+.\objects\joystick_test.o: joystick_test.c
+.\objects\joystick_test.o: .\RTE\_STM32F429\Pre_Include_Global.h
+.\objects\joystick_test.o: joystick_test.h
+.\objects\joystick_test.o: ../joystick.h
+.\objects\joystick_test.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
+.\objects\joystick_test.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+.\objects\joystick_test.o: C:\Users\gdanietzlu\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\RTOS2\Include\cmsis_os2.h
+.\objects\joystick_test.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
+.\objects\joystick_test.o: ../../stm_err.h
+.\objects\joystick_test.o: ../../stm_log.h

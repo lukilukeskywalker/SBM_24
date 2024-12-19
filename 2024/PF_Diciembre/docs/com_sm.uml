@@ -1,0 +1,18 @@
+@startuml
+
+[*] --> COM_DECODER_INIT
+
+state COM_DECODER_INIT {
+}
+note left of COM_DECODER_INIT : El sistema espera la recepcion de un byte "SOH"
+COM_DECODER_INIT --> COM_DECODER_WAIT_HEADER : Se recibe "SOH"
+state COM_DECODER_WAIT_HEADER {
+}
+note left of COM_DECODER_WAIT_HEADER : Espera 2 bytes,\nque contienen el tipo de comando\ny la longuitud del datagrama
+COM_DECODER_WAIT_HEADER --> COM_DECODER_WAIT_DATA : El sistema recibe 2 bytes correctamente.
+state COM_DECODER_WAIT_DATA {
+}
+note left of COM_DECODER_WAIT_DATA : Espera el numero indicado\nde bytes en la trama menos 3,\nque ya se han recibido.\nUna vez recibido, se comprueba\nsi se ha recibido un "EOT"
+COM_DECODER_WAIT_DATA --> COM_DECODER_INIT : USART Error/\nSe recibe "SOT"
+COM_DECODER_WAIT_HEADER --> COM_DECODER_INIT : USART Error
+@enduml

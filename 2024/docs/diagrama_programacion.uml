@@ -1,0 +1,48 @@
+@startuml
+
+[*] --> disable_edit
+
+state disable_edit {
+    [*] --> check_events
+    check_events --> edit_hour : JOY_RIGHT_SPULSE
+    check_events --> edit_lref : JOY_LEFT_SPULSE
+    edit_hour : JOY_RIGHT_SPULSE --> edit_min
+    edit_hour : JOY_LEFT_SPULSE --> edit_lref
+    edit_lref : JOY_RIGHT_SPULSE --> edit_hour
+    edit_lref : JOY_LEFT_SPULSE --> edit_sec
+    edit_min : JOY_RIGHT_SPULSE --> edit_sec
+    edit_min : JOY_LEFT_SPULSE --> edit_hour
+    edit_sec : JOY_RIGHT_SPULSE --> edit_lref
+    edit_sec : JOY_LEFT_SPULSE --> edit_min
+    edit_sec : JOY_CENTER_SPULSE --> disable_edit : SetClock()
+    edit_sec : JOY_UP_SPULSE --> edit_sec : increment step
+    edit_sec : JOY_DOWN_SPULSE --> edit_sec : decrement step
+}
+
+state edit_hour {
+    [*] --> edit_hour_display
+    edit_hour_display --> edit_min : JOY_RIGHT_SPULSE
+    edit_hour_display --> edit_lref : JOY_LEFT_SPULSE
+}
+
+state edit_min {
+    [*] --> edit_min_display
+    edit_min_display --> edit_sec : JOY_RIGHT_SPULSE
+    edit_min_display --> edit_hour : JOY_LEFT_SPULSE
+}
+
+state edit_sec {
+    [*] --> edit_sec_display
+    edit_sec_display --> edit_lref : JOY_RIGHT_SPULSE
+    edit_sec_display --> edit_min : JOY_LEFT_SPULSE
+}
+
+state edit_lref {
+    [*] --> edit_lref_display
+    edit_lref_display --> edit_hour : JOY_RIGHT_SPULSE
+    edit_lref_display --> edit_sec : JOY_LEFT_SPULSE
+}
+
+[*] --> disable_edit
+
+@enduml

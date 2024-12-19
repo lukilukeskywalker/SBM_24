@@ -1,0 +1,17 @@
+@startuml
+
+[*] --> REPOSO
+
+state REPOSO {
+}
+note left of REPOSO : El sistema inicia el sistema en modo REPOSO.\nSe muestra la hora, pero no se realiza muestreado del acelerometro.
+REPOSO --> ACTIVO : Se detecta un pulso largo en el centro del joystick"
+state ACTIVO {
+}
+note left of ACTIVO : Se realiza 1 medicion por segundo de la aceleracion\ny temperatura, y se muestra en pantalla\nAdemas, se activan a desactivan los leds si se\nsobrepasan los limites preestablecidos.
+ACTIVO --> PROGRAMACION : Se detecta un pulso corto en el centro del joystick.
+state PROGRAMACION {
+}
+note left of PROGRAMACION : Pulsando el centro del joystick\nse puede modificar la hora, minutos, segundos, y aceleraciones limite\nRealizando un pulso largo\nse puede volver al modo REPOSO.
+PROGRAMACION --> REPOSO : Se detecta un pulso largo en el centro del joystick.
+@enduml

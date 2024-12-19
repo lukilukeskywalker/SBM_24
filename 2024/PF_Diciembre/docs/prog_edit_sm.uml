@@ -1,0 +1,41 @@
+@startuml
+
+[*] --> disable_edit
+
+state disable_edit {
+}
+note left of disable_edit : Inicialización y configuración de la edición
+
+disable_edit --> edit_hour : JOY_CENTER_SPULSE
+
+state edit_hour {
+}
+note left of edit_hour : Edición de la hora
+edit_hour --> edit_min : JOY_CENTER_SPULSE
+
+state edit_min {
+}
+note left of edit_min : Edición de los minutos
+edit_min --> edit_sec : JOY_CENTER_SPULSE
+
+state edit_sec {
+}
+note left of edit_sec : Edición de los segundos
+edit_sec --> edit_AX : JOY_CENTER_SPULSE
+
+state edit_AX {
+}
+note left of edit_AX : Edición del límite en X
+edit_AX --> edit_AY : JOY_CENTER_SPULSE
+
+state edit_AY {
+}
+note left of edit_AY : Edición del límite en Y
+edit_AY --> edit_AZ : JOY_CENTER_SPULSE
+
+state edit_AZ {
+}
+note left of edit_AZ : Edición del límite en Z
+edit_AZ --> edit_hour : JOY_CENTER_SPULSE
+
+@enduml
