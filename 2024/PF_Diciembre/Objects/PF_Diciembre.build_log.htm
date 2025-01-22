@@ -26,20 +26,7 @@ Project File Date:  12/17/2024
 <h2>Output:</h2>
 *** Using Compiler 'V5.06 update 7 (build 960)', folder: 'C:\Keil_v5\ARM\ARMCC\Bin'
 Build target 'STM32F429_Nucleo'
-compiling circ_buf.c...
-circ_buf.c(30): warning:  #1254-D: arithmetic on pointer to void or function type
-  	memcpy(&buffer->i_buffer_circ[buffer->ultima_entrada*buffer->data_size], dato, buffer->data_size);		//Shifteamos el tamano del dato
-circ_buf.c(31): warning:  #1254-D: arithmetic on pointer to void or function type
-  	STM_LOGI(__func__, "En el buf tenemos: %s", (char *)&buffer->i_buffer_circ[buffer->ultima_entrada*buffer->data_size]);
-circ_buf.c(51): warning:  #1254-D: arithmetic on pointer to void or function type
-  	STM_LOGI(__func__, &buffer->i_buffer_circ[n_elemento]);
-circ_buf.c(52): warning:  #1254-D: arithmetic on pointer to void or function type
-  	memcpy(dato, &buffer->i_buffer_circ[n_elemento*buffer->data_size], buffer->data_size);
-circ_buf.c: 4 warnings, 0 errors
-linking...
-Program Size: Code=52436 RO-data=6304 RW-data=35032 ZI-data=3024  
-FromELF: creating hex file...
-".\Objects\PF_Diciembre.axf" - 0 Error(s), 4 Warning(s).
+".\Objects\PF_Diciembre.axf" - 0 Error(s), 0 Warning(s).
 
 <h2>Software Packages used:</h2>
 
@@ -182,7 +169,7 @@ Package Vendor: Keil
       Source file:   MDK\Device\Source\ARM\STM32F42xxx_43xxx_OPT.s
       Source file:   Drivers\CMSIS\Device\ST\STM32F4xx\Source\Templates\arm\startup_stm32f429xx.s
       Source file:   Drivers\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c
-Build Time Elapsed:  00:00:02
+Build Time Elapsed:  00:00:03
 </pre>
 </body>
 </html>

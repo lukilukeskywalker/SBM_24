@@ -136,6 +136,7 @@ int main(void){
 /*
 * @brief Configuraccion de los pines de los leds y boton
 */
+static void MX_GPIO_Init(void);
 static void MX_GPIO_Init(void){
 	GPIO_InitTypeDef GPIO_InitStruct = {0};
 	__HAL_RCC_GPIOC_CLK_ENABLE();

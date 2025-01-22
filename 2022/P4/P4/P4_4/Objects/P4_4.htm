@@ -3,7 +3,7 @@
 <title>Static Call Graph - [.\Objects\P4_4.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image .\Objects\P4_4.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060960: Last Updated: Wed Jun 29 14:51:49 2022
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060960: Last Updated: Tue Jan 21 16:54:21 2025
 <BR><P>
 <H3>Maximum Stack Usage =        324 bytes + Unknown(Functions without stacksize, Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
@@ -631,7 +631,8 @@ Global Symbols
 <P><STRONG><a name="[d5]"></a>__aeabi_memclr4</STRONG> (Thumb, 0 bytes, Stack size 4 bytes, rt_memclr_w.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 4<LI>Call Chain = __aeabi_memclr4
 </UL>
-<BR>[Called By]<UL><LI><a href="#[cd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SPI_Initialize
+<BR>[Called By]<UL><LI><a href="#[ce]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SPI_PowerControl
+<LI><a href="#[cd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SPI_Initialize
 <LI><a href="#[c9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SPI_Control
 </UL>
 
@@ -812,14 +813,14 @@ Global Symbols
 <BR><BR>[Called By]<UL><LI><a href="#[c9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SPI_Control
 </UL>
 
-<P><STRONG><a name="[d6]"></a>HAL_GPIO_DeInit</STRONG> (Thumb, 336 bytes, Stack size 20 bytes, stm32f4xx_hal_gpio.o(i.HAL_GPIO_DeInit))
+<P><STRONG><a name="[d6]"></a>HAL_GPIO_DeInit</STRONG> (Thumb, 340 bytes, Stack size 20 bytes, stm32f4xx_hal_gpio.o(i.HAL_GPIO_DeInit))
 <BR><BR>[Stack]<UL><LI>Max Depth = 20<LI>Call Chain = HAL_GPIO_DeInit
 </UL>
 <BR>[Called By]<UL><LI><a href="#[d2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SPI_Uninitialize
 <LI><a href="#[c9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SPI_Control
 </UL>
 
-<P><STRONG><a name="[c8]"></a>HAL_GPIO_Init</STRONG> (Thumb, 486 bytes, Stack size 24 bytes, stm32f4xx_hal_gpio.o(i.HAL_GPIO_Init))
+<P><STRONG><a name="[c8]"></a>HAL_GPIO_Init</STRONG> (Thumb, 474 bytes, Stack size 24 bytes, stm32f4xx_hal_gpio.o(i.HAL_GPIO_Init))
 <BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = HAL_GPIO_Init
 </UL>
 <BR>[Called By]<UL><LI><a href="#[cd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SPI_Initialize
@@ -920,7 +921,7 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[b1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_RCC_ClockConfig
 </UL>
 
-<P><STRONG><a name="[b6]"></a>HAL_RCC_OscConfig</STRONG> (Thumb, 1152 bytes, Stack size 24 bytes, stm32f4xx_hal_rcc.o(i.HAL_RCC_OscConfig))
+<P><STRONG><a name="[b6]"></a>HAL_RCC_OscConfig</STRONG> (Thumb, 1172 bytes, Stack size 24 bytes, stm32f4xx_hal_rcc.o(i.HAL_RCC_OscConfig))
 <BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = HAL_RCC_OscConfig
 </UL>
 <BR>[Calls]<UL><LI><a href="#[b2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_GetTick
@@ -936,7 +937,7 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[ab]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_InitTick
 </UL>
 
-<P><STRONG><a name="[b7]"></a>HAL_TIM_Base_DeInit</STRONG> (Thumb, 70 bytes, Stack size 8 bytes, stm32f4xx_hal_tim.o(i.HAL_TIM_Base_DeInit))
+<P><STRONG><a name="[b7]"></a>HAL_TIM_Base_DeInit</STRONG> (Thumb, 120 bytes, Stack size 8 bytes, stm32f4xx_hal_tim.o(i.HAL_TIM_Base_DeInit))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = HAL_TIM_Base_DeInit
 </UL>
 <BR>[Calls]<UL><LI><a href="#[b8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_TIM_Base_MspDeInit
@@ -944,7 +945,7 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[c3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;delay
 </UL>
 
-<P><STRONG><a name="[b9]"></a>HAL_TIM_Base_Init</STRONG> (Thumb, 52 bytes, Stack size 8 bytes, stm32f4xx_hal_tim.o(i.HAL_TIM_Base_Init))
+<P><STRONG><a name="[b9]"></a>HAL_TIM_Base_Init</STRONG> (Thumb, 102 bytes, Stack size 8 bytes, stm32f4xx_hal_tim.o(i.HAL_TIM_Base_Init))
 <BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = HAL_TIM_Base_Init &rArr; TIM_Base_SetConfig
 </UL>
 <BR>[Calls]<UL><LI><a href="#[ba]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_TIM_Base_MspInit
@@ -961,11 +962,11 @@ Global Symbols
 <BR><BR>[Called By]<UL><LI><a href="#[b9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_TIM_Base_Init
 </UL>
 
-<P><STRONG><a name="[e1]"></a>HAL_TIM_Base_Start</STRONG> (Thumb, 42 bytes, Stack size 0 bytes, stm32f4xx_hal_tim.o(i.HAL_TIM_Base_Start))
+<P><STRONG><a name="[e1]"></a>HAL_TIM_Base_Start</STRONG> (Thumb, 126 bytes, Stack size 0 bytes, stm32f4xx_hal_tim.o(i.HAL_TIM_Base_Start))
 <BR><BR>[Called By]<UL><LI><a href="#[c3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;delay
 </UL>
 
-<P><STRONG><a name="[e2]"></a>HAL_TIM_Base_Stop</STRONG> (Thumb, 56 bytes, Stack size 0 bytes, stm32f4xx_hal_tim.o(i.HAL_TIM_Base_Stop))
+<P><STRONG><a name="[e2]"></a>HAL_TIM_Base_Stop</STRONG> (Thumb, 50 bytes, Stack size 0 bytes, stm32f4xx_hal_tim.o(i.HAL_TIM_Base_Stop))
 <BR><BR>[Called By]<UL><LI><a href="#[c3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;delay
 </UL>
 
@@ -1298,7 +1299,7 @@ Local Symbols
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> spi_stm32f4xx.o(.constdata)
 </UL>
-<P><STRONG><a name="[c9]"></a>SPI_Control</STRONG> (Thumb, 1290 bytes, Stack size 64 bytes, spi_stm32f4xx.o(i.SPI_Control))
+<P><STRONG><a name="[c9]"></a>SPI_Control</STRONG> (Thumb, 1502 bytes, Stack size 64 bytes, spi_stm32f4xx.o(i.SPI_Control))
 <BR><BR>[Stack]<UL><LI>Max Depth = 88<LI>Call Chain = SPI_Control &rArr; HAL_GPIO_Init
 </UL>
 <BR>[Calls]<UL><LI><a href="#[d6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_GPIO_DeInit
@@ -1323,7 +1324,7 @@ Local Symbols
 <BR>[Called By]<UL><LI><a href="#[77]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SPI1_GetStatus
 </UL>
 
-<P><STRONG><a name="[cc]"></a>SPI_IRQHandler</STRONG> (Thumb, 262 bytes, Stack size 24 bytes, spi_stm32f4xx.o(i.SPI_IRQHandler))
+<P><STRONG><a name="[cc]"></a>SPI_IRQHandler</STRONG> (Thumb, 274 bytes, Stack size 24 bytes, spi_stm32f4xx.o(i.SPI_IRQHandler))
 <BR><BR>[Stack]<UL><LI>Max Depth = 44<LI>Call Chain = SPI_IRQHandler &rArr; SPI_RxData
 </UL>
 <BR>[Calls]<UL><LI><a href="#[d9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SPI_TxData
@@ -1347,7 +1348,7 @@ Local Symbols
 <LI><a href="#[c9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SPI_Control
 </UL>
 
-<P><STRONG><a name="[ce]"></a>SPI_PowerControl</STRONG> (Thumb, 254 bytes, Stack size 16 bytes, spi_stm32f4xx.o(i.SPI_PowerControl))
+<P><STRONG><a name="[ce]"></a>SPI_PowerControl</STRONG> (Thumb, 264 bytes, Stack size 16 bytes, spi_stm32f4xx.o(i.SPI_PowerControl))
 <BR><BR>[Stack]<UL><LI>Max Depth = 104<LI>Call Chain = SPI_PowerControl &rArr; SPI_Control &rArr; HAL_GPIO_Init
 </UL>
 <BR>[Calls]<UL><LI><a href="#[da]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_NVIC_DisableIRQ
@@ -1355,12 +1356,13 @@ Local Symbols
 <LI><a href="#[c9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SPI_Control
 <LI><a href="#[dc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Enable_SPI_Clock
 <LI><a href="#[db]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Disable_SPI_Clock
+<LI><a href="#[d5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memclr4
 </UL>
 <BR>[Called By]<UL><LI><a href="#[d2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SPI_Uninitialize
 <LI><a href="#[71]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SPI1_PowerControl
 </UL>
 
-<P><STRONG><a name="[cf]"></a>SPI_Receive</STRONG> (Thumb, 136 bytes, Stack size 16 bytes, spi_stm32f4xx.o(i.SPI_Receive))
+<P><STRONG><a name="[cf]"></a>SPI_Receive</STRONG> (Thumb, 148 bytes, Stack size 16 bytes, spi_stm32f4xx.o(i.SPI_Receive))
 <BR><BR>[Stack]<UL><LI>Max Depth = 32<LI>Call Chain = SPI_Receive &rArr; SPI_TxData
 </UL>
 <BR>[Calls]<UL><LI><a href="#[d9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SPI_TxData
@@ -1368,13 +1370,13 @@ Local Symbols
 <BR>[Called By]<UL><LI><a href="#[73]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SPI1_Receive
 </UL>
 
-<P><STRONG><a name="[d8]"></a>SPI_RxData</STRONG> (Thumb, 86 bytes, Stack size 20 bytes, spi_stm32f4xx.o(i.SPI_RxData))
+<P><STRONG><a name="[d8]"></a>SPI_RxData</STRONG> (Thumb, 88 bytes, Stack size 20 bytes, spi_stm32f4xx.o(i.SPI_RxData))
 <BR><BR>[Stack]<UL><LI>Max Depth = 20<LI>Call Chain = SPI_RxData
 </UL>
 <BR>[Called By]<UL><LI><a href="#[cc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SPI_IRQHandler
 </UL>
 
-<P><STRONG><a name="[d0]"></a>SPI_Send</STRONG> (Thumb, 136 bytes, Stack size 16 bytes, spi_stm32f4xx.o(i.SPI_Send))
+<P><STRONG><a name="[d0]"></a>SPI_Send</STRONG> (Thumb, 148 bytes, Stack size 16 bytes, spi_stm32f4xx.o(i.SPI_Send))
 <BR><BR>[Stack]<UL><LI>Max Depth = 32<LI>Call Chain = SPI_Send &rArr; SPI_TxData
 </UL>
 <BR>[Calls]<UL><LI><a href="#[d9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SPI_TxData
@@ -1382,7 +1384,7 @@ Local Symbols
 <BR>[Called By]<UL><LI><a href="#[72]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SPI1_Send
 </UL>
 
-<P><STRONG><a name="[d1]"></a>SPI_Transfer</STRONG> (Thumb, 118 bytes, Stack size 24 bytes, spi_stm32f4xx.o(i.SPI_Transfer))
+<P><STRONG><a name="[d1]"></a>SPI_Transfer</STRONG> (Thumb, 130 bytes, Stack size 24 bytes, spi_stm32f4xx.o(i.SPI_Transfer))
 <BR><BR>[Stack]<UL><LI>Max Depth = 40<LI>Call Chain = SPI_Transfer &rArr; SPI_TxData
 </UL>
 <BR>[Calls]<UL><LI><a href="#[d9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SPI_TxData

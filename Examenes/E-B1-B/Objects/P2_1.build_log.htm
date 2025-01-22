@@ -27,37 +27,7 @@ Project File Date:  06/23/2024
 <h2>Output:</h2>
 *** Using Compiler 'V5.06 update 7 (build 960)', folder: 'C:\Keil_v5\ARM\ARMCC\Bin'
 Build target 'Target 1'
-compiling stm32f4xx_hal_dma.c...
-compiling stm32f4xx_hal_cortex.c...
-compiling stm32f4xx_hal_dma_ex.c...
-compiling main.c...
-compiling stm32f4xx_hal.c...
-compiling stm32f4xx_it.c...
-stm32f4xx_it.c(68): warning:  #188-D: enumerated type mixed with another type
-  						HAL_GPIO_WritePin(GPIOB, GPIO_PIN_7, 0);
-stm32f4xx_it.c(69): warning:  #188-D: enumerated type mixed with another type
-  						HAL_GPIO_WritePin(GPIOB, GPIO_PIN_14, 0);
-stm32f4xx_it.c(73): warning:  #188-D: enumerated type mixed with another type
-  						HAL_GPIO_WritePin(GPIOB, GPIO_PIN_0, 0);
-stm32f4xx_it.c(74): warning:  #188-D: enumerated type mixed with another type
-  						HAL_GPIO_WritePin(GPIOB, GPIO_PIN_14, 0);	
-stm32f4xx_it.c(78): warning:  #188-D: enumerated type mixed with another type
-  						HAL_GPIO_WritePin(GPIOB, GPIO_PIN_0, 0);
-stm32f4xx_it.c(79): warning:  #188-D: enumerated type mixed with another type
-  						HAL_GPIO_WritePin(GPIOB, GPIO_PIN_7, 0);	
-stm32f4xx_it.c: 6 warnings, 0 errors
-compiling stm32f4xx_hal_gpio.c...
-compiling stm32f4xx_hal_rcc.c...
-compiling stm32f4xx_hal_tim.c...
-assembling startup_stm32f429xx.s...
-compiling stm32f4xx_hal_pwr_ex.c...
-compiling stm32f4xx_hal_pwr.c...
-compiling stm32f4xx_hal_rcc_ex.c...
-compiling stm32f4xx_hal_tim_ex.c...
-compiling system_stm32f4xx.c...
-linking...
-Program Size: Code=5314 RO-data=486 RW-data=24 ZI-data=1728  
-".\Objects\P2_1.axf" - 0 Error(s), 6 Warning(s).
+".\Objects\P2_1.axf" - 0 Error(s), 0 Warning(s).
 
 <h2>Software Packages used:</h2>
 
@@ -96,26 +66,26 @@ Package Vendor: Keil
    * Component: ARM::CMSIS:CORE:5.6.0
 
    * Component: Keil::Device:STM32Cube Framework:Classic:1.8.1
-      Source file:   MDK\Templates\Src\stm32f4xx_it.c
-      Include file:  CMSIS\Driver\Config\RTE_Device.h
-      Include file:  MDK\Templates\Inc\stm32f4xx_hal_conf.h
-      Source file:   MDK\Templates\Src\stm32f4xx_hal_msp.c
-      Include file:  MDK\Templates\Inc\stm32f4xx_it.h
+      Include file:  MDK\Templates_LL\Inc\main.h
       Source file:   MDK\Templates_LL\Src\main.c
       Source file:   MDK\Templates\Src\main.c
+      Source file:   MDK\Templates\Src\stm32f4xx_hal_msp.c
+      Include file:  MDK\Templates\Inc\stm32f4xx_it.h
+      Include file:  MDK\Templates\Inc\stm32f4xx_hal_conf.h
+      Include file:  CMSIS\Driver\Config\RTE_Device.h
       Include file:  MDK\Templates\Inc\main.h
-      Include file:  MDK\Templates_LL\Inc\main.h
+      Source file:   MDK\Templates\Src\stm32f4xx_it.c
 
    * Component: Keil::Device:STM32Cube HAL:Common:1.8.1
-      Source file:   Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal.c
       Include file:  Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal.h
+      Source file:   Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal.c
 
    * Component: Keil::Device:STM32Cube HAL:Cortex:1.8.1
       Source file:   Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_cortex.c
 
    * Component: Keil::Device:STM32Cube HAL:DMA:1.8.1
-      Source file:   Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_dma.c
       Source file:   Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_dma_ex.c
+      Source file:   Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_dma.c
 
    * Component: Keil::Device:STM32Cube HAL:GPIO:1.8.1
       Source file:   Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_gpio.c
@@ -125,20 +95,20 @@ Package Vendor: Keil
       Source file:   Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_pwr_ex.c
 
    * Component: Keil::Device:STM32Cube HAL:RCC:1.8.1
-      Source file:   Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_rcc.c
       Source file:   Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_rcc_ex.c
+      Source file:   Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_rcc.c
 
    * Component: Keil::Device:STM32Cube HAL:TIM:1.8.1
       Source file:   Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_tim.c
       Source file:   Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_tim_ex.c
 
    * Component: Keil::Device:Startup:2.6.3
-      Source file:   Drivers\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c
-      Source file:   MDK\Device\Source\ARM\STM32F4xx_OTP.s
       Source file:   MDK\Device\Source\ARM\STM32F42xxx_43xxx_OPT.s
+      Source file:   MDK\Device\Source\ARM\STM32F4xx_OTP.s
       Include file:  Drivers\CMSIS\Device\ST\STM32F4xx\Include\stm32f4xx.h
       Source file:   Drivers\CMSIS\Device\ST\STM32F4xx\Source\Templates\arm\startup_stm32f429xx.s
-Build Time Elapsed:  00:00:30
+      Source file:   Drivers\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c
+Build Time Elapsed:  00:00:01
 </pre>
 </body>
 </html>

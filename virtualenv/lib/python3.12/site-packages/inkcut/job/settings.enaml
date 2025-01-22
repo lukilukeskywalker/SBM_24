@@ -1,0 +1,30 @@
+"""
+Copyright (c) 2019, Jairus Martin.
+
+Distributed under the terms of the GPL v3 License.
+
+The full license is in the file LICENSE, distributed with this software.
+
+Created on May 25, 2019
+
+@author: jrm
+"""
+from enaml.widgets.api import Container, Form, Label, ObjectCombo
+from enaml.qt.QtWidgets import QApplication
+from enamlx.widgets.api import DoubleSpinBox
+
+
+enamldef JobSettingsPage(Container):
+    padding = 0
+    attr model
+    Form:
+        Label:
+            text = QApplication.translate("settings", "Default Units")
+        ObjectCombo:
+            items = list(sorted(model.get_member('units').items))
+            selected := model.units
+        Label:
+            text = QApplication.translate("settings", "Optimizer timeout")
+        DoubleSpinBox:
+            suffix = ' sec'
+            value := model.optimizer_timeout
