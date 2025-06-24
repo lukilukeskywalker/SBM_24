@@ -31,3 +31,4 @@
 .\exam_helper.o: C:\Users\gdanietzlu\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_tim.h
 .\exam_helper.o: C:\Users\gdanietzlu\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_tim_ex.h
 .\exam_helper.o: exam_helper.h
+.\exam_helper.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\math.h

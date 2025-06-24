@@ -128,8 +128,11 @@ int main(void)
   }
 }
 /** Viable settings:
-* SYSCLK | M | N | P | Q | 
-*  42 MHz| 4 |168| 8 | 7 |
+* SYSCLK | M | N | P | Q | AHB | APB1 | APB2 | FAULTY
+*  42 MHz| 4 |168| 8 | 7 | 1   | 2    | 2    |
+*  50 MHz| 4 |100| 4 | 4 | 1   | 2    | 2    |x
+*  84 MHz| 4 |168| 4 | 7 | 1   | 2    | 2    |
+*  168 MHz| 4 |168| 2 | 7 | 1   | 4    | 2    |
 */
 static void SystemClock_Config(void)
 {
@@ -151,7 +154,7 @@ static void SystemClock_Config(void)
   RCC_OscInitStruct.PLL.PLLSource = RCC_PLLSOURCE_HSE;
   RCC_OscInitStruct.PLL.PLLM = 4;
   RCC_OscInitStruct.PLL.PLLN = 168;
-  RCC_OscInitStruct.PLL.PLLP = RCC_PLLP_DIV8;
+  RCC_OscInitStruct.PLL.PLLP = RCC_PLLP_DIV2;
   RCC_OscInitStruct.PLL.PLLQ = 7;
   if(HAL_RCC_OscConfig(&RCC_OscInitStruct) != HAL_OK)
   {
@@ -164,7 +167,8 @@ static void SystemClock_Config(void)
   RCC_ClkInitStruct.ClockType = (RCC_CLOCKTYPE_SYSCLK | RCC_CLOCKTYPE_HCLK | RCC_CLOCKTYPE_PCLK1 | RCC_CLOCKTYPE_PCLK2);
   RCC_ClkInitStruct.SYSCLKSource = RCC_SYSCLKSOURCE_PLLCLK;
   RCC_ClkInitStruct.AHBCLKDivider = RCC_SYSCLK_DIV1;
-  RCC_ClkInitStruct.APB1CLKDivider = RCC_HCLK_DIV4;  
+  //RCC_ClkInitStruct.APB1CLKDivider = RCC_HCLK_DIV4;  
+  RCC_ClkInitStruct.APB1CLKDivider = RCC_HCLK_DIV2;
   RCC_ClkInitStruct.APB2CLKDivider = RCC_HCLK_DIV2;  
   if(HAL_RCC_ClockConfig(&RCC_ClkInitStruct, FLASH_LATENCY_5) != HAL_OK)
   {

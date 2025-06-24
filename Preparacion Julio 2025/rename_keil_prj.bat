@@ -18,14 +18,14 @@ xcopy "%SRC_FOLDER%" "%NEW_NAME%" /E /I /H /Y
 
 REM Rename .uvprojx and .uvoptx files
 pushd "%NEW_NAME%"
-for %%f in (*.uvprojx *.uvoptx) do (
+for %%f in (*.uvprojx *.uvoptx *.uvguix *.axf) do (
     set "OLD_FILE=%%f"
     set "EXT=%%~xf"
     ren "!OLD_FILE!" "%NEW_NAME%!EXT!"
 )
 
 REM Replace contents inside the project files
-for %%f in (%NEW_NAME%.uvprojx %NEW_NAME%.uvoptx) do (
+for %%f in (%NEW_NAME%.uvprojx %NEW_NAME%.uvoptx %NEW_NAME%.uvguix %NEW_NAME%.axf) do (
     powershell -Command "(Get-Content -Raw '%%f') -replace '%SRC_NAME%', '%NEW_NAME%' | Set-Content '%%f'"
 )
 

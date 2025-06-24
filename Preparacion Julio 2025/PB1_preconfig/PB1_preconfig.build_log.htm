@@ -21,23 +21,22 @@ Dialog DLL:      TCM.DLL V1.48.0.0
  
 <h2>Project:</h2>
 \\vmware-host\Shared Folders\SBM\Preparacion Julio 2025\PB1_preconfig\PB1_preconfig.uvprojx
-Project File Date:  06/23/2025
+Project File Date:  06/24/2025
 
 <h2>Output:</h2>
 *** Using Compiler 'V5.06 update 7 (build 960)', folder: 'C:\Keil_v5\ARM\ARMCC\Bin'
 Build target 'Target 1'
-compiling exam_helper.c...
-exam_helper.h(11): warning:  #1-D: last line of file ends without a newline
-  #endif
-exam_helper.c(18): warning:  #188-D: enumerated type mixed with another type
-  		HAL_GPIO_WritePin(GPIOB, GPIO_PIN_0, 1);		// Turn LED1 ON
-exam_helper.c: 2 warnings, 0 errors
 compiling main.c...
-exam_helper.h(11): warning:  #1-D: last line of file ends without a newline
-  #endif
-main.c: 1 warning, 0 errors
+compiling exam_helper.c...
+exam_helper.c(21): warning:  #68-D: integer conversion resulted in a change of sign
+  	.counter = -1,
+exam_helper.c(39): warning:  #188-D: enumerated type mixed with another type
+  		HAL_GPIO_WritePin(GPIOB, GPIO_PIN_0, 1);		// Turn LED1 ON
+exam_helper.c(60): warning:  #188-D: enumerated type mixed with another type
+  		HAL_GPIO_WritePin(GPIOB, GPIO_PIN_7, next_blink_state(&ld2_blink));
+exam_helper.c: 3 warnings, 0 errors
 linking...
-Program Size: Code=5266 RO-data=486 RW-data=20 ZI-data=1708  
+Program Size: Code=6970 RO-data=486 RW-data=28 ZI-data=1924  
 ".\PB1_preconfig.axf" - 0 Error(s), 3 Warning(s).
 
 <h2>Software Packages used:</h2>
@@ -77,15 +76,15 @@ Package Vendor: Keil
    * Component: ARM::CMSIS:CORE:5.6.0
 
    * Component: Keil::Device:STM32Cube Framework:Classic:1.8.1
-      Include file:  MDK\Templates\Inc\main.h
-      Source file:   MDK\Templates\Src\main.c
       Source file:   MDK\Templates_LL\Src\main.c
       Include file:  MDK\Templates_LL\Inc\main.h
       Include file:  CMSIS\Driver\Config\RTE_Device.h
       Include file:  MDK\Templates\Inc\stm32f4xx_hal_conf.h
+      Source file:   MDK\Templates\Src\stm32f4xx_it.c
       Source file:   MDK\Templates\Src\stm32f4xx_hal_msp.c
       Include file:  MDK\Templates\Inc\stm32f4xx_it.h
-      Source file:   MDK\Templates\Src\stm32f4xx_it.c
+      Include file:  MDK\Templates\Inc\main.h
+      Source file:   MDK\Templates\Src\main.c
 
    * Component: Keil::Device:STM32Cube HAL:Common:1.8.1
       Include file:  Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal.h
@@ -95,15 +94,15 @@ Package Vendor: Keil
       Source file:   Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_cortex.c
 
    * Component: Keil::Device:STM32Cube HAL:DMA:1.8.1
-      Source file:   Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_dma_ex.c
       Source file:   Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_dma.c
+      Source file:   Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_dma_ex.c
 
    * Component: Keil::Device:STM32Cube HAL:GPIO:1.8.1
       Source file:   Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_gpio.c
 
    * Component: Keil::Device:STM32Cube HAL:PWR:1.8.1
-      Source file:   Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_pwr.c
       Source file:   Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_pwr_ex.c
+      Source file:   Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_pwr.c
 
    * Component: Keil::Device:STM32Cube HAL:RCC:1.8.1
       Source file:   Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_rcc_ex.c
@@ -115,11 +114,11 @@ Package Vendor: Keil
 
    * Component: Keil::Device:Startup:2.6.3
       Source file:   MDK\Device\Source\ARM\STM32F4xx_OTP.s
-      Source file:   MDK\Device\Source\ARM\STM32F42xxx_43xxx_OPT.s
       Include file:  Drivers\CMSIS\Device\ST\STM32F4xx\Include\stm32f4xx.h
+      Source file:   MDK\Device\Source\ARM\STM32F42xxx_43xxx_OPT.s
       Source file:   Drivers\CMSIS\Device\ST\STM32F4xx\Source\Templates\arm\startup_stm32f429xx.s
       Source file:   Drivers\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c
-Build Time Elapsed:  00:00:02
+Build Time Elapsed:  00:00:03
 </pre>
 </body>
 </html>

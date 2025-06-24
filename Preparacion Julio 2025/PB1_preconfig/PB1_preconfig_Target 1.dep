@@ -1,6 +1,6 @@
 Dependencies for Project 'PB1_preconfig', Target 'Target 1': (DO NOT MODIFY !)
 CompilerVersion: 5060960::V5.06 update 7 (build 960)::.\ARMCC
-F (.\main.c)(0x68594979)(--c99 --gnu -c --cpu Cortex-M4.fp.sp -g -O0 --apcs=interwork --split_sections-I.\RTE\Device\STM32F429ZITx-I.\RTE\_Target_1-IC:\Users\gdanietzlu\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include-IC:\Users\gdanietzlu\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\CMSIS\Device\ST\STM32F4xx\Include-IC:\Users\gdanietzlu\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\STM32F4xx_HAL_Driver\Inc-D__UVISION_VERSION="534" -D_RTE_ -DSTM32F429xx -D_RTE_ -DHSE_VALUE="8000000"  --preinclude="Pre_Include_Global.h"-o .\main.o --omf_browse .\main.crf --depend .\main.d)
+F (.\main.c)(0x685AB6B1)(--c99 --gnu -c --cpu Cortex-M4.fp.sp -g -O0 --apcs=interwork --split_sections-I.\RTE\Device\STM32F429ZITx-I.\RTE\_Target_1-IC:\Users\gdanietzlu\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include-IC:\Users\gdanietzlu\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\CMSIS\Device\ST\STM32F4xx\Include-IC:\Users\gdanietzlu\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\STM32F4xx_HAL_Driver\Inc-D__UVISION_VERSION="534" -D_RTE_ -DSTM32F429xx -D_RTE_ -DHSE_VALUE="8000000"  --preinclude="Pre_Include_Global.h"-o .\main.o --omf_browse .\main.crf --depend .\main.d)
 I (.\RTE\_Target_1\Pre_Include_Global.h)(0x6857F6E2)
 I (main.h)(0x63777BBE)
 I (C:\Users\gdanietzlu\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal.h)(0x6374AC96)
@@ -32,7 +32,7 @@ I (C:\Users\gdanietzlu\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers
 I (C:\Users\gdanietzlu\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_pwr_ex.h)(0x6374AC96)
 I (C:\Users\gdanietzlu\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_tim.h)(0x6374AC96)
 I (C:\Users\gdanietzlu\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_tim_ex.h)(0x6374AC96)
-I (exam_helper.h)(0x68594811)
+I (exam_helper.h)(0x685AB50B)
 F (.\stm32f4xx_it.c)(0x6858205C)(--c99 --gnu -c --cpu Cortex-M4.fp.sp -g -O0 --apcs=interwork --split_sections-I.\RTE\Device\STM32F429ZITx-I.\RTE\_Target_1-IC:\Users\gdanietzlu\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include-IC:\Users\gdanietzlu\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\CMSIS\Device\ST\STM32F4xx\Include-IC:\Users\gdanietzlu\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\STM32F4xx_HAL_Driver\Inc-D__UVISION_VERSION="534" -D_RTE_ -DSTM32F429xx -D_RTE_ -DHSE_VALUE="8000000"  --preinclude="Pre_Include_Global.h"-o .\stm32f4xx_it.o --omf_browse .\stm32f4xx_it.crf --depend .\stm32f4xx_it.d)
 I (.\RTE\_Target_1\Pre_Include_Global.h)(0x6857F6E2)
 I (main.h)(0x63777BBE)
@@ -66,7 +66,7 @@ I (C:\Users\gdanietzlu\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers
 I (C:\Users\gdanietzlu\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_tim.h)(0x6374AC96)
 I (C:\Users\gdanietzlu\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_tim_ex.h)(0x6374AC96)
 I (stm32f4xx_it.h)(0x63777BBE)
-F (.\exam_helper.c)(0x6859496C)(--c99 --gnu -c --cpu Cortex-M4.fp.sp -g -O0 --apcs=interwork --split_sections-I.\RTE\Device\STM32F429ZITx-I.\RTE\_Target_1-IC:\Users\gdanietzlu\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include-IC:\Users\gdanietzlu\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\CMSIS\Device\ST\STM32F4xx\Include-IC:\Users\gdanietzlu\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\STM32F4xx_HAL_Driver\Inc-D__UVISION_VERSION="534" -D_RTE_ -DSTM32F429xx -D_RTE_ -DHSE_VALUE="8000000"  --preinclude="Pre_Include_Global.h"-o .\exam_helper.o --omf_browse .\exam_helper.crf --depend .\exam_helper.d)
+F (.\exam_helper.c)(0x685AB838)(--c99 --gnu -c --cpu Cortex-M4.fp.sp -g -O0 --apcs=interwork --split_sections-I.\RTE\Device\STM32F429ZITx-I.\RTE\_Target_1-IC:\Users\gdanietzlu\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include-IC:\Users\gdanietzlu\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\CMSIS\Device\ST\STM32F4xx\Include-IC:\Users\gdanietzlu\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\STM32F4xx_HAL_Driver\Inc-D__UVISION_VERSION="534" -D_RTE_ -DSTM32F429xx -D_RTE_ -DHSE_VALUE="8000000"  --preinclude="Pre_Include_Global.h"-o .\exam_helper.o --omf_browse .\exam_helper.crf --depend .\exam_helper.d)
 I (.\RTE\_Target_1\Pre_Include_Global.h)(0x6857F6E2)
 I (C:\Users\gdanietzlu\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal.h)(0x6374AC96)
 I (.\RTE\Device\STM32F429ZITx\stm32f4xx_hal_conf.h)(0x63777BBE)
@@ -97,8 +97,9 @@ I (C:\Users\gdanietzlu\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers
 I (C:\Users\gdanietzlu\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_pwr_ex.h)(0x6374AC96)
 I (C:\Users\gdanietzlu\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_tim.h)(0x6374AC96)
 I (C:\Users\gdanietzlu\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_tim_ex.h)(0x6374AC96)
-I (exam_helper.h)(0x68594811)
-F (.\exam_helper.h)(0x68594811)()
+I (exam_helper.h)(0x685AB50B)
+I (C:\Keil_v5\ARM\ARMCC\include\math.h)(0x5E8E9122)
+F (.\exam_helper.h)(0x685AB50B)()
 F (C:\Users\gdanietzlu\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal.c)(0x6374AC96)(--c99 --gnu -c --cpu Cortex-M4.fp.sp -g -O0 --apcs=interwork --split_sections-I.\RTE\Device\STM32F429ZITx-I.\RTE\_Target_1-IC:\Users\gdanietzlu\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include-IC:\Users\gdanietzlu\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\CMSIS\Device\ST\STM32F4xx\Include-IC:\Users\gdanietzlu\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\STM32F4xx_HAL_Driver\Inc-D__UVISION_VERSION="534" -D_RTE_ -DSTM32F429xx -D_RTE_ -DHSE_VALUE="8000000"  --preinclude="Pre_Include_Global.h"-o .\stm32f4xx_hal.o --omf_browse .\stm32f4xx_hal.crf --depend .\stm32f4xx_hal.d)
 I (.\RTE\_Target_1\Pre_Include_Global.h)(0x6857F6E2)
 I (C:\Users\gdanietzlu\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal.h)(0x6374AC96)
