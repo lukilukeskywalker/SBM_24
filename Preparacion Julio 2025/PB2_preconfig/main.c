@@ -22,6 +22,7 @@
 
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
+#include "pb2_exam_helper.h"
 
 #ifdef _RTE_
 #include "RTE_Components.h"             // Component selection
@@ -109,6 +110,8 @@ int main(void)
 #ifdef RTE_CMSIS_RTOS2
   /* Initialize CMSIS-RTOS2 */
   osKernelInitialize ();
+  
+   init_pb2();
 
   /* Create thread functions that start executing, 
   Example: osThreadNew(app_main, NULL, NULL); */
