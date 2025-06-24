@@ -31,11 +31,25 @@ pb2_exam_helper.h(8): warning:  #1-D: last line of file ends without a newline
   #endif
 lcd.h(13): warning:  #1-D: last line of file ends without a newline
   #endif
-pb2_exam_helper.c: 2 warnings, 0 errors
+pb2_exam_helper.c(107): warning:  #177-D: variable "posicion"  was declared but never referenced
+  	uint16_t posicion = 0;
+pb2_exam_helper.c(129): warning:  #940-D: missing return statement at end of non-void function "draw_pelota" 
+  }
+pb2_exam_helper.c(159): warning:  #128-D: loop is not reachable
+  	while(1);
+pb2_exam_helper.c(136): warning:  #550-D: variable "restart"  was set but never used
+  	uint8_t restart = 0, flags;
+pb2_exam_helper.c(136): warning:  #550-D: variable "flags"  was set but never used
+  	uint8_t restart = 0, flags;
+pb2_exam_helper.c(75): warning:  #177-D: function "draw_knight_rider"  was declared but never referenced
+  static int draw_knight_rider(uint8_t restart){
+pb2_exam_helper.c(95): warning:  #177-D: function "draw_diagonal_pattern"  was declared but never referenced
+  static int draw_diagonal_pattern(void){
+pb2_exam_helper.c: 9 warnings, 0 errors
 linking...
-Program Size: Code=18484 RO-data=900 RW-data=34336 ZI-data=2360  
+Program Size: Code=18404 RO-data=900 RW-data=34340 ZI-data=2356  
 FromELF: creating hex file...
-".\Objects\PB2_preconfig.axf" - 0 Error(s), 2 Warning(s).
+".\Objects\PB2_preconfig.axf" - 0 Error(s), 9 Warning(s).
 
 <h2>Software Packages used:</h2>
 

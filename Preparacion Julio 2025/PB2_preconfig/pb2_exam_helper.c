@@ -92,6 +92,42 @@ static int draw_knight_rider(uint8_t restart){
 	progress %=max_progress;
 	return progress - 1;
 }
+static int draw_diagonal_pattern(void){
+	const uint16_t max_progress = 128;
+	static uint16_t progress = 0;
+	if(progress == max_progress)
+		return progress;
+	draw_buf[progress] = 0x01 << (progress % 8);
+	lcd_write_drawbuf(draw_buf);
+	osDelay(200);
+	progress++;
+	return progress;
+}
+static void draw_cube(int x){
+	uint16_t posicion = 0;
+	for(uint16_t posicion = 0; posicion < x; posicion++){
+		draw_buf[posicion] = 0x0;
+		draw_buf[posicion + 128] = 0x00;
+	}
+	for(uint16_t posicion = x; posicion < x + 8; posicion++){
+		draw_buf[posicion] = 0xFF;
+		draw_buf[posicion + 128] = 0xF;
+	}
+	for(uint16_t posicion = x + 8; posicion < 128; posicion++){
+		draw_buf[posicion] = 0x0;
+		draw_buf[posicion + 128] = 0x00;
+	}
+}
+static int draw_pelota(void){
+	const uint16_t max_progress = 128;
+	static uint16_t progress = 0;
+	draw_cube(progress);
+	lcd_write_drawbuf(draw_buf);
+	osDelay(200);
+	progress++;
+	progress%=max_progress;
+}
+
 
 static void pb2_thread(void *arguments){
 	lcd_init(&id_pb2_thread);
@@ -103,6 +139,7 @@ static void pb2_thread(void *arguments){
 		//if(osThreadFlagsWait(FLAG_BTN, osFlagsWaitAll, 0) != osFlagsErrorTimeout)
 			//restart = 1;
 		flags = osThreadFlagsGet();
+		/*
 		if(FLAG_BTN == flags){
 			osThreadFlagsClear(FLAG_BTN);
 			tim4_restart();
@@ -113,7 +150,10 @@ static void pb2_thread(void *arguments){
 			lcd_write_drawbuf(draw_buf);
 			break;
 		}
-		draw_knight_rider(restart);
+		*/
+		//draw_knight_rider(restart);
+		//draw_diagonal_pattern();
+		draw_pelota();
 		restart = 0;
 	}
 	while(1);
