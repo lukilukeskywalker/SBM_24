@@ -423,6 +423,31 @@
               <FileType>5</FileType>
               <FilePath>.\pb2_exam_helper.h</FilePath>
             </File>
+            <File>
+              <FileName>joystick.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\Joystick\joystick.c</FilePath>
+            </File>
+            <File>
+              <FileName>joystick.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\Joystick\joystick.h</FilePath>
+            </File>
+            <File>
+              <FileName>stm_log.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\stm_log.c</FilePath>
+            </File>
+            <File>
+              <FileName>stm_log.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\stm_log.h</FilePath>
+            </File>
+            <File>
+              <FileName>stm_err.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\stm_err.h</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>

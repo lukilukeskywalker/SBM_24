@@ -143,6 +143,17 @@ void lcd_clean(void){
 		}
 	}
 }
+uint16_t lcd_poner_caracter(uint8_t * drawbuf, char caracter, uint8_t linea, uint16_t x){
+	uint8_t *pos_up = &drawbuf[(linea & 0x1)*256 + x];
+	uint8_t *pos_down = &drawbuf[(linea & 0x1)*256 + x + 128];
+	uint16_t offset = 25 * (caracter - ' ');
+	for(int i = 0; i < 12; i++){
+		pos_up[i] = Arial12x12[offset + i * 2 + 1];
+		pos_down[i] = Arial12x12[offset + i * 2 + 2];
+	}
+	return x + Arial12x12[offset];
+}
+
 	
 /*
 static void symbolToLocalBuffer_L1(uint8_t symbol){

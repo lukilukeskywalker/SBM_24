@@ -1,6 +1,6 @@
 Dependencies for Project 'PB2_preconfig', Target 'Target 1': (DO NOT MODIFY !)
 CompilerVersion: 5060960::V5.06 update 7 (build 960)::.\ARMCC
-F (.\main.c)(0x685AD3F0)(--c99 --gnu -c --cpu Cortex-M4.fp.sp -D__RTX -g -O0 --apcs=interwork --split_sections-I.\RTE\CMSIS-I.\RTE\Device\STM32F429ZITx-I.\RTE\_Target_1-IC:\Users\gdanietzlu\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include-IC:\Users\gdanietzlu\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Driver\Include-IC:\Users\gdanietzlu\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\RTOS2\Include-IC:\Users\gdanietzlu\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\RTOS2\RTX\Include-IC:\Users\gdanietzlu\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\CMSIS\Device\ST\STM32F4xx\Include-IC:\Users\gdanietzlu\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\STM32F4xx_HAL_Driver\Inc-D__UVISION_VERSION="534" -D_RTE_ -DSTM32F429xx -D_RTE_ -DHSE_VALUE="8000000"  --preinclude="Pre_Include_Global.h"-o .\objects\main.o --omf_browse .\objects\main.crf --depend .\objects\main.d)
+F (.\main.c)(0x685BC849)(--c99 --gnu -c --cpu Cortex-M4.fp.sp -D__RTX -g -O0 --apcs=interwork --split_sections-I.\RTE\CMSIS-I.\RTE\Device\STM32F429ZITx-I.\RTE\_Target_1-IC:\Users\gdanietzlu\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include-IC:\Users\gdanietzlu\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Driver\Include-IC:\Users\gdanietzlu\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\RTOS2\Include-IC:\Users\gdanietzlu\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\RTOS2\RTX\Include-IC:\Users\gdanietzlu\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\CMSIS\Device\ST\STM32F4xx\Include-IC:\Users\gdanietzlu\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\STM32F4xx_HAL_Driver\Inc-D__UVISION_VERSION="534" -D_RTE_ -DSTM32F429xx -D_RTE_ -DHSE_VALUE="8000000"  --preinclude="Pre_Include_Global.h"-o .\objects\main.o --omf_browse .\objects\main.crf --depend .\objects\main.d)
 I (.\RTE\_Target_1\Pre_Include_Global.h)(0x68598583)
 I (main.h)(0x63777BBE)
 I (C:\Users\gdanietzlu\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal.h)(0x6374AC96)
@@ -33,11 +33,13 @@ I (C:\Users\gdanietzlu\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers
 I (C:\Users\gdanietzlu\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_spi.h)(0x6374AC96)
 I (C:\Users\gdanietzlu\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_tim.h)(0x6374AC96)
 I (C:\Users\gdanietzlu\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_tim_ex.h)(0x6374AC96)
-I (pb2_exam_helper.h)(0x685AE127)
+I (pb2_exam_helper.h)(0x685BCA26)
+I (stm_log.h)(0x66744314)
+I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x5E8E9122)
 I (C:\Users\gdanietzlu\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\RTOS2\Include\cmsis_os2.h)(0x626FAD4E)
-F (.\lcd.c)(0x685ADCCE)(--c99 --gnu -c --cpu Cortex-M4.fp.sp -D__RTX -g -O0 --apcs=interwork --split_sections-I.\RTE\CMSIS-I.\RTE\Device\STM32F429ZITx-I.\RTE\_Target_1-IC:\Users\gdanietzlu\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include-IC:\Users\gdanietzlu\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Driver\Include-IC:\Users\gdanietzlu\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\RTOS2\Include-IC:\Users\gdanietzlu\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\RTOS2\RTX\Include-IC:\Users\gdanietzlu\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\CMSIS\Device\ST\STM32F4xx\Include-IC:\Users\gdanietzlu\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\STM32F4xx_HAL_Driver\Inc-D__UVISION_VERSION="534" -D_RTE_ -DSTM32F429xx -D_RTE_ -DHSE_VALUE="8000000"  --preinclude="Pre_Include_Global.h"-o .\objects\lcd.o --omf_browse .\objects\lcd.crf --depend .\objects\lcd.d)
+F (.\lcd.c)(0x685BD669)(--c99 --gnu -c --cpu Cortex-M4.fp.sp -D__RTX -g -O0 --apcs=interwork --split_sections-I.\RTE\CMSIS-I.\RTE\Device\STM32F429ZITx-I.\RTE\_Target_1-IC:\Users\gdanietzlu\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include-IC:\Users\gdanietzlu\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Driver\Include-IC:\Users\gdanietzlu\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\RTOS2\Include-IC:\Users\gdanietzlu\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\RTOS2\RTX\Include-IC:\Users\gdanietzlu\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\CMSIS\Device\ST\STM32F4xx\Include-IC:\Users\gdanietzlu\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\STM32F4xx_HAL_Driver\Inc-D__UVISION_VERSION="534" -D_RTE_ -DSTM32F429xx -D_RTE_ -DHSE_VALUE="8000000"  --preinclude="Pre_Include_Global.h"-o .\objects\lcd.o --omf_browse .\objects\lcd.crf --depend .\objects\lcd.d)
 I (.\RTE\_Target_1\Pre_Include_Global.h)(0x68598583)
-I (lcd.h)(0x685ADC1C)
+I (lcd.h)(0x685BD764)
 I (C:\Users\gdanietzlu\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\RTOS2\Include\cmsis_os2.h)(0x626FAD4E)
 I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5E8E9122)
 I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x5E8E9122)
@@ -110,13 +112,13 @@ I (C:\Users\gdanietzlu\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers
 I (C:\Users\gdanietzlu\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_tim_ex.h)(0x6374AC96)
 I (stm32f4xx_it.h)(0x66776948)
 F (.\Arial12x12.h)(0x66776948)()
-F (.\lcd.h)(0x685ADC1C)()
+F (.\lcd.h)(0x685BD764)()
 F (.\stm32f4xx_it.h)(0x66776948)()
-F (.\pb2_exam_helper.c)(0x685B0FE8)(--c99 --gnu -c --cpu Cortex-M4.fp.sp -D__RTX -g -O0 --apcs=interwork --split_sections-I.\RTE\CMSIS-I.\RTE\Device\STM32F429ZITx-I.\RTE\_Target_1-IC:\Users\gdanietzlu\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include-IC:\Users\gdanietzlu\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Driver\Include-IC:\Users\gdanietzlu\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\RTOS2\Include-IC:\Users\gdanietzlu\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\RTOS2\RTX\Include-IC:\Users\gdanietzlu\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\CMSIS\Device\ST\STM32F4xx\Include-IC:\Users\gdanietzlu\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\STM32F4xx_HAL_Driver\Inc-D__UVISION_VERSION="534" -D_RTE_ -DSTM32F429xx -D_RTE_ -DHSE_VALUE="8000000"  --preinclude="Pre_Include_Global.h"-o .\objects\pb2_exam_helper.o --omf_browse .\objects\pb2_exam_helper.crf --depend .\objects\pb2_exam_helper.d)
+F (.\pb2_exam_helper.c)(0x685BDD41)(--c99 --gnu -c --cpu Cortex-M4.fp.sp -D__RTX -g -O0 --apcs=interwork --split_sections-I.\RTE\CMSIS-I.\RTE\Device\STM32F429ZITx-I.\RTE\_Target_1-IC:\Users\gdanietzlu\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include-IC:\Users\gdanietzlu\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Driver\Include-IC:\Users\gdanietzlu\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\RTOS2\Include-IC:\Users\gdanietzlu\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\RTOS2\RTX\Include-IC:\Users\gdanietzlu\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\CMSIS\Device\ST\STM32F4xx\Include-IC:\Users\gdanietzlu\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\STM32F4xx_HAL_Driver\Inc-D__UVISION_VERSION="534" -D_RTE_ -DSTM32F429xx -D_RTE_ -DHSE_VALUE="8000000"  --preinclude="Pre_Include_Global.h"-o .\objects\pb2_exam_helper.o --omf_browse .\objects\pb2_exam_helper.crf --depend .\objects\pb2_exam_helper.d)
 I (.\RTE\_Target_1\Pre_Include_Global.h)(0x68598583)
-I (pb2_exam_helper.h)(0x685AE127)
+I (pb2_exam_helper.h)(0x685BCA26)
 I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x5E8E9122)
-I (lcd.h)(0x685ADC1C)
+I (lcd.h)(0x685BD764)
 I (C:\Users\gdanietzlu\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\RTOS2\Include\cmsis_os2.h)(0x626FAD4E)
 I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5E8E9122)
 I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x5E8E9122)
@@ -148,7 +150,82 @@ I (C:\Users\gdanietzlu\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers
 I (C:\Users\gdanietzlu\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_spi.h)(0x6374AC96)
 I (C:\Users\gdanietzlu\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_tim.h)(0x6374AC96)
 I (C:\Users\gdanietzlu\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_tim_ex.h)(0x6374AC96)
-F (.\pb2_exam_helper.h)(0x685AE127)()
+I (Joystick/joystick.h)(0x685BCCD7)
+I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x5E8E9122)
+F (.\pb2_exam_helper.h)(0x685BCA26)()
+F (.\Joystick\joystick.c)(0x685BD84C)(--c99 --gnu -c --cpu Cortex-M4.fp.sp -D__RTX -g -O0 --apcs=interwork --split_sections-I.\RTE\CMSIS-I.\RTE\Device\STM32F429ZITx-I.\RTE\_Target_1-IC:\Users\gdanietzlu\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include-IC:\Users\gdanietzlu\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Driver\Include-IC:\Users\gdanietzlu\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\RTOS2\Include-IC:\Users\gdanietzlu\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\RTOS2\RTX\Include-IC:\Users\gdanietzlu\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\CMSIS\Device\ST\STM32F4xx\Include-IC:\Users\gdanietzlu\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\STM32F4xx_HAL_Driver\Inc-D__UVISION_VERSION="534" -D_RTE_ -DSTM32F429xx -D_RTE_ -DHSE_VALUE="8000000"  --preinclude="Pre_Include_Global.h"-o .\objects\joystick.o --omf_browse .\objects\joystick.crf --depend .\objects\joystick.d)
+I (.\RTE\_Target_1\Pre_Include_Global.h)(0x68598583)
+I (Joystick\joystick.h)(0x685BCCD7)
+I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x5E8E9122)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5E8E9122)
+I (C:\Users\gdanietzlu\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\RTOS2\Include\cmsis_os2.h)(0x626FAD4E)
+I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x5E8E9122)
+I (C:\Users\gdanietzlu\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal.h)(0x6374AC96)
+I (.\RTE\Device\STM32F429ZITx\stm32f4xx_hal_conf.h)(0x63777BBE)
+I (.\RTE\_Target_1\RTE_Components.h)(0x68599375)
+I (C:\Users\gdanietzlu\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_rcc.h)(0x6374AC96)
+I (C:\Users\gdanietzlu\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_def.h)(0x63777BBE)
+I (C:\Users\gdanietzlu\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\CMSIS\Device\ST\STM32F4xx\Include\stm32f4xx.h)(0x6374AC5A)
+I (C:\Users\gdanietzlu\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\CMSIS\Device\ST\STM32F4xx\Include\stm32f429xx.h)(0x6374AC5A)
+I (C:\Users\gdanietzlu\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\core_cm4.h)(0x626FAD4E)
+I (C:\Users\gdanietzlu\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_version.h)(0x626FAD4E)
+I (C:\Users\gdanietzlu\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_compiler.h)(0x626FAD4E)
+I (C:\Users\gdanietzlu\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_armcc.h)(0x626FAD4E)
+I (C:\Users\gdanietzlu\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\mpu_armv7.h)(0x626FAD4E)
+I (C:\Users\gdanietzlu\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\CMSIS\Device\ST\STM32F4xx\Include\system_stm32f4xx.h)(0x6374AC5A)
+I (C:\Users\gdanietzlu\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\STM32F4xx_HAL_Driver\Inc\Legacy\stm32_hal_legacy.h)(0x6374AC96)
+I (C:\Users\gdanietzlu\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_rcc_ex.h)(0x6374AC96)
+I (C:\Users\gdanietzlu\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_gpio.h)(0x6374AC96)
+I (C:\Users\gdanietzlu\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_gpio_ex.h)(0x6374AC96)
+I (C:\Users\gdanietzlu\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_dma.h)(0x6374AC96)
+I (C:\Users\gdanietzlu\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_dma_ex.h)(0x6374AC96)
+I (C:\Users\gdanietzlu\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_cortex.h)(0x6374AC96)
+I (C:\Users\gdanietzlu\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_flash.h)(0x6374AC96)
+I (C:\Users\gdanietzlu\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_flash_ex.h)(0x6374AC96)
+I (C:\Users\gdanietzlu\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_flash_ramfunc.h)(0x6374AC96)
+I (C:\Users\gdanietzlu\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_pwr.h)(0x6374AC96)
+I (C:\Users\gdanietzlu\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_pwr_ex.h)(0x6374AC96)
+I (C:\Users\gdanietzlu\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_spi.h)(0x6374AC96)
+I (C:\Users\gdanietzlu\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_tim.h)(0x6374AC96)
+I (C:\Users\gdanietzlu\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_tim_ex.h)(0x6374AC96)
+F (.\Joystick\joystick.h)(0x685BCCD7)()
+F (.\stm_log.c)(0x66745482)(--c99 --gnu -c --cpu Cortex-M4.fp.sp -D__RTX -g -O0 --apcs=interwork --split_sections-I.\RTE\CMSIS-I.\RTE\Device\STM32F429ZITx-I.\RTE\_Target_1-IC:\Users\gdanietzlu\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include-IC:\Users\gdanietzlu\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Driver\Include-IC:\Users\gdanietzlu\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\RTOS2\Include-IC:\Users\gdanietzlu\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\RTOS2\RTX\Include-IC:\Users\gdanietzlu\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\CMSIS\Device\ST\STM32F4xx\Include-IC:\Users\gdanietzlu\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\STM32F4xx_HAL_Driver\Inc-D__UVISION_VERSION="534" -D_RTE_ -DSTM32F429xx -D_RTE_ -DHSE_VALUE="8000000"  --preinclude="Pre_Include_Global.h"-o .\objects\stm_log.o --omf_browse .\objects\stm_log.crf --depend .\objects\stm_log.d)
+I (.\RTE\_Target_1\Pre_Include_Global.h)(0x68598583)
+I (stm_log.h)(0x66744314)
+I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x5E8E9122)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5E8E9122)
+I (C:\Keil_v5\ARM\ARMCC\include\stdarg.h)(0x5E8E9122)
+I (C:\Users\gdanietzlu\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal.h)(0x6374AC96)
+I (.\RTE\Device\STM32F429ZITx\stm32f4xx_hal_conf.h)(0x63777BBE)
+I (.\RTE\_Target_1\RTE_Components.h)(0x68599375)
+I (C:\Users\gdanietzlu\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_rcc.h)(0x6374AC96)
+I (C:\Users\gdanietzlu\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_def.h)(0x63777BBE)
+I (C:\Users\gdanietzlu\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\CMSIS\Device\ST\STM32F4xx\Include\stm32f4xx.h)(0x6374AC5A)
+I (C:\Users\gdanietzlu\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\CMSIS\Device\ST\STM32F4xx\Include\stm32f429xx.h)(0x6374AC5A)
+I (C:\Users\gdanietzlu\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\core_cm4.h)(0x626FAD4E)
+I (C:\Users\gdanietzlu\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_version.h)(0x626FAD4E)
+I (C:\Users\gdanietzlu\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_compiler.h)(0x626FAD4E)
+I (C:\Users\gdanietzlu\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_armcc.h)(0x626FAD4E)
+I (C:\Users\gdanietzlu\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\mpu_armv7.h)(0x626FAD4E)
+I (C:\Users\gdanietzlu\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\CMSIS\Device\ST\STM32F4xx\Include\system_stm32f4xx.h)(0x6374AC5A)
+I (C:\Users\gdanietzlu\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\STM32F4xx_HAL_Driver\Inc\Legacy\stm32_hal_legacy.h)(0x6374AC96)
+I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x5E8E9122)
+I (C:\Users\gdanietzlu\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_rcc_ex.h)(0x6374AC96)
+I (C:\Users\gdanietzlu\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_gpio.h)(0x6374AC96)
+I (C:\Users\gdanietzlu\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_gpio_ex.h)(0x6374AC96)
+I (C:\Users\gdanietzlu\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_dma.h)(0x6374AC96)
+I (C:\Users\gdanietzlu\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_dma_ex.h)(0x6374AC96)
+I (C:\Users\gdanietzlu\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_cortex.h)(0x6374AC96)
+I (C:\Users\gdanietzlu\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_flash.h)(0x6374AC96)
+I (C:\Users\gdanietzlu\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_flash_ex.h)(0x6374AC96)
+I (C:\Users\gdanietzlu\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_flash_ramfunc.h)(0x6374AC96)
+I (C:\Users\gdanietzlu\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_pwr.h)(0x6374AC96)
+I (C:\Users\gdanietzlu\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_pwr_ex.h)(0x6374AC96)
+I (C:\Users\gdanietzlu\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_spi.h)(0x6374AC96)
+I (C:\Users\gdanietzlu\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_tim.h)(0x6374AC96)
+I (C:\Users\gdanietzlu\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_tim_ex.h)(0x6374AC96)
+F (.\stm_log.h)(0x66744314)()
+F (.\stm_err.h)(0x685BCBA7)()
 F (C:\Users\gdanietzlu\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\RTOS2\RTX\Library\ARM\RTX_CM4F.lib)(0x626FAD4E)()
 F (C:\Users\gdanietzlu\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\RTOS2\RTX\Source\rtx_lib.c)(0x626FAD4E)(--c99 --gnu -c --cpu Cortex-M4.fp.sp -D__RTX -g -O0 --apcs=interwork --split_sections-I.\RTE\CMSIS-I.\RTE\Device\STM32F429ZITx-I.\RTE\_Target_1-IC:\Users\gdanietzlu\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include-IC:\Users\gdanietzlu\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Driver\Include-IC:\Users\gdanietzlu\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\RTOS2\Include-IC:\Users\gdanietzlu\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\RTOS2\RTX\Include-IC:\Users\gdanietzlu\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\CMSIS\Device\ST\STM32F4xx\Include-IC:\Users\gdanietzlu\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\STM32F4xx_HAL_Driver\Inc-D__UVISION_VERSION="534" -D_RTE_ -DSTM32F429xx -D_RTE_ -DHSE_VALUE="8000000"  --preinclude="Pre_Include_Global.h"-o .\objects\rtx_lib.o --omf_browse .\objects\rtx_lib.crf --depend .\objects\rtx_lib.d)
 I (.\RTE\_Target_1\Pre_Include_Global.h)(0x68598583)

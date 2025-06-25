@@ -7,6 +7,7 @@
 void lcd_init(osThreadId_t *id_task);
 void lcd_clean(void);
 void lcd_write_drawbuf(uint8_t *drawbuf);
+uint16_t lcd_poner_caracter(uint8_t * drawbuf, char caracter, uint8_t linea, uint16_t x);
 
 osMessageQueueId_t get_id_MsgQueue_lcd(void);
 

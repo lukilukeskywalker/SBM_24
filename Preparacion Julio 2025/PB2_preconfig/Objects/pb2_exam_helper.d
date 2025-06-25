@@ -35,3 +35,5 @@
 .\objects\pb2_exam_helper.o: C:\Users\gdanietzlu\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_spi.h
 .\objects\pb2_exam_helper.o: C:\Users\gdanietzlu\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_tim.h
 .\objects\pb2_exam_helper.o: C:\Users\gdanietzlu\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_tim_ex.h
+.\objects\pb2_exam_helper.o: Joystick/joystick.h
+.\objects\pb2_exam_helper.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h

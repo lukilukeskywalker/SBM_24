@@ -3,6 +3,8 @@
 ".\objects\lcd.o"
 ".\objects\stm32f4xx_it.o"
 ".\objects\pb2_exam_helper.o"
+".\objects\joystick.o"
+".\objects\stm_log.o"
 "C:\Users\gdanietzlu\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\RTOS2\RTX\Library\ARM\RTX_CM4F.lib"
 ".\objects\rtx_lib.o"
 ".\objects\rtx_config.o"

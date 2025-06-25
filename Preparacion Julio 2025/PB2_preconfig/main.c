@@ -23,6 +23,7 @@
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
 #include "pb2_exam_helper.h"
+#include "stm_log.h"
 
 #ifdef _RTE_
 #include "RTE_Components.h"             // Component selection
@@ -106,7 +107,8 @@ int main(void)
 
   /* Add your application code here
      */
-
+	uint32_t sysclk = HAL_RCC_GetSysClockFreq();
+	SWO_Init(0x1, sysclk, 64000);
 #ifdef RTE_CMSIS_RTOS2
   /* Initialize CMSIS-RTOS2 */
   osKernelInitialize ();
