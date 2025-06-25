@@ -1,0 +1,110 @@
+Capa HAL; No LowLevel
+
+SBM
+RESET y RCC
+	RESET:
+		- Pin NRST (status)
+		- Rutina fija en dirección 0x00000004
+		- Contiene WatchDog ante condición. Si no se produce en ventana programada (es un contador a ser reseteado) resetea el sistema de manera autónoma.
+				REQUIERE DE RELOJ ACTIVO. Puede existir varios WatchDog con fuentes de reloj independientes.
+		- Invocación por SW
+		- Protección de alimentación LowPower: Reseteo a standby/stop mode. Protección contra fallos por valores lógicos indeterminados.
+		(Cortocircuito no controlado de transistores de puertas lógicas).
+		- Forzado por Botón B2
+		- El reset se ejecuta a nivel bajo, desde la pulsación del botón y se completa por especificación 1uS después de nivel alto (liberado).
+		
+	RESET HANDLER
+		
+		• During the execution of the reset handler
+			– The processor is using de internal clock (16MHz)
+			– The different PINs are in the default state
+		
+		• The user/developer has to configure the processor and the peripherals. This should be done in the main function
+			– the first function to call in the main is “HAL_Init()” to gain access to the HAL Library.
+			
+Default BOOT0 = 0; Pin a masa= Boot Mode Flash memory.
+
+Frecuencia dinámica: RCC: Clock Control = Presenta 3 fuentes de reloj HSInternal (16MHz); HSExternal (8MHz); PhaseLockedLoop (PLL).
+		-Tras Reset: Fuente HSI.
+		Se activa también HSE.
+		/M (divisor ~ pre-scaler)
+El PLL requiere una señal en frecuencia para operar: Fuentes HSI/HSE desde Mux. 
+		Parámetros /M; /P; /Q; /R para operar en distintos protocolos a partir de las señales de reloj HSI/HSE
+		
+Frecuencia de operación: HSI(16MHz); HSE(8MHz) ó PLLCLK -> AHB Prescaler -> HCLK ->(prescaler para cada bus/protocolo).
+
+
+-----------------
+ESQUEMA: 
+
+
+HAL_Init();
+SystemClock_Config();
+SystemCoreClockUpdate();
+
+
+Inicialización de reloj
+Inicialización de oscilador (fuente de reloj);
+
+Habilitación de alimentación de reloj : _HAL_RCC_PWR_CLK_ENABLE();
+
+Selección de fuente de reloj;
+Selección de estado de reloj;
+Selección de estado de PLL;
+Selección de fuente de PLL;
+Factores pre-scaler PLL;
+
+
+static void SystemClock_Config(void)
+	{
+		RCC_ClkInitTypeDef RCC_ClkInitStruct;
+		RCC_OscInitTypeDef RCC_OscInitStruct;
+		/* Enable Power Control clock */
+		__HAL_RCC_PWR_CLK_ENABLE();
+		…………..
+		/* Enable HSE Oscillator and activate PLL with HSE as source
+		*/
+		RCC_OscInitStruct.OscillatorType = RCC_OSCILLATORTYPE_HSE;
+		RCC_OscInitStruct.HSEState = RCC_HSE_ON;
+		RCC_OscInitStruct.PLL.PLLState = RCC_PLL_ON;
+		RCC_OscInitStruct.PLL.PLLSource = RCC_PLLSOURCE_HSE;
+		RCC_OscInitStruct.PLL.PLLM = 25;
+		RCC_OscInitStruct.PLL.PLLN = 336;
+		RCC_OscInitStruct.PLL.PLLP = RCC_PLLP_DIV2;
+		RCC_OscInitStruct.PLL.PLLQ = 7;
+
+
+
+DIAGRAMA DATASHEET Pag.27 "B1-STM32-RCC.pdf"
+ 
+ 
+ IMPORTANTE:
+ HSE_VALUE=8000000 // #define HSE_VALUE 8000000
+ 
+-----
+GPIO
+	- Pines multipropósito (optimización de espacio/pcb).
+		Digital I/O; Función/Pin específico a HW alternativo; Analog (ADC/DAC); OpenDrain, PullUp (VDD), PullDown(VSS); High-speed; low-speed.
+	- 	OpenDrain = Alta Impedancia : Anula PMOS
+	- PullUp (Puesta a nivel alto). 
+	
+	OUTPUT_PP = PUSH PULL: PMOS Y NMOS HABILITADOS
+	
+	GPIOF; (PUERTO F DE GPIO) = PF0~PF12
+	GPIOC; (PUERTO C DE GPIO)
+	
+	Port A -> PA0~PA12 -> Función alternativa de tabla de puertos AF1 (Timer 2 canal 1 ó Timer 2 timer eventos) -> ETIQUETA INITSTRUCT.Alternate = tag a buscar en .h
+	
+	LOCALIZAR HOJAS DE PUERTOS.
+	LOCALIZAR FUNCIONES ALTERNATIVAS.
+	
+----
+INTERRUPCIONES:
+	startup_stm32f429xx.s //TAGS A INTERRUPCIONES
+	stm32f429xx.h	//TIPOS DE INTERRUPCIONES
+
+Podemos anidar interrupciones gracias a NVIC (las configurables).
+	-IRQ (Prior. Configurable): SysTick Timer, Periféricos, EXTI Controller (Señales externas que generan interrupciones)
+	-NMI: Reset(-3); NMI(-2); HardFault(-1)
+
+MODOS THREAD E INTERRUPT DE FUNCIONAMIENTO != HILOS DE EJECUCIÓN

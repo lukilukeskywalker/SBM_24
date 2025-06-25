@@ -1,0 +1,36 @@
+En main.c
+	__HAL_RCC_GPIOB_CLK_ENABLE(); //INICIALIZADO DE RELOJ EN PUERTO B
+	
+	//CONFIGURAR STRUCT "MULETA" PARA DEFINIR GPIO
+	GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
+	GPIO_InitStruct.Pull = GPIO_PULLUP;
+	GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_VERY_HIGH;
+	
+/*	//SELECCIÓN DE PIN Y ESCRITURA A GPIOB
+	GPIO_InitStruct.Pin = GPIO_PIN_0;
+	HAL_GPIO_Init(GPIOB, &GPIO_InitStruct);
+	//CAMBIOS = SELECCIÓN DE PIN Y ESCRITURA A GPIOB
+	GPIO_InitStruct.Pin = GPIO_PIN_7;
+	HAL_GPIO_Init(GPIOB, &GPIO_InitStruct);
+*/
+  //EJERCICIO 3
+	GPIO_InitStruct.Pin = GPIO_PIN_14;
+	HAL_GPIO_Init(GPIOB, &GPIO_InitStruct);
+	
+	//CÓDIGO P0 - ENCENDIDO Y APAGADO INTERCALADO 
+//DE LD1(Y) Y LD2(G) DURANTE 200ms
+
+  /* Infinite loop */
+  while (1)
+  {
+/*	
+		HAL_GPIO_TogglePin(GPIOB, GPIO_PIN_0);
+		HAL_Delay(100);
+		HAL_GPIO_TogglePin(GPIOB, GPIO_PIN_7);
+		HAL_Delay(100);	
+*/	
+		//EJERCICIO 3
+		HAL_GPIO_TogglePin(GPIOB, GPIO_PIN_14);
+		HAL_Delay(100);
+  }
+}

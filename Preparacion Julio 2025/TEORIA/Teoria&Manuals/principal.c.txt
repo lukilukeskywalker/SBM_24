@@ -1,0 +1,353 @@
+#include "cmsis_os2.h"                          // CMSIS RTOS header file
+#include "stdio.h"
+#include "principal.h"
+#include "main.h"
+#include "temp.h"
+#include "lcd.h"
+#include "clock.h"
+#include "POT_1.h"
+#include "POT_2.h"
+#include "com.h"
+#include "joystick.h"
+
+osThreadId_t tid_Thprincial;                        // thread id
+ 
+void Thprincipal (void *argument);                   // thread function
+
+
+//STATES
+
+typedef enum {REPOSO, ACTIVO, TEST,PROGRAMACION} principal_state_t;
+static principal_state_t state;
+
+//Hora states
+typedef enum {HORA, MIN, SEC} states2;
+static states2 horas_states;
+
+
+osMessageQueueId_t LCD_MsgQueue;
+MSGQUEUE_LCD_t msg_send;
+
+osMessageQueueId_t LEDS_MsgQueue;
+MSGQUEUE_LEDS_t leds_send;
+
+osMessageQueueId_t PWM_MsgQueue;
+MSGQUEUE_PWM_t pwm_send;
+
+osMessageQueueId_t COM_MsgQueue;
+MSGQUEUE_COM com_send;
+
+extern osMessageQueueId_t temp_queue;
+extern MSGQUEUE_TEMP_t temperature;
+
+extern osMessageQueueId_t POT1_MsgQueue;
+extern MSGQUEUE_POT_1 pot_1_send;
+
+extern osMessageQueueId_t POT2_MsgQueue;
+extern MSGQUEUE_POT_2 pot_2_send;
+
+extern osMessageQueueId_t COM_Prin_MsgQueue;
+extern MSGQUEUE_COM_PRIN com_prin_send;
+
+extern osMessageQueueId_t JOY_MsgQueue;
+extern MSGQUEUE_JOY JOY_send;
+
+
+int Init_MsgQueue_COM (void);
+
+int e=0;
+int full=0;
+static float x = 0.5;
+static float aux = 0.5;
+static int contador = 0;
+char buf[10][40];
+static int pwm;
+extern int segundos;
+extern int segundos_co;//segundos cociente
+extern int segundos_res;//segundos resto
+extern int minutos;
+extern int minutos_co;// minutos cociente
+extern int minutos_res;// minutos resto
+extern int horas;
+extern int horas_co;// horas cociente
+extern int horas_res; //horas resto 
+static float temp_ref = 26.0;
+
+int Init_MsgQueue_COM (void) {
+ 
+  COM_MsgQueue = osMessageQueueNew(1, sizeof(MSGQUEUE_COM), NULL);
+  if (COM_MsgQueue == NULL) {
+  }
+  return(0);
+}
+
+
+int Init_MsgQueue_LCD(void) {
+  LCD_MsgQueue = osMessageQueueNew(10, sizeof(MSGQUEUE_LCD_t), NULL);
+  if (LCD_MsgQueue == NULL) {return -1;}
+  return(0);
+}
+
+
+int Init_Thpincipal (void) {
+  state = REPOSO;
+	horas_states = HORA;
+  tid_Thprincial = osThreadNew(Thprincipal, NULL, NULL);
+  if (tid_Thprincial == NULL) {
+    return(-1);
+  }
+
+ 
+  return(0);
+}
+ 
+void Thprincipal (void *argument) {
+ 
+  while (1) {
+		osMessageQueueGet(temp_queue, &temperature, NULL, 0U);
+		osMessageQueueGet(POT1_MsgQueue, &pot_1_send, NULL, 0U);
+		osMessageQueueGet(JOY_MsgQueue, &JOY_send, NULL, 0U);
+		osMessageQueueGet(COM_Prin_MsgQueue, &com_prin_send, NULL, 0U);
+			switch (state){
+				case REPOSO:
+					sprintf(msg_send.mensaje1,"      SBM2023");
+					sprintf(msg_send.mensaje2,"      %d%d:%d%d:%d%d   ",horas_co,horas_res,minutos_co,minutos_res,segundos_co,segundos_res);
+					osMessageQueuePut(LCD_MsgQueue, &msg_send, 0U, 0U);
+					if(JOY_send.joystick == 11){
+						JOY_send.joystick = 0;
+						state = ACTIVO;
+						contador = 0;
+					}
+				break;
+				case ACTIVO:
+					// como hacer una resta con un numero como 25 nos puede reportar un valor negativo, voy a utilizar otro valor para establecer los rangos
+					aux= temperature.temp; 
+					x = 50 - aux;
+					// BLUE que es +30
+					if(x<=20){
+						pwm_send.pulso = 0;
+						pwm = 0;
+						leds_send.leds = 3;
+						osMessageQueuePut(LEDS_MsgQueue, &leds_send, 0U, 0U);
+					}
+					// Verde Azul que es 25-30
+					else if(x >= 20 && x < 25){
+						pwm_send.pulso = 32;
+						pwm = 40;
+						leds_send.leds = 4;
+						osMessageQueuePut(LEDS_MsgQueue, &leds_send, 0U, 0U);
+					}
+					// Verde rojo que es 20-25
+					else if(x >= 25 && x < 30){
+						pwm_send.pulso = 64;
+						pwm = 80;
+						leds_send.leds = 1;
+						osMessageQueuePut(LEDS_MsgQueue, &leds_send, 0U, 0U);
+					}
+					//  rojo que es <20
+					else if(x>30){
+						pwm_send.pulso = 80;
+						pwm = 100;
+						leds_send.leds = 2;
+						osMessageQueuePut(LEDS_MsgQueue, &leds_send, 0U, 0U);
+					}	
+					sprintf(msg_send.mensaje1,"   ACT---%d%d:%d%d:%d%d---",horas_co,horas_res,minutos_co,minutos_res,segundos_co,segundos_res);
+					sprintf(msg_send.mensaje2,"Tm:%.1lf-Tr:%.1lf$-D:%d%%",temperature.temp,temp_ref,pwm);
+					sprintf(buf[e],"%d%d:%d%d:%d%d--Tm:%.1lf$--Tr:%.1lf$--D:%d%%",horas_co,horas_res,minutos_co,minutos_res,segundos_co,segundos_res,temperature.temp,temp_ref,pwm);
+					e++;
+					
+					if(e==10){
+						e=0;
+						full = 1;
+					}
+					osMessageQueuePut(LCD_MsgQueue, &msg_send, 0U, 0U);
+					osMessageQueuePut(PWM_MsgQueue, &pwm_send, 0U, 0U);
+					if(JOY_send.joystick == 11){
+						JOY_send.joystick = 0;
+						state = TEST;
+					}
+				break;
+				case TEST:
+					x = pot_2_send.value2+20 - pot_1_send.value1;
+					// BLUE que es +30
+					if(x<=15){
+						pwm_send.pulso = 0;
+						pwm = 0;
+						leds_send.leds = 3;
+						osMessageQueuePut(LEDS_MsgQueue, &leds_send, 0U, 0U);
+					}
+					// Verde Azul que es 25-30
+					else if(x > 15 && x < 20){
+						pwm_send.pulso = 32;
+						pwm = 40;
+						leds_send.leds = 4;
+						osMessageQueuePut(LEDS_MsgQueue, &leds_send, 0U, 0U);
+					}
+					// Verde rojo que es 20-25
+					else if(x >= 20 && x < 25){
+						pwm_send.pulso = 64;
+						pwm = 80;
+						leds_send.leds = 1;
+						osMessageQueuePut(LEDS_MsgQueue, &leds_send, 0U, 0U);
+					}
+					//  rojo que es <20
+					else if(x>=25){
+						pwm_send.pulso = 80;
+						pwm = 100;
+						leds_send.leds = 2;
+						osMessageQueuePut(LEDS_MsgQueue, &leds_send, 0U, 0U);
+					}		
+					sprintf(msg_send.mensaje1,"   TEST---%d%d:%d%d:%d%d---",horas_co,horas_res,minutos_co,minutos_res,segundos_co,segundos_res);
+					sprintf(msg_send.mensaje2,"Tm:%d$-Tr:%d$-D:%d%%",pot_1_send.value1,pot_2_send.value2,pwm);
+					osMessageQueuePut(LCD_MsgQueue, &msg_send, 0U, 0U);
+					if(JOY_send.joystick == 11){
+						JOY_send.joystick = 0;
+						state = PROGRAMACION;
+					}
+				break;
+				case PROGRAMACION:
+					if(com_prin_send.temp !=0){
+					temp_ref = com_prin_send.temp;
+					}
+					if(contador == 0){
+						horas_co = com_prin_send.horas_dec;
+						horas_res = com_prin_send.horas_un;	
+						minutos_co = com_prin_send.minutos_dec;
+						minutos_res = com_prin_send.minutos_un;
+						segundos_co = com_prin_send.segundos_dec;	
+						segundos_res = com_prin_send.segundos_un;
+						contador++;						
+					}
+
+					
+					
+					sprintf(msg_send.mensaje1,"     ---P&D---");
+					sprintf(msg_send.mensaje2," H:%d%d:%d%d:%d%d---Tr:%.1lf$C",horas_co,horas_res,minutos_co,minutos_res,segundos_co,segundos_res,temp_ref);
+					osMessageQueuePut(LCD_MsgQueue, &msg_send, 0U, 0U);
+//				sprintf(com_send.txt,"%d%d:%d%d:%d%d",horas_co,horas_res,minutos_co,minutos_res,segundos_co,segundos_res);
+//				com_send.text_long = 20;
+				osMessageQueuePut(COM_MsgQueue, &com_send, 0U, osWaitForever);
+				
+				//Pulsaciones guia 1 UP 2 RIGHT 4 LEFT 3 DOWN 5 CENTER
+				switch(horas_states){
+					case HORA:
+						if(JOY_send.joystick == 1){
+							JOY_send.joystick = 0;
+							horas_res++;
+						}else if(JOY_send.joystick == 3){
+							JOY_send.joystick = 0;
+							horas_res--;
+						}else if(JOY_send.joystick == 2){
+							JOY_send.joystick = 0;
+							horas_states = MIN;
+						}else if(JOY_send.joystick == 4){
+							JOY_send.joystick = 0;
+							horas_states = SEC;
+						}
+					break;
+					case MIN:
+						if(JOY_send.joystick == 1){
+							JOY_send.joystick = 0;
+							minutos_res++;
+						}else if(JOY_send.joystick == 3){
+							JOY_send.joystick = 0;
+							minutos_res--;
+						}else if(JOY_send.joystick == 2){
+							JOY_send.joystick = 0;
+							horas_states = SEC;
+						}else if(JOY_send.joystick == 4){
+							JOY_send.joystick = 0;
+							horas_states = HORA;
+						}
+					break;
+					case SEC:
+						if(JOY_send.joystick == 1){
+							JOY_send.joystick = 0;
+							segundos_res++;
+						}else if(JOY_send.joystick == 3){
+							JOY_send.joystick = 0;
+							segundos_res--;
+						}else if(JOY_send.joystick == 2){
+							JOY_send.joystick = 0;
+							horas_states = HORA;
+						}else if(JOY_send.joystick == 4){
+							JOY_send.joystick = 0;
+							horas_states = MIN;
+						}
+					break;
+					
+				}
+
+//				switch(horas_states){
+//					case HORA:
+//						if(JOY_send.joystick == 1){
+//							JOY_send.joystick = 0;
+//							horas_res++;
+//						}
+//						if(JOY_send.joystick == 4){
+//							JOY_send.joystick = 0;
+//							horas_res--;
+//						}
+//						if(JOY_send.joystick == 3){
+//							JOY_send.joystick = 0;
+//							horas_states = SEC;
+//						}
+//						if(JOY_send.joystick == 2){
+//							JOY_send.joystick = 0;
+//							horas_states = MIN;
+//						}
+//					break;
+//					case MIN:
+//						if(JOY_send.joystick == 1){
+//							JOY_send.joystick = 0;
+//							minutos_res++;
+//						}
+//						if(JOY_send.joystick == 4){
+//							JOY_send.joystick = 0;
+//							minutos_res--;
+//						}
+//						if(JOY_send.joystick == 3){
+//							JOY_send.joystick = 0;
+//							horas_states = HORA;
+//						}
+//						if(JOY_send.joystick == 2){
+//							JOY_send.joystick = 0;
+//							horas_states = SEC;
+//						}
+//					break;
+//					case SEC:
+//						if(JOY_send.joystick == 1){
+//							JOY_send.joystick = 0;
+//							segundos_res++;
+//						}
+//						if(JOY_send.joystick == 4){
+//							JOY_send.joystick = 0;
+//							segundos_res--;
+//						}
+//						if(JOY_send.joystick == 3){
+//							JOY_send.joystick = 0;
+//							horas_states = MIN;
+//						}
+//						if(JOY_send.joystick == 2){
+//							JOY_send.joystick = 0;
+//							horas_states = HORA;
+//						}
+//					break;
+//				}
+					if(JOY_send.joystick == 11){
+						JOY_send.joystick = 0;
+						state = REPOSO;
+					}
+				break;
+			}
+ //       sprintf(msg_send.mensaje1,"SBM2023 P1%d P2%d",pot_1_send.value1,pot_2_send.value2);
+//        sprintf(msg_send.mensaje1,"  SBM2023 T:%.1lf$C",temperature.temp);
+//        sprintf(msg_send.mensaje2,"      %d%d:%d%d:%d%d   ",horas_co,horas_res,minutos_co,minutos_res,segundos_co,segundos_res);
+        //sprintf(msg_send.mensaje2,"joy %d  %d%d:%d%d:%d%d   ",JOY_send.joystick,horas_co,horas_res,minutos_co,minutos_res,segundos_co,segundos_res);
+//        osMessageQueuePut(LCD_MsgQueue, &msg_send, 0U, 0U);                            // suspend thread
+//				sprintf(com_send.txt,"%d%d:%d%d:%d%d",horas_co,horas_res,minutos_co,minutos_res,segundos_co,segundos_res);
+//				com_send.text_long = 20;
+//				osMessageQueuePut(COM_MsgQueue, &com_send, 0U, osWaitForever);
+				osDelay(100);
+  }
+}

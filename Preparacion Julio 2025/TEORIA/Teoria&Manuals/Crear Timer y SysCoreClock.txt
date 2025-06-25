@@ -1,0 +1,23 @@
+	/*Timer 7 Interrupt code*/
+	htim7.Instance = TIM7;					//Adjudicación de Handler a TIM7
+	htim7.Init.Prescaler = 41999;			//84MHz/42k = 2kHz
+	/*htim7.Init.Period = 999;				//EJ.A = 500 ms		*/
+	htim7.Init.Period = 2999;				//Autoreload Register [2999 to 0] == 3000/(2000/s) = 1.5s
+
+		//HAL_NVIC_SetPriority(TIM7_IRQn, 0, 0);
+	HAL_NVIC_EnableIRQ(TIM7_IRQn); 	//Enable IRQ
+	__HAL_RCC_TIM7_CLK_ENABLE();		//Enable TIM7 Clock Source
+
+	HAL_TIM_Base_Init(&htim7);			//TIM Config Init
+	HAL_TIM_Base_Start_IT(&htim7);	//TIM1 Init
+	
+	
+	  /* Enable HSE Oscillator and activate PLL with HSE as source */
+  RCC_OscInitStruct.OscillatorType = RCC_OSCILLATORTYPE_HSE;
+  RCC_OscInitStruct.HSEState = RCC_HSE_ON;
+  RCC_OscInitStruct.PLL.PLLState = RCC_PLL_ON;
+  RCC_OscInitStruct.PLL.PLLSource = RCC_PLLSOURCE_HSE;
+  RCC_OscInitStruct.PLL.PLLM = 4;
+  RCC_OscInitStruct.PLL.PLLN = 168;
+  RCC_OscInitStruct.PLL.PLLP = RCC_PLLP_DIV2;
+  RCC_OscInitStruct.PLL.PLLQ = 7;

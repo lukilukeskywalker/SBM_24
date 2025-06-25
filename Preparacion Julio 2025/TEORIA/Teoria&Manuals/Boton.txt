@@ -1,0 +1,25 @@
+main.c
+
+	__HAL_RCC_GPIOC_CLK_ENABLE();
+	
+	GPIO_InitStruct.Pin = GPIO_PIN_13;
+	GPIO_InitStruct.Mode = GPIO_MODE_IT_RISING;
+	GPIO_InitStruct.Pull = GPIO_PULLDOWN;
+	HAL_GPIO_Init(GPIOC, &GPIO_InitStruct);
+	
+	
+	
+	en xx_it.c
+	//HANDLER SIEMPRE IGUAL. CONTROLA LA FLAG DE LA INTERRUPCIÓN A TRAVÉS DE CAPA HAL. PROMPTEA EL CALLBACK.
+	  void EXTI15_10_IRQHandler (void) {
+		HAL_GPIO_EXTI_IRQHandler (GPIO_PIN_13);
+  }
+	//LÓGICA DE CAMBIOS!!
+  void HAL_GPIO_EXTI_Callback (uint16_t GPIO_Pin){
+    if (GPIO_Pin == GPIO_PIN_13){
+			if (t_delay == 125)
+				t_delay = 500;
+			else 
+				t_delay = (t_delay)/2;
+			}
+	}

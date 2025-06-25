@@ -1,0 +1,4 @@
+Fsys(168MHz) -> APB1 ->(84Mhz)->/Init.Prescaler->TIM7 Counter (Init.Period)
+ Valor de contador comparador de autorecarga que promptea Interrupción
+
+1/84M = 780uS

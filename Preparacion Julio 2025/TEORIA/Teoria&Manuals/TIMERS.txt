@@ -1,0 +1,48 @@
+Timer como contador de clicks de reloj.
+- Programación de eventos (Scheduling)
+- Medidas de señales externas
+- Generación de señales
+
+Los timers son contadores al margen del procesador. Es HW distinto fuera del procesador. (Contadores dedicados). Por tanto el timer es provisto por HW, no SW; el SW permite controlar los parámetros de configuración.
+
+El contador cuenta clicks, pero solo interviente al hacer overflow (el overflow genera la interrupción). Es poco versátil para múltiples timers de distinta magnitud. Se Integra un prescaler para adaptar la frecuencia y un autoload register con el valor deseado para que fuerce la interrupción al comparar el estado de cuenta de clicks con el valor cargado. Obviamente el número a contar en el prescaler ha de ser menor (o igual) al máximo valor del contador (por ej 255-8bit).
+
+El valor de registro de autorecarga es: [Tiempo deseado / Período Tick (1/Freq.Sys)] == No.CLICKS < Módulo max contador.
+
+A nivel HW, los timers integran a su vez múltiple entrada/selección de fuente de reloj (incluida señal externa), Registros de captura de entradas (medidas de eventos/frecuencias/tiempos externos) y registros comparadores de salida (Generan PWM, Pulsos, señales...)
+
+El contador de timer trabaja continuamente. Se opera generalmente con circuitos en paralelo que comparan valores deseados con las cuenta actual (real time): Registro de Autorecarga, Registros de captura de entradas...
+
+Al ser HW dedicado externo a CPU, los timers están conectados a través de los BUSES APB1\APB2: 		STM32F429-DATASHEET		Page 20/239
+
+Timers on STM32F4
+On board there are following timers available:
+➢ 2x advanced 16bit timers (TIM1,8)
+➢ 2x general purpose 32bit timers (TIM2, 5)
+➢ 8x general purpose 16bit timers (TIM3,4,9,10..14)
+➢ 2x simple (basic) 16bit timers for DAC (TIM6,7)
+➢ 1x 24bit system timer (SysTick)
+
+Existen Timers Básicos (Reference only, no Input/Output); Basic timers (TIM6 and TIM7)
+
+General Purpose Timers (Input Output básicos "monopulso", flancos, interrupciones, encoders, hall sensor; Single ó Dual Channel, PWM, ...) General-purpose timers (TIM2 to TIM5)
+y Avanzados (Step Motor, Digital power Converter, deadtime, Emergency stop)
+
+Firmware TIMERS 68.
+HAL_TIM_PeriodElapsedCallback
+HAL_TIM_PeriodElapsedHalfCpltCallback
+HAL provides three ways to use timers: polling, INTERRUPT and DMA
+
+1)Habilitar reloj al TIMER (off by default, energy saving)
+2)Habilitar reloj al GPIO (Input/Output): La función de reloj no suele ser una función ppal del pin: Función ALTERNATIVA.
+3)Elección opcional de fuente de reloj. HAL_TIM_ConfigClockSource
+
+-------------
+
+
+
+
+
+
+
+  

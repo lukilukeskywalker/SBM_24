@@ -161,7 +161,7 @@
           <SizeOfObject>0</SizeOfObject>
           <BreakByAccess>0</BreakByAccess>
           <BreakIfRCount>1</BreakIfRCount>
-          <Filename>\vmware-host\Shared Folders\SBM\Preparacion Julio 2025\PB1_preconfig\\vmware-host\Shared Folders\SBM\Preparacion Julio 2025\PB1_preconfig\exam_helper.c</Filename>
+          <Filename>\\vmware-host\Shared Folders\vmware-host\Shared Folders\SBM\Preparacion Julio 2025\PB1_preconfig\vmware-host\Shared Folders\SBM\Preparacion Julio 2025\PB1_preconfig\exam_helper.c</Filename>
           <ExecCommand></ExecCommand>
           <Expression>\\PB1_preconfig\exam_helper.c\132</Expression>
         </Bp>
